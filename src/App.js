@@ -11,8 +11,8 @@ import { NavLink } from "react-router-dom";
 function App() {
   const location = useLocation();
   return (
-    <AnimatePresence className="App">
-      <Navigation />{" "}
+    <div>
+      <Navigation />{" "}<AnimatePresence className="App" exitBeforeEnter={true}>
       <Switch location={location} key={location.pathname}>
         <Route exact path="/" render={(props) => <Interstellar {...props} />} />
         <Route exact path="/sol" render={(props) => <SolSystem {...props} />} />
@@ -27,7 +27,7 @@ function App() {
           render={(props) => <GeneratePlanet {...props} />}
         />
       </Switch>
-    </AnimatePresence>
+    </AnimatePresence></div>
   );
 }
 

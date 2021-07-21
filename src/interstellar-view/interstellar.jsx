@@ -112,11 +112,7 @@ export const Interstellar = () => {
       <Star name="Sol" starType="sol-system" />
       <div className="random-placement">
         {exoStars}
-        <div className="wrapper">
-          <div className="planet">
-            <h1>Planet</h1>
-          </div>
-        </div>
+        
       </div>
 
       {/*<div className="bottom-warp warp"></div> */}
@@ -124,4 +120,3 @@ export const Interstellar = () => {
   );
 };
 
-// red giant, red supergiant, blue giant, white dwarf, yellow dwarf, red dwarf, brown dwarf
