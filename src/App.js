@@ -5,7 +5,7 @@ import { Interstellar } from "./interstellar-view/interstellar";
 import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence} from "framer-motion";
 
 import { NavLink } from "react-router-dom";
 function App() {

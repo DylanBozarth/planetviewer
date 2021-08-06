@@ -14,18 +14,9 @@ export const MiniPlanet = (props) => {
 
 export const SolSystem = () => {
   useEffect(() => {
-    Orbit();
+    
   });
 
-  const Orbit = () => {
-    
-    gsap.to(".orbit-container2", {
-      rotation: -360,
-      ease: "none",
-      repeat: -1,
-      duration: 13,
-    });
-  };
   return (
     <div className="sol-system-master">
       <div className="sun">Sun</div>

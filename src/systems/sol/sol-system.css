@@ -53,8 +53,8 @@
   animation: translateBackground 55s infinite linear;
   background: url("../../planetTextures/mercury.jpg") repeat-x;
   background-size: 100% 100%;
-   animation: circular 10s linear infinite;
-
+   animation: circular 1s linear infinite;
+/* make this centered */
  
 }
 .venusMini {
