@@ -163,19 +163,22 @@ gsap.to(".a6", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
-  const randomPlanetIndex = () => {
+  let randomPlanetIndex = () => {
    return Math.floor(Math.random() * 56 + 1)
+  }
+  let randomPositionIndex = () => {
+    return Math.floor(Math.random() * 8 + 1)
   }
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
         <div
-          className={`planetWrap ${positionList[Math.floor(Math.random() * 8 + 1)]}`}
+          className={`planetWrap ${positionList[randomPositionIndex()]}`}
         >
           <MiniPlanet
             name={`${makePlanetName()}`}
             label={``}
-            className={`${planetTypes[Math.floor(Math.random() * 56 + 1)]} 
+            className={`${planetTypes[randomPlanetIndex()]} 
           `}
           >
             {" "}

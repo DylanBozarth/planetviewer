@@ -60,7 +60,7 @@ export const Interstellar = () => {
     //gsap.to(".bottom-warp", { y:1000, duration: 2.7 });
   }
   // auto generation stuff
-  function makeid() {
+  function makeStarName() {
     let r = Math.random().toString(36).substring(7);
 
     return r;
@@ -90,17 +90,17 @@ export const Interstellar = () => {
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
-  const makeStars = (num = 5) => {
-    if (num > 0) {
+  const makeStars = (Count = 5) => {
+    if (Count > 0) {
       return (
         <div className="starWrapper">
           <Star
-            name={`${makeid()}`}
+            name={`${makeStarName()}`}
             starType={`${starList[Math.floor(Math.random() * 6 + 1)]} ${
               posList[Math.floor(Math.random() * 9 + 1)]
             }`}
           ></Star>
-          {makeStars(num - 1)}
+          {makeStars(Count - 1)}
         </div>
       );
     }
