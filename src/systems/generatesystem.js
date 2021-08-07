@@ -98,7 +98,7 @@ gsap.to(".a6", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
   const splitCss = starType.split(" ");
   // making planets
 
-  function makeid() {
+  function makePlanetName() {
     let r = Math.random().toString(36).substring(7);
 
     return r;
@@ -159,25 +159,28 @@ gsap.to(".a6", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     "Molten-world",
     "Molten-world",
   ];
-  let posList = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9"];
+  let positionList = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9"];
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
-  const makePlanets = (num = 5) => {
-    if (num > 0) {
+  const randomPlanetIndex = () => {
+   return Math.floor(Math.random() * 56 + 1)
+  }
+  const makePlanets = (Count = 5) => {
+    if (Count > 0) {
       return (
         <div
-          className={`planetWrap ${posList[Math.floor(Math.random() * 8 + 1)]}`}
+          className={`planetWrap ${positionList[Math.floor(Math.random() * 8 + 1)]}`}
         >
           <MiniPlanet
-            name={`${makeid()}`}
+            name={`${makePlanetName()}`}
             label={``}
             className={`${planetTypes[Math.floor(Math.random() * 56 + 1)]} 
-          }`}
+          `}
           >
             {" "}
           </MiniPlanet>
-          {makePlanets(num - 1)}
+          {makePlanets(Count - 1)}
         </div>
       );
     }
