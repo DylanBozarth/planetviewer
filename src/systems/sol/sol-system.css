@@ -29,13 +29,16 @@
 }
 
 .earthMini {
-  width: 3em;
-  height: 3em;
   border-radius: 50%;
-
-  animation: translateBackground 75s infinite linear;
+  position: absolute;
+  --radius: 1rem;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   background: url("../../planetTextures/earth.jpg") repeat-x;
   background-size: 100% 100%;
+  animation: circular 15s linear infinite, translateBackground 50s infinite linear;
 }
 .marsMini {
   width: 2em;
@@ -46,25 +49,34 @@
   background-size: 100% 100%;
 }
 .mercuryMini {
-  width: 1.5em;
-  height: 1.5em;
+ 
   border-radius: 50%;
+  position: absolute;
+  --radius: 1rem;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   z-index: 9;
-  animation: translateBackground 55s infinite linear;
   background: url("../../planetTextures/mercury.jpg") repeat-x;
   background-size: 100% 100%;
-   animation: circular 1s linear infinite;
+   animation: circular 12s linear infinite,  translateBackground 55s infinite linear;
 /* make this centered */
  
 }
+
 .venusMini {
-  width: 2em;
-  height: 2em;
   border-radius: 50%;
-  animation: translateBackground 65s infinite linear;
+  position: absolute;
+  --radius: 1.2rem;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   z-index: 8;
   background: url("../../planetTextures/venus.jpg") repeat-x;
   background-size: 100% 100%;
+  animation: circular 12s linear infinite, translateBackground 65s infinite linear;
 }
 .juipterMini {
   width: 6em;
@@ -106,88 +118,7 @@
   top: 50%;
   left: 50%;
 }
-.orbit-container1 {
-  position: absolute;
-  --radius: 8rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 7;
-  
-}
-.orbit-container2 {
-  position: absolute;
-  --radius: 8rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 7;
-}
-.orbit-container3 {
-  position: absolute;
-  --radius: 11rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 6;
-}
-.orbit-container4 {
-  position: absolute;
-  --radius: 13rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 5;
-}
-.orbit-container5 {
-  position: absolute;
-  --radius: 19rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 4;
-}
-.orbit-container6 {
-  position: absolute;
-  --radius: 26rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 3;
-}
-.orbit-container7 {
-  position: absolute;
-  --radius: 30rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 2;
-}
-.orbit-container8 {
-  position: absolute;
-  --radius: 35rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 1;
-}
-.orbit-container {
-  position: absolute;
-  --radius: 6rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  z-index: 8;
-}
+
 
 @keyframes circular {
   from {
