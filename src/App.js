@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
   return (
     <div>
-      <Navigation />{" "}<AnimatePresence className="App" exitBeforeEnter={true}>
+      {/*<Navigation /> */}{" "}<AnimatePresence className="App" exitBeforeEnter={true}>
       <Switch location={location} key={location.pathname}>
         <Route exact path="/" render={(props) => <Interstellar {...props} />} />
         <Route exact path="/sol" render={(props) => <SolSystem {...props} />} />

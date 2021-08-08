@@ -1,4 +1,6 @@
-.sun {
+.sol-system-master {
+  text-align: center;
+}.sun {
   background-size: cover;
   box-shadow: 1px 1px 105px firebrick;
   box-shadow: 1px 1px 85px goldenrod;
@@ -68,15 +70,16 @@
 .venusMini {
   border-radius: 50%;
   position: absolute;
-  --radius: 1.2rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
+  left: 50%;
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+ width: 50px;
+ height: 50px;
   z-index: 8;
   background: url("../../planetTextures/venus.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: circular 12s linear infinite, translateBackground 65s infinite linear;
+  animation: circular 1s linear infinite, translateBackground 65s infinite linear;
 }
 .juipterMini {
   width: 6em;
