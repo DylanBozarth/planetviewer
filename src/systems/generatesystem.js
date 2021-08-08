@@ -29,31 +29,9 @@ export const GenerateSystem = (props) => {
 
 gsap.to(".wrapper", {rotation: 360, ease: "none", repeat: -1, duration: 3});
 gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-gsap.to(".a2", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-gsap.to(".a3", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-gsap.to(".a4", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-gsap.to(".a5", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-gsap.to(".a6", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
 
   
-    gsap.to(".a7", {
-      rotation: -360,
-      ease: "linear",
-      repeat: Infinity,
-      duration: gsap.utils.random(20, 60),
-    });
-    gsap.to(".a8", {
-      rotation: -360,
-      ease: "linear",
-      repeat: Infinity,
-      duration: gsap.utils.random(20, 60),
-    });
-    gsap.to(".a9", {
-      rotation: -360,
-      ease: "linear",
-      repeat: Infinity,
-      duration: gsap.utils.random(20, 60),
-    });
+  
   }
   //animations
   const backToInterstellar = {
