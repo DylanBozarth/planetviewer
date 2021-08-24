@@ -13,7 +13,6 @@ export const Interstellar = (props) => {
     EnterSystem();
     perfectOrbit();
     // }
-console.log(props.starProps.starCount)
     // save the results of the first set of this
   }, []);
 

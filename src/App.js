@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { Interstellar } from "./interstellar-view/interstellar";
 import { SolSystem } from "./systems/sol/solsystem";
@@ -8,12 +8,17 @@ import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence} from "framer-motion";
 import { NavLink } from "react-router-dom";
 function App() {
-  const starProps = { 
-    starCount: Math.floor(Math.random() * 5 + 3),
-    planetCount: 1,
-  
-  }
+  const [starCount, setStarCount] = useState(null)
 
+  useEffect(() => {
+    if (starCount === null) {
+      setStarCount(1)
+      console.log(starCount)
+    }
+    else {
+      console.log('nadda')
+    }
+  }, [])
   const location = useLocation();
   return (
     <div>
@@ -23,7 +28,7 @@ function App() {
               exact
               path="/"
               render={(props) => (
-                <Interstellar {...props} starProps={starProps} />
+                <Interstellar {...props}  />
               )}
             />
         <Route exact path="/sol" render={(props) => <SolSystem {...props} />} />
