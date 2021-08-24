@@ -6,15 +6,26 @@ import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence} from "framer-motion";
-
 import { NavLink } from "react-router-dom";
 function App() {
+  const starProps = { 
+    starCount: Math.floor(Math.random() * 5 + 3),
+    planetCount: 1,
+  
+  }
+
   const location = useLocation();
   return (
     <div>
       {/*<Navigation /> */}{" "}<AnimatePresence className="App" exitBeforeEnter={true}>
       <Switch location={location} key={location.pathname}>
-        <Route exact path="/" render={(props) => <Interstellar {...props} />} />
+      <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Interstellar {...props} starProps={starProps} />
+              )}
+            />
         <Route exact path="/sol" render={(props) => <SolSystem {...props} />} />
         <Route
           exact

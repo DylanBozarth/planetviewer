@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-export const Interstellar = () => {
+export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
     //var cookies = document.cookie
@@ -13,7 +13,7 @@ export const Interstellar = () => {
     EnterSystem();
     perfectOrbit();
     // }
-
+console.log(props.starProps.starCount)
     // save the results of the first set of this
   }, []);
 
