@@ -9,14 +9,14 @@ import { AnimatePresence} from "framer-motion";
 import { NavLink } from "react-router-dom";
 function App() {
   const [starCount, setStarCount] = useState(null)
-
+//https://www.javascripttutorial.net/web-apis/javascript-sessionstorage/
   useEffect(() => {
-    if (starCount === null) {
-      setStarCount(1)
-      console.log(starCount)
+    localStorage.setItem('variables', "steve")
+    if(localStorage.getItem('variables') === true) {
+console.log('worked')
     }
     else {
-      console.log('nadda')
+      console.log('naw')
     }
   }, [])
   const location = useLocation();
