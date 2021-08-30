@@ -19,12 +19,12 @@ export const GenerateSystem = (props) => {
     
     if (planets) {
       EnterSystem();
-      Orbit();
+      //Orbit();
     }
   
   }, [planets]);
   // orbits 
-  function Orbit() {
+  /*function Orbit() {
     gsap.set(".wrapper", {xPercent: 0, yPercent: -50, x: 0, y: 0, transformOrigin: "20vw center"});
 
 gsap.to(".wrapper", {rotation: 360, ease: "none", repeat: -1, duration: 3});
@@ -33,6 +33,14 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
   
   
   }
+   const perfectOrbit = () => {
+    gsap.set(".wrapper", {
+      xPercent: 0,
+      yPercent: -50,
+      x: 0,
+      y: 0,
+      transformOrigin: "20vw center",
+    })} */
   //animations
   const backToInterstellar = {
     leaveSystem: {
@@ -178,7 +186,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
       className="generatedSystem"
     >
       
-      <div className={splitCss[0] + "1"}></div>{" "}
+      <div className={splitCss[0] + "1 centerOfSystem" }></div>{" "}
       <div className="random-placement wrapper">{planets} </div>
      
     </motion.div>
