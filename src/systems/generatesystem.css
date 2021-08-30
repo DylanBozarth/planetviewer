@@ -3,9 +3,7 @@
   min-width: 100vw;
   overflow: visible;
 }
-.centerOfSystem {
-  background-color: red;
-}
+
 .yellow-dwarf1 {
   position: absolute;
   left: 50%;
@@ -143,11 +141,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/barren.jpg") repeat-x;
   background-size: 200% 100%; 
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+  
 }
 .Rocky-world {
   background-color: brown;
@@ -159,11 +153,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/rocky.jpg") repeat-x;
   background-size: 200% 100%; 
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+  
 }
 .Frozen-world {
   background-color: white;
@@ -175,11 +165,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/frozen.png") repeat-x;
   background-size: 200% 100%;
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+ 
 }
 .Gas-giant {
   background-color: green;
@@ -191,11 +177,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/gas.png") repeat-x;
   background-size: 200% 100%;
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+ 
 }
 .Ocean-world {
   background-color: blue;
@@ -207,11 +189,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/ocean.jpg") repeat-x;
   background-size: 200% 100%; 
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+ 
 }
 .Desert-world {
   background-color: brown;
@@ -223,11 +201,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/desert.jpg") repeat-x;
   background-size: 200% 100%;
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+ 
 }
 .Molten-world {
   background-color: red;
@@ -239,11 +213,7 @@ margin-left: 100px;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/lava.jpg") repeat-x;
   background-size: 200% 100%;
-  -webkit-animation: orbit 20s linear infinite;
-     -moz-animation: orbit 20s linear infinite;
-      -ms-animation: orbit 20s linear infinite;
-       -o-animation: orbit 20s linear infinite;
-          animation: orbit 20s linear infinite;
+ 
 }
 .box {
   background-color: blue;
@@ -268,4 +238,86 @@ margin-left: 100px;
          -o-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+@-webkit-keyframes orbit-text {
+  100% {
+    -webkit-transform: rotate(-360deg);
+       -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+         -o-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+/* orbits */
+/* orbits of miniplanets */
+
+
+.orbitContainer {
+  
+  width:var(--s);
+  height:var(--s);
+  margin:auto;
+  text-align: center;
+  border-radius: 50%;
+ 
+  overflow: auto; /* Recommended in case content is larger than the container */
+  margin: auto; /* Center the item vertically & horizontally */
+
+  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+  font-weight:bold;
+  animation: spin var(--d) linear infinite, translateBackground 100s infinite linear; 
+  transform:rotate(0) translate(var(--o)) rotate(0);
+}
+@keyframes spin {
+  100% {
+    transform:rotate(1turn) translate(var(--o)) rotate(-1turn);
+  }
+}
+.a1 {
+  --d:20s; 
+  --o:4.5rem;
+  --s: 12rem;
+  z-index: 9;
+}
+.venusPath {
+  --d:21s;
+  --o:5.8rem;
+  --s: 18rem;
+  z-index: 8;
+}
+.earthPath {
+  --d:28s;
+  --o:7.4rem;
+  --s: 20rem;
+  z-index: 7;
+}
+.marsPath {
+  --d:31s;
+  --o:9rem;
+  --s: 22rem;
+  z-index: 6;
+}
+.juipterPath {
+  --d:57s;
+  --o:13rem;
+  --s: 35rem;
+  z-index: 5;
+}
+.saturnPath {
+  --d:79s;
+  --o:17rem;
+  --s: 45rem;
+  z-index: 4;
+}
+.uranusPath {
+  --d:95s;
+  --o:21rem;
+  --s: 55rem;
+  z-index: 3;
+}
+.neptunePath {
+  --d:120s;
+  --o:25rem;
+  --s: 55rem;
+  z-index: 2;
 }
