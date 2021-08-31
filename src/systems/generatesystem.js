@@ -165,7 +165,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
             name={`${makePlanetName()}`}
             label={``}
             className={`${planetTypes[randomPlanetIndex()]} 
-          `}
+           `}
           >
             {" "}
           </MiniPlanet>
@@ -186,7 +186,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
       className="generatedSystem"
     >
       
-      <div className={splitCss[0] + "1 centerOfSystem" }></div>{" "}
+      <div className={splitCss[0] + "1" }></div>{" "}
       <div className="random-placement wrapper">{planets} </div>
      
     </motion.div>

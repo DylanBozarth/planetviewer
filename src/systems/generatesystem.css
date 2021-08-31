@@ -230,24 +230,7 @@ margin-left: 100px;
   transform: translate(0%, -50%);
 }
 
-@-webkit-keyframes orbit {
-  100% {
-    -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes orbit-text {
-  100% {
-    -webkit-transform: rotate(-360deg);
-       -moz-transform: rotate(-360deg);
-        -ms-transform: rotate(-360deg);
-         -o-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
+
 /* orbits */
 /* orbits of miniplanets */
 
@@ -267,6 +250,7 @@ margin-left: 100px;
   font-weight:bold;
   animation: spin var(--d) linear infinite, translateBackground 100s infinite linear; 
   transform:rotate(0) translate(var(--o)) rotate(0);
+  overflow: visible;
 }
 @keyframes spin {
   100% {
@@ -279,43 +263,43 @@ margin-left: 100px;
   --s: 12rem;
   z-index: 9;
 }
-.venusPath {
+.a2 {
   --d:21s;
   --o:5.8rem;
   --s: 18rem;
   z-index: 8;
 }
-.earthPath {
+.a3 {
   --d:28s;
   --o:7.4rem;
   --s: 20rem;
   z-index: 7;
 }
-.marsPath {
+.a4 {
   --d:31s;
   --o:9rem;
   --s: 22rem;
   z-index: 6;
 }
-.juipterPath {
+.a5 {
   --d:57s;
   --o:13rem;
   --s: 35rem;
   z-index: 5;
 }
-.saturnPath {
+.a6 {
   --d:79s;
   --o:17rem;
   --s: 45rem;
   z-index: 4;
 }
-.uranusPath {
+.a7 {
   --d:95s;
   --o:21rem;
   --s: 55rem;
   z-index: 3;
 }
-.neptunePath {
+.a8 {
   --d:120s;
   --o:25rem;
   --s: 55rem;
