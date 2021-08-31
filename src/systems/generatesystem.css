@@ -245,7 +245,7 @@ margin-left: 100px;
  
   overflow: auto; /* Recommended in case content is larger than the container */
   margin: auto; /* Center the item vertically & horizontally */
-
+ position: absolute;
   top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
   font-weight:bold;
   animation: spin var(--d) linear infinite, translateBackground 100s infinite linear; 
@@ -258,49 +258,49 @@ margin-left: 100px;
   }
 }
 .a1 {
-  --d:20s; 
+  --d:1s; 
   --o:4.5rem;
   --s: 12rem;
   z-index: 9;
 }
 .a2 {
-  --d:21s;
+  --d:1s;
   --o:5.8rem;
   --s: 18rem;
   z-index: 8;
 }
 .a3 {
-  --d:28s;
+  --d:1s;
   --o:7.4rem;
   --s: 20rem;
   z-index: 7;
 }
 .a4 {
-  --d:31s;
+  --d:1s;
   --o:9rem;
   --s: 22rem;
   z-index: 6;
 }
 .a5 {
-  --d:57s;
+  --d:1s;
   --o:13rem;
   --s: 35rem;
   z-index: 5;
 }
 .a6 {
-  --d:79s;
+  --d:1s;
   --o:17rem;
   --s: 45rem;
   z-index: 4;
 }
 .a7 {
-  --d:95s;
+  --d:1s;
   --o:21rem;
   --s: 55rem;
   z-index: 3;
 }
 .a8 {
-  --d:120s;
+  --d:1s;
   --o:25rem;
   --s: 55rem;
   z-index: 2;
