@@ -232,68 +232,68 @@ margin-left: 100px;
 
 .orbitContainer {
   
-  width:var(--s);
-  height:var(--s);
+  width:var(--size);
+  height:var(--size);
  position: absolute;
   
  left: 50%;
  top: 50%;
  -webkit-transform: translate(-50%, -50%);
  transform: translate(-50%, -50%);
-  animation: spin var(--d) linear infinite, translateBackground 100s infinite linear; 
-  transform:rotate(0) translate(var(--o)) rotate(0);
+  animation: spin var(--speed) linear infinite, translateBackground 100s infinite linear; 
+  transform:rotate(0) translate(var(--orbitSize)) rotate(0);
  
 }
 @keyframes spin {
   100% {
-    transform:rotate(1turn) translate(var(--o)) rotate(-1turn);
+    transform:rotate(1turn) translate(var(--orbitSize)) rotate(-1turn);
   }
 }
 .a1 {
-  --d:1s; 
-  --o:4.5rem;
-  --s: 12rem;
+  --speed:1s; 
+  --orbitSize:1rem;
+  --size: 12rem;
   z-index: 9;
 }
 .a2 {
-  --d:1s;
-  --o:5.8rem;
-  --s: 18rem;
+  --speed:1s;
+  --orbitSize:2rem;
+  --size: 18rem;
   z-index: 8;
 }
 .a3 {
-  --d:1s;
-  --o:7.4rem;
-  --s: 20rem;
+  --speed:1s;
+  --orbitSize:3rem;
+  --size: 20rem;
   z-index: 7;
 }
 .a4 {
-  --d:1s;
-  --o:9rem;
-  --s: 22rem;
+  --speed:1s;
+  --orbitSize:4rem;
+  --size: 22rem;
   z-index: 6;
 }
 .a5 {
-  --d:1s;
-  --o:13rem;
-  --s: 35rem;
+  --speed:1s;
+  --orbitSize:7rem;
+  --size: 35rem;
   z-index: 5;
 }
 .a6 {
-  --d:1s;
-  --o:17rem;
-  --s: 45rem;
+  --speed:1s;
+  --orbitSize:8rem;
+  --size: 45rem;
   z-index: 4;
 }
 .a7 {
-  --d:1s;
-  --o:21rem;
-  --s: 55rem;
+  --speed:1s;
+  --orbitSize:9rem;
+  --size: 55rem;
   z-index: 3;
 }
 .a8 {
-  --d:1s;
-  --o:25rem;
-  --s: 55rem;
+  --speed:1s;
+  --orbitSize:11rem;
+  --size: 55rem;
   z-index: 2;
 }

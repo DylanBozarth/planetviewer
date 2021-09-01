@@ -159,7 +159,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     if (Count > 0) {
       return (
         <div
-          className={` ${positionList[randomPositionIndex()]}`}
+          className={`${positionList[randomPositionIndex()]}`}
         >
           <MiniPlanet
             name={`${makePlanetName()}`}
