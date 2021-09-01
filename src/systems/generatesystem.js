@@ -159,7 +159,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     if (Count > 0) {
       return (
         <div
-          className={`orbitContainer ${positionList[randomPositionIndex()]}`}
+          className={` ${positionList[randomPositionIndex()]}`}
         >
           <MiniPlanet
             name={`${makePlanetName()}`}
@@ -187,7 +187,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     >
       
       <div className={splitCss[0] + "1" }></div>{" "}
-      <div className="random-placement wrapper">{planets} </div>
+     <div className="orbitContainer">{planets}</div>
      
     </motion.div>
   );

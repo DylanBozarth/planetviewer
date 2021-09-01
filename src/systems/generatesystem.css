@@ -223,12 +223,7 @@ margin-left: 100px;
   text-align: center;
   line-height: 70px;
 }
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(0%, -50%);
-}
+
 
 
 /* orbits */
@@ -239,18 +234,15 @@ margin-left: 100px;
   
   width:var(--s);
   height:var(--s);
-  margin:auto;
-  text-align: center;
-  border-radius: 50%;
- 
-  overflow: auto; /* Recommended in case content is larger than the container */
-  margin: auto; /* Center the item vertically & horizontally */
  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
-  font-weight:bold;
+  
+ left: 50%;
+ top: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
   animation: spin var(--d) linear infinite, translateBackground 100s infinite linear; 
   transform:rotate(0) translate(var(--o)) rotate(0);
-  overflow: visible;
+ 
 }
 @keyframes spin {
   100% {
