@@ -74,7 +74,7 @@ export const Interstellar = (props) => {
     "red-dwarf",
     "brown-dwarf",
   ];
-  let posList = [
+  let positionList = [
     "one",
     "two",
     "three",
@@ -96,7 +96,7 @@ export const Interstellar = (props) => {
           <Star
             name={`${makeStarName()}`}
             starType={`${starList[Math.floor(Math.random() * 6 + 1)]} ${
-              posList[Math.floor(Math.random() * 9 + 1)]
+              positionList[Math.floor(Math.random() * 9 + 1)]
             }`}
           ></Star>
           {makeStars(Count - 1)}
