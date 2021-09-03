@@ -26,12 +26,12 @@ console.log('worked')
       <Switch location={location} key={location.pathname}>
       <Route
               exact
-              path="/"
+              path="/interstellar"
               render={(props) => (
                 <Interstellar {...props}  />
               )}
             />
-        <Route exact path="/sol" render={(props) => <SolSystem {...props} />} />
+        <Route exact path="/" render={(props) => <SolSystem {...props} />} />
         <Route
           exact
           path="/:id"
@@ -75,7 +75,7 @@ export const Navigation = () => {
         <div className="nav-left">BOX</div>
         <div className="text-center nav-center">
           <div className="nav-item">
-            <NavLink to="/">Interstellar Space</NavLink>
+            <NavLink to="/interstellar">Interstellar Space</NavLink>
           </div>
         </div>
         <div className="nav-right">BOX</div>

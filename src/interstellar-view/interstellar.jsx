@@ -1,7 +1,7 @@
 import "./interstellar-space.scss";
 import { Star } from "./stars/star";
 import { gsap } from "gsap";
-
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 export const Interstellar = (props) => {
@@ -38,7 +38,12 @@ export const Interstellar = (props) => {
       repeat: -1,
       duration: 13,
     });
-    gsap.to(".planet", { rotation: -360, ease: "none", repeat: -1, duration: 13 });
+    gsap.to(".planet", {
+      rotation: -360,
+      ease: "none",
+      repeat: -1,
+      duration: 13,
+    });
   };
   const viewStar = {
     exit: {
@@ -108,14 +113,10 @@ export const Interstellar = (props) => {
   return (
     <motion.div variants={viewStar} exit="exit" className="interstellar-space">
       {/*} <div className="top-warp warp"></div> */}
-      <Star name="Sol" starType="sol-system" />
-      <div className="random-placement">
-        {exoStars}
-        
-      </div>
+     <NavLink to="/"><div className="sol-system"></div></NavLink>
+      <div className="random-placement">{exoStars}</div>
 
       {/*<div className="bottom-warp warp"></div> */}
     </motion.div>
   );
 };
-
