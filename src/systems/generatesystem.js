@@ -1,7 +1,7 @@
 import "./generatesystem.css";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { MiniPlanet } from "../components/miniplanet";
+import { MiniExoPlanet } from "../components/miniExoPlanet";
 
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
@@ -161,14 +161,14 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
         <div
           className={`${positionList[randomPositionIndex()]}`}
         >
-          <MiniPlanet
+          <MiniExoPlanet
             planetName={`${makePlanetName()}`}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()]} 
            `}
           >
             {" "}
-          </MiniPlanet>
+          </MiniExoPlanet>
           {makePlanets(Count - 1)}
         </div>
       );

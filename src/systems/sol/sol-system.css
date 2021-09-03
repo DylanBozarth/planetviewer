@@ -129,7 +129,7 @@
 /* orbits */
 .orbit1 {
   position: absolute;
-  --radius: 3rem;
+  --radius: 5rem;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
   width: calc(2 * var(--radius));
