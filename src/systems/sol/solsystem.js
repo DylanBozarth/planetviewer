@@ -26,8 +26,8 @@ export const SolSystem = () => {
         <MiniPlanet name="mercury" className=" mercuryMini "><p>Mercury</p></MiniPlanet>
          
         
-          <div className="orbit1">
-            <div className="venusWrapper"><MiniPlanet name="venus" className=" venusMini " />Venus</div></div>
+         
+            <div className="venusWrapper"><MiniPlanet name="venus" className=" venusMini " />Venus</div>
           
          
         

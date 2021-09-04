@@ -15,7 +15,7 @@
   animation: translateBackground 120s infinite linear;
   background: url("../../planetTextures/sun.jpg") repeat-x;
   background-size: 200% 100%;
-
+  transform: rotate(0deg);
   transition: transform 0.7s linear;
 }
 @keyframes translateBackground {
@@ -40,7 +40,7 @@
   height: calc(2 * var(--radius));
   background: url("../../planetTextures/earth.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: circular 15s linear infinite, translateBackground 50s infinite linear;
+  animation: translateBackground 50s infinite linear;
 }
 .marsMini {
   width: 2em;
@@ -62,7 +62,7 @@
   z-index: 9;
   background: url("../../planetTextures/mercury.jpg") repeat-x;
   background-size: 100% 100%;
-   animation: circular 12s linear infinite,  translateBackground 55s infinite linear;
+   animation:  translateBackground 55s infinite linear;
 /* make this centered */
  
 }
@@ -74,7 +74,7 @@
   z-index: 8;
   background: url("../../planetTextures/venus.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: circular 12s linear infinite, translateBackground 65s infinite linear;
+  animation:  translateBackground 65s infinite linear;
 }
 .juipterMini {
   width: 6em;
@@ -120,16 +120,16 @@
 
 @keyframes circular {
   from {
-    transform: rotate(0deg) translateX(200px) rotate(0deg);
+    transform: rotate(0deg) translateX(20rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    transform: rotate(360deg) translateX(20rem) rotate(-360deg);
   }
 }
 /* orbits */
 .orbit1 {
   position: absolute;
-  --radius: 5rem;
+  --radius: 8rem;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
   width: calc(2 * var(--radius));

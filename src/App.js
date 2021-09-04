@@ -7,6 +7,14 @@ import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence} from "framer-motion";
 import { NavLink } from "react-router-dom";
+import {Mercury} from './systems/sol/sol-planets/Mercury'
+import {Venus} from './systems/sol/sol-planets/Venus'
+import {Earth} from './systems/sol/sol-planets/Earth'
+import {Mars} from './systems/sol/sol-planets/Mars'
+import {Jupiter} from './systems/sol/sol-planets/Jupiter'
+import {Saturn} from './systems/sol/sol-planets/Saturn'
+import {Uranus} from './systems/sol/sol-planets/Uranus'
+import {Neptune} from './systems/sol/sol-planets/Neptune'
 function App() {
   const [starCount, setStarCount] = useState(null)
 //https://www.javascripttutorial.net/web-apis/javascript-sessionstorage/
@@ -42,6 +50,14 @@ console.log('worked')
           path="/planets/:id"
           render={(props) => <GeneratePlanet {...props} />}
         />
+         <Route path="/mercury" component={Mercury} />
+          <Route path="/venus" component={Venus} />
+          <Route path="/earth" component={Earth} />
+          <Route path="/mars" component={Mars} />
+          <Route path="/juipter" component={Jupiter} />
+          <Route path="/saturn" component={Saturn} />
+          <Route path="/uranus" component={Uranus} />
+          <Route path="/neptune" component={Neptune} />
       </Switch>
     </AnimatePresence></div>
   );
