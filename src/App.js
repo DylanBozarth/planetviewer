@@ -45,19 +45,19 @@ console.log('worked')
           path="/:id"
           render={(props) => <GenerateSystem {...props} />}
         />
-        <Route
+        {/*<Route
           exact
           path="/planets/:id"
           render={(props) => <GeneratePlanet {...props} />}
-        />
-         <Route path="/mercury" component={Mercury} />
-          <Route path="/venus" component={Venus} />
-          <Route path="/earth" component={Earth} />
-          <Route path="/mars" component={Mars} />
-          <Route path="/juipter" component={Jupiter} />
-          <Route path="/saturn" component={Saturn} />
-          <Route path="/uranus" component={Uranus} />
-          <Route path="/neptune" component={Neptune} />
+        /> */}
+         <Route path="/planets/mercury" component={Mercury} />
+          <Route path="/planets/venus" component={Venus} />
+          <Route path="/planets/earth" component={Earth} />
+          <Route path="/planets/mars" component={Mars} />
+          <Route path="/planets/juipter" component={Jupiter} />
+          <Route path="/planets/saturn" component={Saturn} />
+          <Route path="/planets/uranus" component={Uranus} />
+          <Route path="/planets/neptune" component={Neptune} />
       </Switch>
     </AnimatePresence></div>
   );

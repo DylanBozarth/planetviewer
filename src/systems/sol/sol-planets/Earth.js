@@ -1,5 +1,19 @@
+import "./planetView.scss"
 export const Earth = () => {
     return (
-        <div>1</div>
+        <div className="earthView container-fluid text-center">
+            <div className="row">
+                <div className="col-lg-4"></div>
+                
+                <div className="col-lg-8 planetWrapper"> <div className="earthBall"></div></div>
+                
+               
+            </div>
+            
+            
+            
+            
+            
+            </div>
     )
 }
