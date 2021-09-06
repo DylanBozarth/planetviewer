@@ -8,10 +8,10 @@ export const Earth = () => {
                 <div className="col-lg-8 planetWrapper">  
            
               <div className="earthBall">
-                <div className="background"></div>
-                <div className="clouds"></div>
+               
+                 
               </div>
-            
+           <div className="clouds"></div> 
           </div>
                 
                

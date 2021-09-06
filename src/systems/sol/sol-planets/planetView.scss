@@ -4,42 +4,31 @@ min-height: 100vh;
 min-width: 100vw;
 }
 .sidePlanetView {
-  background-color: darkcyan;
+ background-color: green;
 }
 .planetWrapper {
     height: 100vh;
-    background-color: steelblue;
 }
 .earthBall {
-    width:100%;
-    height:100%;
+    width:1000px;
+    height:1000px;
     border-radius: 50%;
-    margin-top: 2.5rem;
-   
-}
-.earthBall .mask{
-    width:100%;
-    height:100%;
-    box-shadow:inset -10px -10px 40px #251303, inset 10px 10px 30px -10px darkslategrey;
-    border-radius:50%;
-    background-color: red;
-  }
-  .earthBall .background{
     animation: translateBackground 40s infinite linear;  
     background:url("../../../planetTextures/earth.jpg") repeat-x;
    background-size: 100% 100%;
-    width:390px;
-    height:390px;
+   margin-bottom: 5rem;
     border-radius:50%;
-    background-color: yellow;
-  }
+    z-index: 1;
+    box-shadow: -200px black;
+}
  .clouds{
-    background:url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
-    width:300px;
-    height:300px;
+    background:url(../../../planetTextures/clouds.png) repeat-x;
+    background-size: 100% 100%;
     border-radius:50%;
-    animation: translateBackground 30s infinite linear;
+    width: 100%; 
+    height: 100%;
+    animation: translateBackground 20s infinite linear;
     opacity: 0.4;
-    background-color: red;
+    z-index: 2
   }
 /* End earth */
