@@ -1,27 +1,38 @@
+/* view box */
+
+.planetView {
+padding: 20px;
+  text-align: center;
+  background: #191919;
+  box-shadow: 0px 0px 15px 2px #7Cbdbd inset;
+  border: 2px solid #3acaec;
+  border-radius: 5px;
+  margin-top: 10rem;
+}
 /* Earth */
 .earthView {
 min-height: 100vh;
 min-width: 100vw;
 }
 .sidePlanetView {
- background-color: green;
+ text-align: center;
 }
 .planetWrapper {
-    height: 100vh;
+   margin-top: -3rem;
 }
 .earthBall {
     width:1000px;
     height:1000px;
     border-radius: 50%;
-    animation: translateBackground 40s infinite linear;  
-    background:url("../../../planetTextures/earth.jpg") repeat-x;
-   background-size: 100% 100%;
-   margin-bottom: 5rem;
+    animation: translateBackground 75s infinite linear;  
+    background:url("../../../planetTextures/earthHighRes.jpg") repeat-x;
+   background-size: 100% 90%;
+  
     border-radius:50%;
     z-index: 1;
     box-shadow: -200px black;
 }
- .clouds{
+ .planetClouds{
     background:url(../../../planetTextures/clouds.png) repeat-x;
     background-size: 100% 100%;
     border-radius:50%;
