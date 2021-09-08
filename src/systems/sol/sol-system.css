@@ -54,7 +54,7 @@
  
   border-radius: 50%;
   position: absolute;
-  --radius: 1rem;
+  --radius: .7rem;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
   width: calc(2 * var(--radius));
@@ -71,7 +71,7 @@
   border-radius: 50%;
 
  position: absolute;
- --size: 1rem;
+ --size: .85rem;
   --radius: 1rem;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
@@ -80,7 +80,7 @@
   z-index: 8;
   background: url("../../planetTextures/venus.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: circular 2s linear infinite, translateBackground 65s infinite linear;
+  animation: circular2 2s linear infinite, translateBackground 65s infinite linear;
 }
 .juipterMini {
   width: 6em;
@@ -123,7 +123,14 @@
   left: 50%;
 }
 
-
+@keyframes circular2 {
+  from {
+    transform: rotate(0deg) translateX(5rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(5rem) rotate(-360deg);
+  }
+}
 @keyframes circular {
   from {
     transform: rotate(0deg) translateX(20rem) rotate(0deg);
