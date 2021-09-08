@@ -29,27 +29,7 @@
 .miniPlanet {
   max-width: 6rem;
 }
-
-.earthMini {
-  border-radius: 50%;
-  position: absolute;
-  --radius: 1rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  background: url("../../planetTextures/earth.jpg") repeat-x;
-  background-size: 100% 100%;
-  animation: circular 66s linear infinite, translateBackground 50s infinite linear;
-}
-.marsMini {
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  animation: translateBackground 75s infinite linear;
-  background: url("../../planetTextures/mars.jpeg") repeat-x;
-  background-size: 100% 100%;
-}
+/* orbits and styles */
 .mercuryMini {
  
   border-radius: 50%;
@@ -62,9 +42,17 @@
   z-index: 9;
   background: url("../../planetTextures/mercury.jpg") repeat-x;
   background-size: 100% 100%;
-   animation: circular 66s linear infinite, translateBackground 55s infinite linear;
-/* make this centered */
+   animation: mercuryOrbit 30s linear infinite, translateBackground 55s infinite linear;
+
  
+}
+@keyframes mercuryOrbit {
+  from {
+    transform: rotate(0deg) translateX(7rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(7rem) rotate(-360deg);
+  }
 }
 
 .venusMini {
@@ -80,41 +68,142 @@
   z-index: 8;
   background: url("../../planetTextures/venus.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: circular2 2s linear infinite, translateBackground 65s infinite linear;
+  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes venusOrbit {
+  from {
+    transform: rotate(0deg) translateX(9rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(9rem) rotate(-360deg);
+  }
+}
+.earthMini {
+  border-radius: 50%;
+  position: absolute;
+  --radius: 1rem;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
+  background: url("../../planetTextures/earth.jpg") repeat-x;
+  background-size: 100% 100%;
+  animation: earthOrbit 45s linear infinite, translateBackground 50s infinite linear;
+}
+@keyframes earthOrbit {
+  from {
+    transform: rotate(0deg) translateX(13rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(13rem) rotate(-360deg);
+  }
+}
+.marsMini {
+  --radius: .85rem;
+  position: absolute;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
+  border-radius: 50%;
+  animation: translateBackground 75s infinite linear;
+  background: url("../../planetTextures/mars.jpeg") repeat-x;
+  background-size: 100% 100%;
+  animation: marsOrbit 55s linear infinite, translateBackground 50s infinite linear;
+}
+@keyframes marsOrbit {
+  from {
+    transform: rotate(0deg) translateX(16rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(16rem) rotate(-360deg);
+  }
 }
 .juipterMini {
-  width: 6em;
-  height: 6em;
+  --radius: 3.4rem;
+  position: absolute;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   border-radius: 50%;
-  animation: translateBackground 125s infinite linear;
+  animation: translateBackground 75s infinite linear;
   background: url("../../planetTextures/juipter.jpg") repeat-x;
   background-size: 100% 100%;
+  animation: juipterOrbit 75s linear infinite, translateBackground 50s infinite linear;
+}
+@keyframes juipterOrbit {
+  from {
+    transform: rotate(0deg) translateX(20rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(20rem) rotate(-360deg);
+  }
 }
 .saturnMini {
-  width: 8.5em;
-  height: 7.5em;
+  --radius: 3.6rem;
+  position: absolute;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   border-radius: 50%;
-
-  background: url("../../planetTextures/saturnstatic.png") repeat-x;
+  animation: translateBackground 75s infinite linear;
+  background: url("../../planetTextures/saturnstatic.png");
   background-size: 100% 100%;
+  animation: saturnOrbit 55s linear infinite;
+}
+@keyframes saturnOrbit {
+  from {
+    transform: rotate(0deg) translateX(29rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(29rem) rotate(-360deg);
+  }
 }
 
 .uranusMini {
-  width: 4.5em;
-  height: 4.5em;
+  --radius: 1.9rem;
+  position: absolute;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   border-radius: 50%;
-  rotate: (45deg);
-  animation: translateBackground 105s infinite linear;
+  animation: translateBackground 75s infinite linear;
   background: url("../../planetTextures/uranus.jpg") repeat-x;
   background-size: 100% 100%;
+  animation: uranusOrbit 85s linear infinite, translateBackground 50s infinite linear;
+}
+
+@keyframes uranusOrbit {
+  from {
+    transform: rotate(0deg) translateX(36rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(36rem) rotate(-360deg);
+  }
 }
 .neptuneMini {
-  width: 4.5em;
-  height: 4.5em;
+  --radius: 2.3rem;
+  position: absolute;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
   border-radius: 50%;
-  animation: translateBackground 115s infinite linear;
+  animation: translateBackground 75s infinite linear;
   background: url("../../planetTextures/neptune.jpg") repeat-x;
   background-size: 100% 100%;
+  animation: neptuneOrbit 125s linear infinite, translateBackground 50s infinite linear;
+}
+@keyframes neptuneOrbit {
+  from {
+    transform: rotate(0deg) translateX(41rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(41rem) rotate(-360deg);
+  }
 }
 /* end of miniplanets */
 .planet {
