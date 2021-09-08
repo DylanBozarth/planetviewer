@@ -167,6 +167,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
             planetType={`${planetTypes[randomPlanetIndex()]} 
            `}
           >
+            
             {" "}
           </MiniExoPlanet>
           {makePlanets(Count - 1)}
@@ -187,7 +188,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     >
       
       <div className={splitCss[0] + "1" }></div>{" "}
-     <div className="orbitContainer">{planets}</div>
+     <div className="">{planets}</div>
      
     </motion.div>
   );

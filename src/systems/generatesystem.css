@@ -17,8 +17,8 @@
   height: 12em;
   border-radius: 50%;
   animation: translateBackground 120s infinite linear;
-  background: url("../planetTextures/sun.jpg") repeat-x;
-  background-size: 200% 100%;
+  background: url("../planetTextures/sun.png") repeat-x;
+  background-size: cover;
   transition: transform 0.7s linear;
 }
 .blue-giant1 {
@@ -132,13 +132,15 @@ z-index: -1;
 
 /* exoplanets */
 .Barren-world {
-  background-color: red;
-  width: 1.7em;
-  height: 1.7em;
-  z-index: 1;
-  border-radius: 50%;
-margin-left: 100px;
-  animation: translateBackground 120s infinite linear;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+   z-index: 8;
+  
   background: url("../systems/exoplanettextures/barren.jpg") repeat-x;
   background-size: 200% 100%; 
   
@@ -205,8 +207,8 @@ margin-left: 100px;
 }
 .Molten-world {
   background-color: red;
-  width: 2em;
-  height: 2em;
+ width: 2em;
+  height: 2em; 
   z-index: 1;
   border-radius: 50%;
   margin-bottom: 200px;
@@ -230,42 +232,46 @@ margin-left: 100px;
 /* orbits of miniplanets */
 
 
-.orbitContainer {
-  
-  width:var(--size);
-  height:var(--size);
- position: absolute;
-  
- left: 50%;
- top: 50%;
- -webkit-transform: translate(-50%, -50%);
- transform: translate(-50%, -50%);
-  animation: spin var(--speed) linear infinite, translateBackground 100s infinite linear; 
-  transform:rotate(0) translate(var(--orbitSize)) rotate(0);
+.a1 {
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+
+ 
+  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
  
 }
-@keyframes spin {
-  100% {
-    transform:rotate(1turn) translate(var(--orbitSize)) rotate(-1turn);
+@keyframes venusOrbit {
+  from {
+    transform: rotate(0deg) translateX(9.5rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(9.5rem) rotate(-360deg);
   }
 }
-.a1 {
-  --speed:1s; 
-  --orbitSize:1rem;
-  --size: 12rem;
-  z-index: 9;
-}
 .a2 {
-  --speed:1s;
-  --orbitSize:2rem;
-  --size: 18rem;
-  z-index: 8;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
 }
 .a3 {
-  --speed:1s;
-  --orbitSize:3rem;
-  --size: 20rem;
-  z-index: 7;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
 }
 .a4 {
   --speed:1s;
