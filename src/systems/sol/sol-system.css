@@ -13,8 +13,8 @@
   height: calc(2 * var(--radius));
   border-radius: 50%;
   animation: translateBackground 120s infinite linear;
-  background: url("../../planetTextures/sun.jpg") repeat-x;
-  background-size: 200% 100%;
+  background: url("../../planetTextures/sun.png") repeat-x;
+  background-size: cover;
   transform: rotate(0deg);
   transition: transform 0.7s linear;
 }
@@ -72,10 +72,10 @@
 }
 @keyframes venusOrbit {
   from {
-    transform: rotate(0deg) translateX(9rem) rotate(0deg);
+    transform: rotate(0deg) translateX(9.5rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(9rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(9.5rem) rotate(-360deg);
   }
 }
 .earthMini {
@@ -120,7 +120,7 @@
   }
 }
 .juipterMini {
-  --radius: 3.4rem;
+  --radius: 3.2rem;
   position: absolute;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
@@ -134,10 +134,10 @@
 }
 @keyframes juipterOrbit {
   from {
-    transform: rotate(0deg) translateX(20rem) rotate(0deg);
+    transform: rotate(0deg) translateX(21rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(20rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(21rem) rotate(-360deg);
   }
 }
 .saturnMini {
