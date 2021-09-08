@@ -40,7 +40,7 @@
   height: calc(2 * var(--radius));
   background: url("../../planetTextures/earth.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: circular 2s linear infinite, translateBackground 50s infinite linear;
+  animation: circular 66s linear infinite, translateBackground 50s infinite linear;
 }
 .marsMini {
   width: 2em;
@@ -62,7 +62,7 @@
   z-index: 9;
   background: url("../../planetTextures/mercury.jpg") repeat-x;
   background-size: 100% 100%;
-   animation: circular 2s linear infinite, translateBackground 55s infinite linear;
+   animation: circular 66s linear infinite, translateBackground 55s infinite linear;
 /* make this centered */
  
 }
@@ -71,11 +71,12 @@
   border-radius: 50%;
 
  position: absolute;
+ --size: 1rem;
   --radius: 1rem;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
+  width: calc(2 * var(--size));
+  height: calc(2 * var(--size));
   z-index: 8;
   background: url("../../planetTextures/venus.jpg") repeat-x;
   background-size: 100% 100%;

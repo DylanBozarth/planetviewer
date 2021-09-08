@@ -19,16 +19,16 @@ export const SolSystem = () => {
 
   return (
     <div className="sol-system-master">
-      <div className="sun">Sun</div>
+      <div className="sun"></div>
 
      <MiniPlanet name="Mercury" className="mercuryMini"></MiniPlanet>
       <MiniPlanet name="Venus" className="venusMini"></MiniPlanet>
         <MiniPlanet name="Earth" className="earthMini"></MiniPlanet>
-
-
-         
-          
-         
+        <MiniPlanet name="Mars" className="marsMini"></MiniPlanet>
+        <MiniPlanet name="Juipter" className="juipterMini"></MiniPlanet>
+        <MiniPlanet name="Saturn" className="saturnMini"></MiniPlanet>
+        <MiniPlanet name="Uranus" className="uranusMini"></MiniPlanet>
+        <MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet>
         
        
       
