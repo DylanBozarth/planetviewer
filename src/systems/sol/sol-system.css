@@ -2,8 +2,8 @@
   text-align: center;
 }.sun {
   background-size: cover;
-  box-shadow: 1px 1px 105px firebrick;
-  box-shadow: 1px 1px 85px goldenrod;
+  box-shadow: 1px 1px 155px firebrick;
+  box-shadow: 1px 1px 120px goldenrod;
 
   position: absolute;
   --radius: 6rem;
@@ -48,10 +48,10 @@
 }
 @keyframes mercuryOrbit {
   from {
-    transform: rotate(0deg) translateX(7rem) rotate(0deg);
+    transform: rotate(0deg) translateX(7.2rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(7rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(7.2rem) rotate(-360deg);
   }
 }
 
@@ -151,7 +151,7 @@
   animation: translateBackground 75s infinite linear;
   background: url("../../planetTextures/saturnstatic.png");
   background-size: 100% 100%;
-  animation: saturnOrbit 55s linear infinite;
+  animation: saturnOrbit 85s linear infinite;
 }
 @keyframes saturnOrbit {
   from {
@@ -173,7 +173,7 @@
   animation: translateBackground 75s infinite linear;
   background: url("../../planetTextures/uranus.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: uranusOrbit 85s linear infinite, translateBackground 50s infinite linear;
+  animation: uranusOrbit 95s linear infinite, translateBackground 50s infinite linear;
 }
 
 @keyframes uranusOrbit {
@@ -199,10 +199,10 @@
 }
 @keyframes neptuneOrbit {
   from {
-    transform: rotate(0deg) translateX(41rem) rotate(0deg);
+    transform: rotate(0deg) translateX(44rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(41rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(44rem) rotate(-360deg);
   }
 }
 /* end of miniplanets */
