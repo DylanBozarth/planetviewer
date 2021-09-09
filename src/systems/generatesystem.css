@@ -242,10 +242,10 @@ z-index: -1;
    height: calc(2 * var(--size));
 
  
-  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
+  animation: a1Orbit 103s linear infinite, translateBackground 65s infinite linear;
  
 }
-@keyframes venusOrbit {
+@keyframes a1Orbit {
   from {
     transform: rotate(0deg) translateX(9.5rem) rotate(0deg);
   }
@@ -261,7 +261,15 @@ z-index: -1;
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
-  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
+  animation: a2Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a2Orbit {
+  from {
+    transform: rotate(0deg) translateX(12rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(12rem) rotate(-360deg);
+  }
 }
 .a3 {
   position: absolute;
@@ -271,35 +279,103 @@ z-index: -1;
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
-  animation: venusOrbit 39s linear infinite, translateBackground 65s infinite linear;
+  animation: a3Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a3Orbit {
+  from {
+    transform: rotate(0deg) translateX(14rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(14rem) rotate(-360deg);
+  }
 }
 .a4 {
-  --speed:1s;
-  --orbitSize:4rem;
-  --size: 22rem;
-  z-index: 6;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: a4Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a4Orbit {
+  from {
+    transform: rotate(0deg) translateX(17rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(17rem) rotate(-360deg);
+  }
 }
 .a5 {
-  --speed:1s;
-  --orbitSize:7rem;
-  --size: 35rem;
-  z-index: 5;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: a5Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a5Orbit {
+  from {
+    transform: rotate(0deg) translateX(20rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(20rem) rotate(-360deg);
+  }
 }
 .a6 {
-  --speed:1s;
-  --orbitSize:8rem;
-  --size: 45rem;
-  z-index: 4;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: a6Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a6Orbit {
+  from {
+    transform: rotate(0deg) translateX(24rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(24rem) rotate(-360deg);
+  }
 }
 .a7 {
-  --speed:1s;
-  --orbitSize:9rem;
-  --size: 55rem;
-  z-index: 3;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: a7Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a7Orbit {
+  from {
+    transform: rotate(0deg) translateX(27rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(27rem) rotate(-360deg);
+  }
 }
 .a8 {
-  --speed:1s;
-  --orbitSize:11rem;
-  --size: 55rem;
-  z-index: 2;
+  position: absolute;
+  --size: 3rem;
+   --radius: 1rem;
+   top: calc(50% - var(--radius));
+   left: calc(50% - var(--radius));
+   width: calc(2 * var(--size));
+   height: calc(2 * var(--size));
+  animation: a8Orbit 3s linear infinite, translateBackground 65s infinite linear;
+}
+@keyframes a8Orbit {
+  from {
+    transform: rotate(0deg) translateX(30rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(30rem) rotate(-360deg);
+  }
 }

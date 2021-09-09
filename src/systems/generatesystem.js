@@ -150,7 +150,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     return Math.floor(Math.random() * 5 + 3);
   }
   let randomPlanetIndex = () => {
-   return Math.floor(Math.random() * 56 + 1)
+   return Math.floor(Math.random() * 56 )
   }
   let randomPositionIndex = () => {
     return Math.floor(Math.random() * 8 + 1)
