@@ -10,9 +10,9 @@ export const Earth = () => {
            
               <div className="earthBall">
                
-                 
+                 <div className="planetClouds"></div> 
               </div>
-           <div className="planetClouds"></div> 
+           
           </div>
                 
                
