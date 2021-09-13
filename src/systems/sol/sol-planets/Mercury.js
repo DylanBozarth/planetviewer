@@ -1,5 +1,25 @@
+import { PlanetView } from "../../../components/planetview"
 export const Mercury = () => {
     return (
-        <div>1</div>
+        <div className="earthView container-fluid text-center">
+        <div className="row">
+            <div className="col-lg-4 sidePlanetView"><PlanetView name="Earf"></PlanetView></div>
+            
+            <div className="col-lg-8 planetWrapper">  
+       
+          <div className="mercuryBall">
+           
+          </div>
+       
+      </div>
+            
+           
+        </div>
+        
+        
+        
+        
+        
+        </div>
     )
 }

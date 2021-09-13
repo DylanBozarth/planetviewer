@@ -9,17 +9,38 @@ padding: 20px;
   border-radius: 5px;
   margin-top: 10rem;
 }
+.planetWrapper {
+  text-align:center;
+  height: 100vh;
+   
+}
+/* Mercury */
+.mercuryBall {
+  width:600px;
+  height:600px;
+  border-radius: 50%;
+  animation: translateBackground 88s infinite linear;  
+  background:url("../../../planetTextures/mercuryHighRes.jpg") repeat-x;
+ background-size: cover;
+margin-top: 4rem;
+  z-index: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* End Mercury */
 /* Earth */
 .earthView {
 min-height: 100vh;
 min-width: 100vw;
+height: 100vh;
+width: 100vw;
 }
 .sidePlanetView {
  text-align: center;
 }
-.planetWrapper {
-   margin-top: -3rem;
-}
+
 .earthBall {
     width:1000px;
     height:1000px;
@@ -30,6 +51,7 @@ min-width: 100vw;
   position: absolute;
     border-radius:50%;
     z-index: 1;
+    margin-top: -2rem;
     box-shadow: -200px black;
 }
  .planetClouds{
@@ -40,8 +62,8 @@ min-width: 100vw;
     height: 1000px;
 position: absolute;
   top: 0;
-    animation: translateBackground 160s infinite linear;
-    opacity: 0.4;
+    animation: translateBackground 55s infinite linear;
+    opacity: 0.6;
     z-index: 2
   }
 /* End earth */
