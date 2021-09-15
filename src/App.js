@@ -30,7 +30,7 @@ console.log('worked')
   const location = useLocation();
   return (
     <div>
-      <Navigation /> {" "}<AnimatePresence className="App" exitBeforeEnter={true}>
+     {/*} <Navigation /> */} {" "}<AnimatePresence className="App" exitBeforeEnter={true}>
       <Switch location={location} key={location.pathname}>
       <Route
               exact
