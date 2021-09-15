@@ -12,12 +12,14 @@ padding: 20px;
 .planetWrapper {
   text-align:center;
   height: 100vh;
+   padding-left: 10rem;
    
 }
+/* small 30em, medium 45em, large */ 
 /* Mercury */
 .mercuryBall {
-  width:600px;
-  height:600px;
+  width:30em;
+  height:30em;
   border-radius: 50%;
   animation: translateBackground 88s infinite linear;  
   background:url("../../../planetTextures/mercuryHighRes.jpg") repeat-x;
@@ -28,7 +30,33 @@ margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
 }
-
+/* venus */
+.venusBall {
+  width:30em;
+  height:30em;
+  border-radius: 50%;
+  animation: translateBackground 88s infinite linear;  
+  background:url("../../../planetTextures/venusHighRes.jpg") repeat-x;
+ background-size: cover;
+margin-top: 4rem;
+  z-index: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.venusClouds {
+  background:url(../../../planetTextures/clouds.png) repeat-x;
+  background-size: 100% 100%;
+  border-radius:50%;
+  width: 30em; 
+  height: 30em;
+position: absolute;
+top: 0;
+  animation: translateBackground 55s infinite linear;
+  opacity: 0.6;
+  z-index: 2
+}
+/* end venus */
 /* End Mercury */
 /* Earth */
 .earthView {
@@ -42,24 +70,23 @@ width: 100vw;
 }
 
 .earthBall {
-    width:1000px;
-    height:1000px;
+    width:45em;
+    height:45em;
     border-radius: 50%;
     animation: translateBackground 125s infinite linear;  
     background:url("../../../planetTextures/earthHighRes.jpg") repeat-x;
-   background-size: 100% 90%;
+   background-size: 100% 100%;
   position: absolute;
     border-radius:50%;
     z-index: 1;
-    margin-top: -2rem;
-    box-shadow: -200px black;
+    margin-top: 1rem;
 }
  .planetClouds{
     background:url(../../../planetTextures/clouds.png) repeat-x;
-    background-size: 100% 90%;
+    background-size: 100% 100%;
     border-radius:50%;
-    width: 1000px; 
-    height: 1000px;
+    width: 45em; 
+    height: 45em;
 position: absolute;
   top: 0;
     animation: translateBackground 55s infinite linear;
