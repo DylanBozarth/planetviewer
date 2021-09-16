@@ -16,6 +16,15 @@ padding: 20px;
    
 }
 /* small 30em, medium 45em, large */ 
+.earthView {
+min-height: 100vh;
+min-width: 100vw;
+height: 100vh;
+width: 100vw;
+}
+.sidePlanetView {
+ text-align: center;
+}
 /* Mercury */
 .mercuryBall {
   width:30em;
@@ -59,15 +68,7 @@ top: 0;
 /* end venus */
 /* End Mercury */
 /* Earth */
-.earthView {
-min-height: 100vh;
-min-width: 100vw;
-height: 100vh;
-width: 100vw;
-}
-.sidePlanetView {
- text-align: center;
-}
+
 
 .earthBall {
     width:45em;
@@ -94,3 +95,75 @@ position: absolute;
     z-index: 2
   }
 /* End earth */
+/* mars */
+
+.marsBall {
+  width:35em;
+  height:35em;
+  border-radius: 50%;
+  animation: translateBackground 125s infinite linear;  
+  background:url("../../../planetTextures/marsHighRes.jpg") repeat-x;
+ background-size: 100% 100%;
+position: absolute;
+  border-radius:50%;
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+/* end mars */
+/* juipter start */
+.juipterBall {
+  width:65em;
+  height:65em;
+  border-radius: 50%;
+  animation: translateBackground 125s infinite linear;  
+  background:url("../../../planetTextures/juipterHighRes.jpg") repeat-x;
+ background-size: 100% 100%;
+position: absolute;
+  border-radius:50%;
+  z-index: 1;
+  margin-top: -5rem;
+}
+
+/* end juipter */
+/* saturn */ 
+.saturnBall {
+  width:52em;
+  height:52em;
+  border-radius: 50%;
+  animation: translateBackground 125s infinite linear;  
+  background:url("../../../planetTextures/saturnHighRes.jpg") repeat-x;
+ background-size: 100% 100%;
+position: absolute;
+  border-radius:50%;
+  z-index: 1;
+  margin-top: -3rem;
+}
+/* end saturn */
+/* Uranus */
+.uranusBall {
+  width:45em;
+  height:45em;
+  border-radius: 50%;
+  animation: translateBackground 125s infinite linear;  
+  background:url("../../../planetTextures/uranusHighRes.png") repeat-x;
+ background-size: 100% 100%;
+position: absolute;
+  border-radius:50%;
+  z-index: 1;
+}
+
+/* end uranurs */ 
+/* neptune */
+.neptuneBall {
+  width: 41em;
+  height:41em;
+  border-radius: 50%;
+  animation: translateBackground 125s infinite linear;  
+  background:url("../../../planetTextures/neptuneHighRes.jpg") repeat-x;
+ background-size: 100% 100%;
+position: absolute;
+  border-radius:50%;
+  z-index: 1;
+}
+/* end neptune */
