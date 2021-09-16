@@ -154,7 +154,7 @@
   background: url("../../planetTextures/juipter.jpg") repeat-x;
   background-size: 100% 100%;
   animation: juipterOrbit 75s linear infinite, translateBackground 50s infinite linear;
-  animation-delay: -25s;
+  animation-delay: -55s;
 }
 @keyframes juipterOrbit {
   from {
@@ -176,7 +176,7 @@
   background: url("../../planetTextures/saturnstatic.png");
   background-size: 100% 100%;
   animation: saturnOrbit 85s linear infinite;
-  animation-delay: -65s;
+  animation-delay: -45s;
 }
 @keyframes saturnOrbit {
   from {
@@ -199,7 +199,7 @@
   background: url("../../planetTextures/uranus.jpg") repeat-x;
   background-size: 100% 100%;
   animation: uranusOrbit 95s linear infinite, translateBackground 50s infinite linear;
-  animation-delay: -75s;
+  animation-delay: -165s;
 }
 
 @keyframes uranusOrbit {
