@@ -3,12 +3,12 @@ export const Saturn = () => {
     return (
         <div className="earthView container-fluid text-center">
         <div className="row">
-            <div className="col-lg-4 sidePlanetView"><PlanetView name="Mars"></PlanetView></div>
+            <div className="col-lg-4 sidePlanetView"><PlanetView name="Saturn"></PlanetView></div>
             
             <div className="col-lg-8 planetWrapper">  
        
           <div className="saturnBall">
-          
+          <div className="rings"></div>
           </div>
           
       </div>

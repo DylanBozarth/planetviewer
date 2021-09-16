@@ -139,6 +139,19 @@ position: absolute;
   z-index: 1;
   margin-top: -3rem;
 }
+.rings {
+  position: absolute;
+background-color: green;
+z-index: 2;
+background-size: 100% 100%;
+border-radius: 50%;
+width: 69em; 
+height: 2em;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
 /* end saturn */
 /* Uranus */
 .uranusBall {

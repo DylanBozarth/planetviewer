@@ -25,7 +25,7 @@ export const SolSystem = () => {
       <MiniPlanet name="Venus" className="venusMini"></MiniPlanet>
         <MiniPlanet name="Earth" className="earthMini"></MiniPlanet>
         <MiniPlanet name="Mars" className="marsMini"></MiniPlanet>
-        <MiniPlanet name="Asteroid-Belt" className="asteroidBelt"></MiniPlanet>
+        {/*<MiniPlanet name="Asteroid-Belt" className="asteroidBelt"></MiniPlanet> */}
         <MiniPlanet name="Juipter" className="juipterMini"></MiniPlanet>
         <MiniPlanet name="Saturn" className="saturnMini"></MiniPlanet>
         <MiniPlanet name="Uranus" className="uranusMini"></MiniPlanet>

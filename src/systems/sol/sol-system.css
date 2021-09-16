@@ -116,10 +116,10 @@
 }
 @keyframes marsOrbit {
   from {
-    transform: rotate(0deg) translateX(16rem) rotate(0deg);
+    transform: rotate(0deg) translateX(17rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(16rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(17rem) rotate(-360deg);
   }
 }
 .asteroidBelt {
@@ -136,10 +136,10 @@
 }
 @keyframes asteroidBeltOrbit {
   from {
-    transform: rotate(0deg) translateX(19rem) rotate(0deg);
+    transform: rotate(0deg) translateX(20rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(19rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(20rem) rotate(-360deg);
   }
 }
 .juipterMini {
@@ -158,10 +158,10 @@
 }
 @keyframes juipterOrbit {
   from {
-    transform: rotate(0deg) translateX(21rem) rotate(0deg);
+    transform: rotate(0deg) translateX(25rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(21rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(25rem) rotate(-360deg);
   }
 }
 .saturnMini {
@@ -180,10 +180,10 @@
 }
 @keyframes saturnOrbit {
   from {
-    transform: rotate(0deg) translateX(29rem) rotate(0deg);
+    transform: rotate(0deg) translateX(31rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(29rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(31rem) rotate(-360deg);
   }
 }
 
