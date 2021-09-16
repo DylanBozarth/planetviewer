@@ -122,6 +122,26 @@
     transform: rotate(360deg) translateX(16rem) rotate(-360deg);
   }
 }
+.asteroidBelt {
+  --radius: .85rem;
+  position: absolute;
+  top: calc(50% - var(--radius));
+  left: calc(50% - var(--radius));
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
+  animation: translateBackground 75s infinite linear;
+ background-color: brown;
+  animation: marsOrbit 55s linear infinite, translateBackground 50s infinite linear;
+  animation-delay: -35s;
+}
+@keyframes asteroidBeltOrbit {
+  from {
+    transform: rotate(0deg) translateX(19rem) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(19rem) rotate(-360deg);
+  }
+}
 .juipterMini {
   --radius: 3.2rem;
   position: absolute;
@@ -218,28 +238,4 @@
   left: 50%;
 }
 
-@keyframes circular2 {
-  from {
-    transform: rotate(0deg) translateX(5rem) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(5rem) rotate(-360deg);
-  }
-}
-@keyframes circular {
-  from {
-    transform: rotate(0deg) translateX(20rem) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(20rem) rotate(-360deg);
-  }
-}
-/* orbits */
-.orbit1 {
-  position: absolute;
-  --radius: 8rem;
-  top: calc(50% - var(--radius));
-  left: calc(50% - var(--radius));
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-}
+
