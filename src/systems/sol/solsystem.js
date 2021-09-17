@@ -16,9 +16,9 @@ export const MiniPlanet = (props) => {
 function RandomNum() {
     return Math.floor(Math.random() * 3 );
   }
-  let timeArray = [1, 5, 9]
+ 
   const pagetransition = {
-  duration: timeArray[RandomNum()],
+  duration: 1.5
 };
 export const SolSystem = () => {
   useEffect(() => {
@@ -27,15 +27,24 @@ export const SolSystem = () => {
 const FadeIn = {
   in: {
     opacity: 1,
-    duration: timeArray[RandomNum()]
+    duration: RandomNum()
   },
   out: {
     opacity: 0,
   },
 };  
+/* sun effects */
+const zoomOut = {
+  in: {
+    x: 0
+  },
+  out: {
+    y: '-1000px'
+  }
+}
   return (
-    <motion.div  className="sol-system-master">
-      <div className="sun"></div>
+    <motion.div initial="in" animate="in" exit="out" variants={zoomOut}   className="sol-system-master">
+      <div className="sun"  ></div>
 
      <motion.div initial="out"
     animate="in"
