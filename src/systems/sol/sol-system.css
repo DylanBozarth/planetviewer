@@ -204,10 +204,10 @@
 
 @keyframes uranusOrbit {
   from {
-    transform: rotate(0deg) translateX(36rem) rotate(0deg);
+    transform: rotate(0deg) translateX(38.5rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(36rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(38.5rem) rotate(-360deg);
   }
 }
 .neptuneMini {
