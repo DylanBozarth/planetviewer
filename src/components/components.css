@@ -1,3 +1,8 @@
 .miniPlanetName {
     color: red;
 }
+.planetViewBack {
+    color: white;
+    font-size:2vh;
+    font-weight:bolder;
+}

@@ -18,7 +18,7 @@ function RandomNum() {
   }
  
   const pagetransition = {
-  duration: 1.5
+  duration: 1.1
 };
 export const SolSystem = () => {
   useEffect(() => {
@@ -39,7 +39,7 @@ const zoomOut = {
     x: 0
   },
   out: {
-    y: '-1000px'
+   opacity: 0
   }
 }
   return (
