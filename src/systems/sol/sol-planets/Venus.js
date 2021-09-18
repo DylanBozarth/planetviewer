@@ -26,9 +26,9 @@ export const Venus = () => {
             <div className="col-lg-8 planetWrapper">  
        
           <div className="venusBall">
-          <div className="venusClouds"></div>
-          </div>
           
+          </div>
+          <div className="venusClouds"></div>
       </div>
             
            
