@@ -15,7 +15,7 @@ export const Mercury = () => {
         duration: .7
       };
   return (
-    <motion.div className="container-fluid" initial="out"
+    <motion.div  initial="out"
     animate="in"
     exit="out"
     transition={pagetransition}

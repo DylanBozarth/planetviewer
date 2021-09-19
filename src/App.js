@@ -15,6 +15,7 @@ import {Jupiter} from './systems/sol/sol-planets/Jupiter'
 import {Saturn} from './systems/sol/sol-planets/Saturn'
 import {Uranus} from './systems/sol/sol-planets/Uranus'
 import {Neptune} from './systems/sol/sol-planets/Neptune'
+import { Navigation } from "./components/navigation";
 function App() {
   const [starCount, setStarCount] = useState(null)
 //https://www.javascripttutorial.net/web-apis/javascript-sessionstorage/
@@ -30,7 +31,7 @@ console.log('worked')
   const location = useLocation();
   return (
     <div>
-     {/*} <Navigation /> */} {" "}<AnimatePresence className="App" exitBeforeEnter={true}>
+      <Navigation /><AnimatePresence className="App" exitBeforeEnter={true}>
       <Switch location={location} key={location.pathname}>
       <Route
               exact
@@ -64,39 +65,3 @@ console.log('worked')
 }
 
 export default App;
-
-export const Navigation = () => {
-  const [Scan, setScan] = useState("Scanner");
-  const [open, setOpen] = useState("navbar-open");
-  const openNav = () => {
-    setOpen("navbar-open");
-  };
-  const closeNav = () => {
-    setOpen("navbar-closed");
-  };
-  return (
-    <div className="navbar-wrapper">
-      <div className="button-container">
-        {open === "navbar-open" ? (
-          <button onClick={() => closeNav()} className="button btn-success">
-            make small
-          </button>
-        ) : (
-          <button onClick={() => openNav()} className="button btn-success">
-            Make big
-          </button>
-        )}
-      </div>{" "}
-      <nav class={`navbar   ${open}`}>
-        <div className="nav-left">BOX</div>
-        <div className="text-center nav-center">
-          <div className="nav-item">
-            <NavLink to="/interstellar">Interstellar Space</NavLink>
-          </div>
-        </div>
-        <div className="nav-right">BOX</div>
-        <div className="nav-bottom">{Scan}</div>
-      </nav>
-    </div>
-  );
-};
