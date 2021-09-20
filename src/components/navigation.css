@@ -6,6 +6,15 @@
     padding: 1rem;
     z-index: 99;
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.navRow {
+border: 1px solid red;
+flex-direction: flex-center;
+}
 .navIcon {
     width: 50px;
     height: 50px;
