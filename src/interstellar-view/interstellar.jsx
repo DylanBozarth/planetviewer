@@ -113,7 +113,7 @@ export const Interstellar = (props) => {
   return (
     <motion.div variants={viewStar} exit="exit" className="interstellar-space">
       {/*} <div className="top-warp warp"></div> */}
-     <NavLink to="/"><div className="sol-system"></div></NavLink>
+     <NavLink to="/"><div className="sol-system">Our Solar System</div></NavLink>
       <div className="random-placement">{exoStars}</div>
 
       {/*<div className="bottom-warp warp"></div> */}
