@@ -6,13 +6,15 @@
     padding: 1rem;
     z-index: 99;
 }
+.hidden {
+    display: none;
+}
 .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 .navRow {
-border: 1px solid red;
 flex-direction: flex-center;
 }
 .navIcon {
@@ -24,4 +26,8 @@ flex-direction: flex-center;
 .navIcon:hover {
     scale: 1.1;
     cursor: pointer;
+}
+.navTitle {
+    color: red;
+    font-size: 1.5rem;
 }
