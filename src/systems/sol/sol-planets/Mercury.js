@@ -1,7 +1,7 @@
 import { PlanetView } from "../../../components/planetview";
-
+import {useEffect} from 'react'
 import { motion } from "framer-motion";
-export const Mercury = () => {
+export const Mercury = (props) => {
     const FadeIn = {
         in: {
           opacity: 1,
@@ -14,6 +14,9 @@ export const Mercury = () => {
       const pagetransition = {
         duration: .7
       };
+      useEffect(() => {
+        
+      })
   return (
     <motion.div  initial="out"
     animate="in"

@@ -19,9 +19,10 @@ function RandomNum() {
   const pagetransition = {
   duration: 1.1
 };
-export const SolSystem = () => {
+export const SolSystem = (props) => {
   useEffect(() => {
-    console.log(RandomNum())
+    
+    console.log(props.area)
   });
 const FadeIn = {
   in: {
