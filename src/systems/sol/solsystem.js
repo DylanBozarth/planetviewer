@@ -1,5 +1,4 @@
 import "./sol-system.css";
-import { gsap } from "gsap";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";

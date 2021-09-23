@@ -254,6 +254,7 @@ z-index: -1;
 
  
   animation: a1Orbit 20s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -6s;
  
 }
 @keyframes a1Orbit {
@@ -273,6 +274,7 @@ z-index: -1;
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a2Orbit 29s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -14s;
 }
 @keyframes a2Orbit {
   from {
@@ -291,6 +293,7 @@ z-index: -1;
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a3Orbit 34s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -25s;
 }
 @keyframes a3Orbit {
   from {
@@ -308,7 +311,8 @@ z-index: -1;
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
-  animation: a4Orbit 3s linear infinite, translateBackground 65s infinite linear;
+  animation: a4Orbit 39s linear infinite, translateBackground 65s infinite linear;
+ 
 }
 @keyframes a4Orbit {
   from {
@@ -327,6 +331,7 @@ z-index: -1;
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a5Orbit 45s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -15s;
 }
 @keyframes a5Orbit {
   from {
@@ -345,6 +350,7 @@ z-index: -1;
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a6Orbit 64s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -23s;
 }
 @keyframes a6Orbit {
   from {
@@ -363,6 +369,7 @@ z-index: -1;
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a7Orbit 69s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -10s;
 }
 @keyframes a7Orbit {
   from {
@@ -381,6 +388,7 @@ z-index: -1;
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a8Orbit 95s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -25s;
 }
 @keyframes a8Orbit {
   from {

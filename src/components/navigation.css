@@ -1,27 +1,24 @@
 .navMaster {
     position: absolute;
     right: 0;
-    bottom: 0;
+   top: 0;
     left: 0;
     padding: .15rem;
-    z-index: 99;
-    border: solid 1px grey;
-    background-color: grey;
+    z-index: 97;
     border-radius: 5%;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 .hidden {
     display: none;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 
 .navIcon {
-    width: 50px;
+   width: 100px;
     height: 50px;
     background-image: url('../sample-image.png');
+    background-size: contain;
     border: 1px solid green;
 }
 .navIcon:hover {

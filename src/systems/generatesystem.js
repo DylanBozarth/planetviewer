@@ -4,7 +4,6 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { MiniExoPlanet } from "../components/miniExoPlanet";
 
 import { motion } from "framer-motion";
-import { gsap } from "gsap";
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -18,7 +17,7 @@ export const GenerateSystem = (props) => {
   useEffect(() => {
     
     if (planets) {
-      EnterSystem();
+      
       //Orbit();
     }
   
@@ -51,31 +50,22 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     },
   };
 
- 
-  function ExitSystem() {
-    gsap.to(".generatedSystem", {
-      scaleX: 0.1,
-      scaleY: 0.1,
-      transformOrigin: "center",
-      duration: 3,
-    });
-    setTimeout(() => {
-      props.history.push("/");
-    });
-  }
-  function EnterSystem() {
-    gsap.from(".generatedSystem", {
-      scaleX: 0.1,
-      scaleY: 0.1,
-      transformOrigin: "center",
-      duration: 3,
-    });
-    gsap.to(".generatedSystem", {
-      scaleX: 1,
-      scaleY: 1,
-      transformOrigin: "center",
-      duration: 3,
-    });
+  const FadeIn = {
+    in: {
+      opacity: 1,
+      duration: '1.5s'
+    },
+    out: {
+      opacity: 0,
+    },
+  };  
+  const zoomOut = {
+    in: {
+      x: 0
+    },
+    out: {
+     opacity: 0
+    }
   }
 
   const query = useQuery();
@@ -181,9 +171,8 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
   
 
   return (
-    <motion.div
-      variants={backToInterstellar}
-      exit="leaveSystem"
+    <motion.div 
+    initial="in" animate="in" exit="out" variants={zoomOut}
       className="generatedSystem"
     >
       
