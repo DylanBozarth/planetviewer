@@ -8,6 +8,8 @@
     border-radius: 5%;
     padding-left: 25%;
     padding-right: 10vw;
+    border: 1px solid blue;
+    border-radius: 25%;
 }
 .hidden {
     display: none;
@@ -15,6 +17,7 @@
 
 .currentLocation {
     color: red;
+    font-weight: bolder;
 }
 .navIcon {
    width: 100px;

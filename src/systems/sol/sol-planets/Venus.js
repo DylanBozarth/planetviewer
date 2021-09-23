@@ -1,7 +1,7 @@
 import { PlanetView } from "../../../components/planetview"
-
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-export const Venus = () => {
+export const Venus = (props) => {
     const FadeIn = {
         in: {
           opacity: 1,
@@ -14,6 +14,9 @@ export const Venus = () => {
       const pagetransition = {
         duration: .7
       };
+      useEffect(() => {
+        props.setArea('Venus')
+      })
     return (
         <motion.div initial="out"
         animate="in"
