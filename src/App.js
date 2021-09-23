@@ -43,7 +43,7 @@ function App() {
             exact
             path="/"
             
-            render={(props) => <SolSystem {...props} />}
+            render={(props) => <SolSystem {...props} area={area} setArea={setArea} />}
           />
           <Route
             exact
@@ -55,14 +55,38 @@ function App() {
           path="/planets/:id"
           render={(props) => <GeneratePlanet {...props} />}
         /> */}
-          <Route path="/planets/mercury" area={area} setArea={setArea} component={Mercury} />
-          <Route path="/planets/venus" component={Venus} />
-          <Route path="/planets/earth" component={Earth} />
-          <Route path="/planets/mars" component={Mars} />
-          <Route path="/planets/juipter" component={Jupiter} />
-          <Route path="/planets/saturn" component={Saturn} />
-          <Route path="/planets/uranus" component={Uranus} />
-          <Route path="/planets/neptune" component={Neptune} />
+          <Route
+      path="/planets/mercury"
+      render={props => <Mercury {...props} setArea={setArea} area={area} />}
+    />
+           <Route
+      path="/planets/venus"
+      render={props => <Venus {...props} setArea={setArea} area={area} />}
+    />
+           <Route
+      path="/planets/earth"
+      render={props => <Earth {...props} setArea={setArea} area={area} />}
+    />
+           <Route
+      path="/planets/mars"
+      render={props => <Mars {...props} setArea={setArea} area={area} />}
+    />
+          <Route
+      path="/planets/juipter"
+      render={props => <Jupiter {...props} setArea={setArea} area={area} />}
+    />
+          <Route
+      path="/planets/saturn"
+      render={props => <Saturn {...props} setArea={setArea} area={area} />}
+    />
+           <Route
+      path="/planets/uranus"
+      render={props => <Uranus {...props} setArea={setArea} area={area} />}
+    />
+          <Route
+      path="/planets/neptune"
+      render={props => <Neptune {...props} setArea={setArea} area={area} />}
+    />
         </Switch>
       </AnimatePresence>
     </div>

@@ -13,7 +13,7 @@ export const Navigation = (props) => {
 <div className="row">
 
     <div className="navRow col-sm-4"><div className={hiddenUI ? "navIcon" : 'hidden'}><NavLink to="/interstellar"> Interstellar Space</NavLink></div></div>
-    <div className="navRow col-sm-4">{props.area}</div>
+    <div className="navRow col-sm-4"><div className={hiddenUI ? 'currentLocation' : 'hidden'}>{props.area}</div></div>
     <div className="navRow col-sm-4 "><div className="navIcon text-center right" onClick={() => setHiddenUI(!hiddenUI)}>Toggle UI</div></div>
 </div>
 </div>

@@ -15,7 +15,7 @@ export const Mercury = (props) => {
         duration: .7
       };
       useEffect(() => {
-        
+        props.setArea('Mercury')
       })
   return (
     <motion.div  initial="out"

@@ -13,7 +13,9 @@
     display: none;
 }
 
-
+.currentLocation {
+    color: red;
+}
 .navIcon {
    width: 100px;
     height: 50px;

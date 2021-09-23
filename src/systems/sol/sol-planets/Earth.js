@@ -1,9 +1,9 @@
 import "./planetView.scss";
 import { PlanetView } from "../../../components/planetview";
-
+import {useEffect} from 'react'
 import { motion } from "framer-motion";
 
-export const Earth = () => {
+export const Earth = (props) => {
     const FadeIn = {
         in: {
           opacity: 1,
@@ -15,6 +15,9 @@ export const Earth = () => {
       const pagetransition = {
         duration: .7
       };
+useEffect(() => {
+  props.setArea('Earth')
+})
   return (
     <motion.div initial="out"
     animate="in"
