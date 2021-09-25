@@ -26,6 +26,10 @@
     background-size: contain;
     border: 1px solid green;
 }
+.toggleNav {
+    bottom: 0;
+    position: absolute
+}
 .navIcon:hover {
     scale: 1.1;
     cursor: pointer;
