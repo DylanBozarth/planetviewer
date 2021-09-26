@@ -48,7 +48,7 @@ function App() {
           <Route
             exact
             path="/:id"
-            render={(props) => <GenerateSystem {...props} />}
+            render={(props) => <GenerateSystem {...props} area={area} setArea={setArea} />}
           />
           {/*<Route
           exact

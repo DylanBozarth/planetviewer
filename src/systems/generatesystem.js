@@ -15,7 +15,7 @@ export const GenerateSystem = (props) => {
   }, []);
   
   useEffect(() => {
-    
+    props.setArea(starName)
     if (planets) {
       
       //Orbit();
