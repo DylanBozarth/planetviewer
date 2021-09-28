@@ -37,7 +37,7 @@ function App() {
           <Route
             exact
             path="/interstellar"
-            render={(props) => <Interstellar {...props} />}
+            render={(props) => <Interstellar {...props}  area={area} setArea={setArea}  />}
           />
           <Route
             exact

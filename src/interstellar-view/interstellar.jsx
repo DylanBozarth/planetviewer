@@ -11,7 +11,7 @@ export const Interstellar = (props) => {
     // if (cookies.length === 0) {
     setExoStars(makeStars(RandomNum()));
     EnterSystem();
-   
+   props.setArea('Interstellar Space')
     // }
     // save the results of the first set of this
   }, []);

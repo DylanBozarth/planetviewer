@@ -5,10 +5,11 @@
     left: 0;
     padding: .15rem;
     z-index: 97;
-    border-radius: 5%;
+    border-radius: 2%;
     padding-left: 25%;
     padding-right: 10vw;
-    border: 1px solid blue;
+    background: #191919;
+  box-shadow: 0px 0px 15px 2px #7Cbdbd inset;
     border-radius: 25%;
 }
 .hidden {
@@ -16,15 +17,20 @@
 }
 
 .currentLocation {
-    color: red;
+    color: white;
     font-weight: bolder;
+    margin-top: .5rem;
+    font-size: 1.4rem;
 }
 .navIcon {
    width: 100px;
     height: 50px;
     background-image: url('../sample-image.png');
     background-size: contain;
-    border: 1px solid green;
+    background: #191919;
+    box-shadow: 0px 0px 15px 2px #7Cbdbd inset;
+    border-radius: 25%;
+    text-align: center;
 }
 .toggleNav {
     bottom: 0;
