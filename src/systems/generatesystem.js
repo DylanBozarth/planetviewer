@@ -16,11 +16,8 @@ export const GenerateSystem = (props) => {
   
   useEffect(() => {
     props.setArea(starName)
-    if (planets) {
-      
-      //Orbit();
-    }
-  
+   
+  console.log(starName)
   }, [planets]);
   // orbits 
   /*function Orbit() {
@@ -70,7 +67,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
 
   const query = useQuery();
   const starType = query.get("starType");
-  const starName = query.get("name");
+  const starName = query.get("starName");
   const splitCss = starType.split(" ");
   // making planets
 

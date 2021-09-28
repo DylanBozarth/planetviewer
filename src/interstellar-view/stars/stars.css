@@ -20,17 +20,7 @@
     height: 30px;
     color: white;
 }
-.starLabel {
-text-align: center;
-color: white;
-}
-.star-label:hover {
-    color: white;
-    
-    font-size: 4vh;
-    text-align: center;
-    background-color: black;
-}
+
 /* mini stars on the home page */
 .yellow-dwarf {
     

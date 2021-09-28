@@ -7,13 +7,12 @@ import { useEffect, useState } from "react";
 export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
-    //var cookies = document.cookie
-    // if (cookies.length === 0) {
+   
     setExoStars(makeStars(RandomNum()));
-    EnterSystem();
+    
    props.setArea('Interstellar Space')
-    // }
-    // save the results of the first set of this
+   
+   
   }, []);
 
   // animations
@@ -24,10 +23,6 @@ export const Interstellar = (props) => {
   check if user has already been here? 
    */
  
-  function EnterSystem() {
-    //gsap.to(".top-warp", { y: -1000, duration: 2.7 });
-    //gsap.to(".bottom-warp", { y:1000, duration: 2.7 });
-  }
   // auto generation stuff
   function makeStarName() {
     let r = Math.random().toString(36).substring(7);
@@ -64,7 +59,7 @@ export const Interstellar = (props) => {
       return (
         <div className="starWrapper">
           <Star
-            name={`${makeStarName()}`}
+            starName={`${makeStarName()}`}
             starType={`${starList[Math.floor(Math.random() * 6 + 1)]} ${
               positionList[Math.floor(Math.random() * 9 + 1)]
             }`}
@@ -95,7 +90,7 @@ export const Interstellar = (props) => {
   return (
     <motion.div initial="in" animate="in" exit="out" variants={FadeIn} className="interstellar-space">
       {/*} <div className="top-warp warp"></div> */}
-     <NavLink to="/" className="sol-system"><div className="sol-system"></div></NavLink><p className="star-label">Our sun</p>
+     <NavLink to="/" className="sol-system"><div className="sol-system"></div><p className="starLabel">Our sun</p></NavLink>
       <div className="random-placement">{exoStars}</div>
 
       {/*<div className="bottom-warp warp"></div> */}

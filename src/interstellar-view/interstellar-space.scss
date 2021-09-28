@@ -31,7 +31,13 @@
   background-size: 200% 100%;
   transition: transform 0.7s linear;
 }
-
+.starLabel {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  z-index: 99;
+  margin-top: 2rem;
+  }
 // star positions on the front page
 .planet {
   position: absolute;
