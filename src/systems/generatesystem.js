@@ -50,7 +50,7 @@ export const GenerateSystem = (props) => {
   const query = useQuery();
   const starType = query.get("starType");
   const getTheName = starType.split(' ')
-  const starName = getTheName[0].replace('-', " ") +  " Star"
+  const starName = getTheName[0].replace('-', " ") +  " Star" 
   const splitCss = starType.split(" ");
   // making planets
 
