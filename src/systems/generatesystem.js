@@ -128,14 +128,13 @@ export const GenerateSystem = (props) => {
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
-        <div
-          className={`${positionList[randomPositionIndex()]}`}
-        >
+        <div>
           <MiniExoPlanet
             planetName={`${makePlanetName()}`}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
-           `}
+            
+           `}position={`${positionList[randomPositionIndex()]}`}
           >
             
             {" "}
