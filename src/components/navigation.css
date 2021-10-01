@@ -35,6 +35,9 @@
     color: white;
     text-decoration: none;
 }
+.navButton:hover {
+    color: white;
+}
 .toggleNav {
     bottom: 0;
     position: absolute

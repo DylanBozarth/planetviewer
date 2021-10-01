@@ -90,7 +90,7 @@ export const Interstellar = (props) => {
   return (
     <motion.div initial="in" animate="in" exit="out" variants={FadeIn} className="interstellar-space">
       {/*} <div className="top-warp warp"></div> */}
-     <NavLink to="/" className="sol-system"><div className="sol-system"></div><p className="starLabel">Our sun</p></NavLink>
+     <NavLink to="/" className="sol-system"><div className="sol-system"></div></NavLink>
       <div className="random-placement">{exoStars}</div>
 
       {/*<div className="bottom-warp warp"></div> */}

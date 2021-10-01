@@ -137,7 +137,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     return Math.floor(Math.random() * 5 + 3);
   }
   let randomPlanetIndex = () => {
-   return Math.floor(Math.random() * 56 )
+   return Math.floor(Math.random() * 55 )
   }
   let randomPositionIndex = () => {
     return Math.floor(Math.random() * 8 + 1)
@@ -151,7 +151,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
           <MiniExoPlanet
             planetName={`${makePlanetName()}`}
             label={``}
-            planetType={`${planetTypes[randomPlanetIndex()]} 
+            planetType={`${planetTypes[randomPlanetIndex()] } 
            `}
           >
             

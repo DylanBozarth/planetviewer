@@ -159,8 +159,8 @@ z-index: -1;
 }
 .Frozen-world {
   background-color: white;
-  width: 1.7em;
-  height: 1.7em;
+  width: 2.2em;
+  height: 2.2em;
   z-index: 1;
   margin-bottom: 100px;
   border-radius: 50%;
@@ -171,8 +171,8 @@ z-index: -1;
 }
 .Gas-giant {
   background-color: green;
-  width: 4em;
-  height: 4em;
+  width: 5em;
+  height: 5em;
   z-index: 1;
   margin-right: 150px;
   border-radius: 50%;
@@ -183,8 +183,8 @@ z-index: -1;
 }
 .Ocean-world {
   background-color: blue;
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   z-index: 1;
   margin-bottom: 200px;
   border-radius: 50%;
@@ -195,8 +195,8 @@ z-index: -1;
 }
 .Desert-world {
   background-color: brown;
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   z-index: 1;
   margin: 50px;
   border-radius: 50%;
@@ -207,8 +207,8 @@ z-index: -1;
 }
 .Molten-world {
   background-color: red;
- width: 2em;
-  height: 2em; 
+ width: 1.4em;
+  height: 1.4em; 
   z-index: 1;
   border-radius: 50%;
   margin-bottom: 200px;
@@ -219,13 +219,24 @@ z-index: -1;
 }
 .Toxic-world {
   background-color: red;
-  width: 2em;
-   height: 2em; 
+  width: 2.3em;
+   height: 2.3em; 
    z-index: 1;
    border-radius: 50%;
    margin-bottom: 200px;
    animation: translateBackground 120s infinite linear;
    background: url("../systems/exoplanettextures/lava.jpg") repeat-x;
+   background-size: 200% 100%;
+}
+.Earth-Like-World {
+
+  width: 2.7em;
+   height: 2.7em; 
+   z-index: 1;
+   border-radius: 50%;
+   margin-bottom: 200px;
+   animation: translateBackground 120s infinite linear;
+   background: url("../planetTextures/earthlikeplanet.jpg") repeat-x;
    background-size: 200% 100%;
 }
 .box {
