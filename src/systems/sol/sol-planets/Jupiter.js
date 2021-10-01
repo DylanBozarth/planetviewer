@@ -1,7 +1,7 @@
 import { PlanetView } from "../../../components/planetview";
-
+import {useEffect} from 'react'
 import { motion } from "framer-motion";
-export const Jupiter = () => {
+export const Jupiter = (props) => {
     const FadeIn = {
         in: {
           opacity: 1
@@ -13,6 +13,9 @@ export const Jupiter = () => {
       const pagetransition = {
         duration: .7
       };
+      useEffect(() => {
+        props.setArea('Jupiter')
+      })
   return (
     <motion.div initial="out"
     animate="in"

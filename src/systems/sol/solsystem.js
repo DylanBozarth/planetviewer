@@ -1,5 +1,4 @@
 import "./sol-system.css";
-import { gsap } from "gsap";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -20,9 +19,10 @@ function RandomNum() {
   const pagetransition = {
   duration: 1.1
 };
-export const SolSystem = () => {
+export const SolSystem = (props) => {
   useEffect(() => {
-    console.log(RandomNum())
+    
+    props.setArea('Sol System')
   });
 const FadeIn = {
   in: {

@@ -4,7 +4,6 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { MiniExoPlanet } from "../components/miniExoPlanet";
 
 import { motion } from "framer-motion";
-import { gsap } from "gsap";
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -16,32 +15,11 @@ export const GenerateSystem = (props) => {
   }, []);
   
   useEffect(() => {
-    
-    if (planets) {
-      EnterSystem();
-      //Orbit();
-    }
+    props.setArea(starName)
+   
+  console.log(starName)
+  }, []);
   
-  }, [planets]);
-  // orbits 
-  /*function Orbit() {
-    gsap.set(".wrapper", {xPercent: 0, yPercent: -50, x: 0, y: 0, transformOrigin: "20vw center"});
-
-gsap.to(".wrapper", {rotation: 360, ease: "none", repeat: -1, duration: 3});
-gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-
-  
-  
-  }
-   const perfectOrbit = () => {
-    gsap.set(".wrapper", {
-      xPercent: 0,
-      yPercent: -50,
-      x: 0,
-      y: 0,
-      transformOrigin: "20vw center",
-    })} */
-  //animations
   const backToInterstellar = {
     leaveSystem: {
       scale: 0.01,
@@ -51,36 +29,28 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     },
   };
 
- 
-  function ExitSystem() {
-    gsap.to(".generatedSystem", {
-      scaleX: 0.1,
-      scaleY: 0.1,
-      transformOrigin: "center",
-      duration: 3,
-    });
-    setTimeout(() => {
-      props.history.push("/");
-    });
-  }
-  function EnterSystem() {
-    gsap.from(".generatedSystem", {
-      scaleX: 0.1,
-      scaleY: 0.1,
-      transformOrigin: "center",
-      duration: 3,
-    });
-    gsap.to(".generatedSystem", {
-      scaleX: 1,
-      scaleY: 1,
-      transformOrigin: "center",
-      duration: 3,
-    });
+  const FadeIn = {
+    in: {
+      opacity: 1,
+      duration: '1.5s'
+    },
+    out: {
+      opacity: 0,
+    },
+  };  
+  const zoomOut = {
+    in: {
+      x: 0
+    },
+    out: {
+     opacity: 0
+    }
   }
 
   const query = useQuery();
   const starType = query.get("starType");
-  const starName = query.get("name");
+  const getTheName = starType.split(' ')
+  const starName = getTheName[0].replace('-', " ") +  " Star" 
   const splitCss = starType.split(" ");
   // making planets
 
@@ -145,12 +115,12 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     "Molten-world",
     "Molten-world",
   ];
-  let positionList = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9"];
+  let positionList = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"];
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
   let randomPlanetIndex = () => {
-   return Math.floor(Math.random() * 56 )
+   return Math.floor(Math.random() * 55 )
   }
   let randomPositionIndex = () => {
     return Math.floor(Math.random() * 8 + 1)
@@ -158,14 +128,13 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
-        <div
-          className={`${positionList[randomPositionIndex()]}`}
-        >
+        <div>
           <MiniExoPlanet
             planetName={`${makePlanetName()}`}
             label={``}
-            planetType={`${planetTypes[randomPlanetIndex()]} 
-           `}
+            planetType={`${planetTypes[randomPlanetIndex()] } 
+            
+           `}position={`${positionList[randomPositionIndex()]}`}
           >
             
             {" "}
@@ -181,9 +150,8 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
   
 
   return (
-    <motion.div
-      variants={backToInterstellar}
-      exit="leaveSystem"
+    <motion.div 
+    initial="in" animate="in" exit="out" variants={zoomOut}
       className="generatedSystem"
     >
       

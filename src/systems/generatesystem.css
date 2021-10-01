@@ -1,10 +1,9 @@
 .generatedSystem {
-  min-height: 100vh;
-  min-width: 100vw;
+ 
   overflow: visible;
 }
 
-.yellow-dwarf1 {
+.Yellow-Dwarf1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -20,8 +19,9 @@
   background: url("../planetTextures/sun.png") repeat-x;
   background-size: cover;
   transition: transform 0.7s linear;
+  z-index: 2
 }
-.blue-giant1 {
+.Blue-Giant1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -29,7 +29,7 @@
   background-size: cover;
   box-shadow: 1px 1px 205px blue;
   box-shadow: 1px 1px 155px blueviolet;
-
+  z-index: 2;
   width: 25em;
   height: 25em;
   border-radius: 50%;
@@ -39,7 +39,7 @@
 
   transition: transform 0.7s linear;
 }
-.white-dwarf1 {
+.White-Dwarf1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -53,11 +53,11 @@
   animation: translateBackground 120s infinite linear;
   background: url("../starTextures/white-dwarf.jpg") repeat-x;
   background-size: 200% 100%;
-
+  z-index: 2;
   transition: transform 0.7s linear;
 }
 
-.brown-dwarf1 {
+.Brown-Dwarf1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -72,10 +72,10 @@
   animation: translateBackground 120s infinite linear;
   background: url("../starTextures/brown-dwarf.jpg") repeat-x;
   background-size: 200% 100%;
-z-index: -1;
+  z-index: 2;
   transition: transform 0.7s linear;
 }
-.red-giant1 {
+.Red-Giant1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -89,10 +89,10 @@ z-index: -1;
   animation: translateBackground 120s infinite linear;
   background: url("../starTextures/red-supergiant.jpeg") repeat-x;
   background-size: 200% 100%;
-
+  z-index: 2;
   transition: transform 0.7s linear;
 }
-.red-supergiant1 {
+.Red-Supergiant1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -107,10 +107,10 @@ z-index: -1;
   animation: translateBackground 120s infinite linear;
   background: url("../starTextures/red-supergiant.jpeg") repeat-x;
   background-size: 200% 100%;
-
+  z-index: 2;
   transition: transform 0.7s linear;
 }
-.red-dwarf1 {
+.Red-Dwarf1 {
   width: 25px;
   height: 25px;
   position: absolute;
@@ -126,30 +126,22 @@ z-index: -1;
   animation: translateBackground 120s infinite linear;
   background: url("../starTextures/red-supergiant.jpeg") repeat-x;
   background-size: 200% 100%;
-
+  z-index: 2;
   transition: transform 0.7s linear;
 }
 
 /* exoplanets */
 .Barren-world {
-  position: absolute;
-  --size: 3rem;
-   --radius: 1rem;
-   top: calc(50% - var(--radius));
-   left: calc(50% - var(--radius));
-   width: calc(2 * var(--size));
-   height: calc(2 * var(--size));
-   z-index: 8;
+  
+  
   
   background: url("../systems/exoplanettextures/barren.jpg") repeat-x;
   background-size: 200% 100%; 
   
 }
 .Rocky-world {
-  background-color: brown;
-  width: 1.7em;
-  height: 1.7em;
-  z-index: 1;
+  
+ 
   border-radius: 50%;
   margin-top: 100px;
   animation: translateBackground 120s infinite linear;
@@ -158,11 +150,7 @@ z-index: -1;
   
 }
 .Frozen-world {
-  background-color: white;
-  width: 1.7em;
-  height: 1.7em;
-  z-index: 1;
-  margin-bottom: 100px;
+ 
   border-radius: 50%;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/frozen.png") repeat-x;
@@ -170,23 +158,17 @@ z-index: -1;
  
 }
 .Gas-giant {
-  background-color: green;
-  width: 4em;
-  height: 4em;
-  z-index: 1;
-  margin-right: 150px;
+  
+  
   border-radius: 50%;
+  z-index: 9;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/gas.png") repeat-x;
   background-size: 200% 100%;
  
 }
 .Ocean-world {
-  background-color: blue;
-  width: 2em;
-  height: 2em;
-  z-index: 1;
-  margin-bottom: 200px;
+ 
   border-radius: 50%;
   animation: translateBackground 120s infinite linear;
   background: url("../systems/exoplanettextures/ocean.jpg") repeat-x;
@@ -194,9 +176,7 @@ z-index: -1;
  
 }
 .Desert-world {
-  background-color: brown;
-  width: 2em;
-  height: 2em;
+
   z-index: 1;
   margin: 50px;
   border-radius: 50%;
@@ -207,8 +187,7 @@ z-index: -1;
 }
 .Molten-world {
   background-color: red;
- width: 2em;
-  height: 2em; 
+ 
   z-index: 1;
   border-radius: 50%;
   margin-bottom: 200px;
@@ -219,8 +198,8 @@ z-index: -1;
 }
 .Toxic-world {
   background-color: red;
-  width: 2em;
-   height: 2em; 
+  width: 2.3em;
+   height: 2.3em; 
    z-index: 1;
    border-radius: 50%;
    margin-bottom: 200px;
@@ -228,14 +207,16 @@ z-index: -1;
    background: url("../systems/exoplanettextures/lava.jpg") repeat-x;
    background-size: 200% 100%;
 }
-.box {
-  background-color: blue;
-  width: 100px;
-  height: 70px;
-  color: white;
-  text-align: center;
-  line-height: 70px;
+.Earth-Like-World {
+
+   z-index: 1;
+   border-radius: 50%;
+   margin-bottom: 200px;
+   animation: translateBackground 120s infinite linear;
+   background: url("../planetTextures/earthlikeplanet.jpg") repeat-x;
+   background-size: 200% 100%;
 }
+
 
 
 
@@ -245,7 +226,7 @@ z-index: -1;
 
 .a1 {
   position: absolute;
-  --size: 3rem;
+  --size: 1.2rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
@@ -254,43 +235,47 @@ z-index: -1;
 
  
   animation: a1Orbit 20s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -6s;
  
 }
 @keyframes a1Orbit {
   from {
-    transform: rotate(0deg) translateX(9.5rem) rotate(0deg);
+    transform: rotate(0deg) translateX(5.5rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(9.5rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(5.5rem) rotate(-360deg);
   }
 }
+
 .a2 {
   position: absolute;
-  --size: 3rem;
+  --size: 1rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a2Orbit 29s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -14s;
 }
 @keyframes a2Orbit {
   from {
-    transform: rotate(0deg) translateX(11rem) rotate(0deg);
+    transform: rotate(0deg) translateX(8.5rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(11rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(8.5rem) rotate(-360deg);
   }
 }
 .a3 {
   position: absolute;
-  --size: 3rem;
+  --size: 1.4rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a3Orbit 34s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -25s;
 }
 @keyframes a3Orbit {
   from {
@@ -302,13 +287,14 @@ z-index: -1;
 }
 .a4 {
   position: absolute;
-  --size: 3rem;
+  --size: 1.4rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
-  animation: a4Orbit 3s linear infinite, translateBackground 65s infinite linear;
+  animation: a4Orbit 39s linear infinite, translateBackground 65s infinite linear;
+ 
 }
 @keyframes a4Orbit {
   from {
@@ -320,13 +306,14 @@ z-index: -1;
 }
 .a5 {
    position: absolute;
-  --size: 3rem;
+  --size: 2.2rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a5Orbit 45s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -15s;
 }
 @keyframes a5Orbit {
   from {
@@ -338,13 +325,14 @@ z-index: -1;
 }
 .a6 {
   position: absolute;
-  --size: 3rem;
+  --size: 2rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a6Orbit 64s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -23s;
 }
 @keyframes a6Orbit {
   from {
@@ -356,13 +344,14 @@ z-index: -1;
 }
 .a7 {
   position: absolute;
-  --size: 3rem;
+  --size:1.6rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a7Orbit 69s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -10s;
 }
 @keyframes a7Orbit {
   from {
@@ -374,13 +363,14 @@ z-index: -1;
 }
 .a8 {
   position: absolute;
-  --size: 3rem;
+  --size: 2.4rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
    width: calc(2 * var(--size));
    height: calc(2 * var(--size));
   animation: a8Orbit 95s linear infinite, translateBackground 65s infinite linear;
+  animation-delay: -25s;
 }
 @keyframes a8Orbit {
   from {

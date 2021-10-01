@@ -3,10 +3,10 @@ import "./stars.css";
 import { NavLink } from "react-router-dom";
 export const Star = (props) => {
   return (
-    <NavLink to={`/${props.name}?starType=${props.starType}`}  >
-      
+    <NavLink to={`/${props.starName}?starType=${props.starType}`}  >
+     {/*} <p className={`starLabel`}>{props.starName}</p> */}
       <div className={``} >
-        <div className={`starBall ${props.starType}`}><p className={`star-label`}>{props.name}</p></div>
+        <div className={`starBall ${props.starType}`}></div>
       </div>
     </NavLink>
   );

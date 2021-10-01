@@ -14,8 +14,12 @@
   background-color: purple;
   z-index: 99 !important;
 }
-.star-label {
+.sunLabel {
   color: white;
+  text-align: center;
+ padding-top: 90px;
+ padding-left: 2px;
+  position: absolute
 }
 .sol-system {
   position: absolute;
@@ -33,6 +37,13 @@
   background-size: 200% 100%;
   transition: transform 0.7s linear;
 }
+.starLabel {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  z-index: 99;
+  margin-top: 2rem;
+  }
 // star positions on the front page
 .planet {
   position: absolute;
