@@ -18,26 +18,8 @@ export const GenerateSystem = (props) => {
     props.setArea(starName)
    
   console.log(starName)
-  }, [planets]);
-  // orbits 
-  /*function Orbit() {
-    gsap.set(".wrapper", {xPercent: 0, yPercent: -50, x: 0, y: 0, transformOrigin: "20vw center"});
-
-gsap.to(".wrapper", {rotation: 360, ease: "none", repeat: -1, duration: 3});
-gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.random(20, 60),});
-
+  }, []);
   
-  
-  }
-   const perfectOrbit = () => {
-    gsap.set(".wrapper", {
-      xPercent: 0,
-      yPercent: -50,
-      x: 0,
-      y: 0,
-      transformOrigin: "20vw center",
-    })} */
-  //animations
   const backToInterstellar = {
     leaveSystem: {
       scale: 0.01,
@@ -67,7 +49,8 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
 
   const query = useQuery();
   const starType = query.get("starType");
-  const starName = query.get("starName");
+  const getTheName = starType.split(' ')
+  const starName = getTheName[0].replace('-', " ") +  " Star"
   const splitCss = starType.split(" ");
   // making planets
 
@@ -132,7 +115,7 @@ gsap.to(".a1", {rotation: -360, ease: "none", repeat: -1, duration: gsap.utils.r
     "Molten-world",
     "Molten-world",
   ];
-  let positionList = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9"];
+  let positionList = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"];
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }

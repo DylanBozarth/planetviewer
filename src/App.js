@@ -17,16 +17,9 @@ import { Uranus } from "./systems/sol/sol-planets/Uranus";
 import { Neptune } from "./systems/sol/sol-planets/Neptune";
 import { Navigation } from "./components/navigation";
 function App() {
-  const [starCount, setStarCount] = useState(null);
   const [area, setArea] = useState("test");
-  //https://www.javascripttutorial.net/web-apis/javascript-sessionstorage/
   useEffect(() => {
-    localStorage.setItem("variables", "steve");
-    if (localStorage.getItem("variables") === true) {
-      console.log("worked");
-    } else {
-      console.log("naw");
-    }
+   
   }, []);
   const location = useLocation();
   return (

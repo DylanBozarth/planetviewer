@@ -31,13 +31,13 @@ export const Interstellar = (props) => {
   }
 
   let starList = [
-    "red-giant",
-    "red-supergiant",
-    "blue-giant",
-    "white-dwarf",
-    "yellow-dwarf",
-    "red-dwarf",
-    "brown-dwarf",
+    "Red-Giant",
+    "Red-Supergiant",
+    "Blue-Giant",
+    "White-Dwarf",
+    "Yellow-Dwarf",
+    "Red-Dwarf",
+    "Brown-Dwarf",
   ];
   let positionList = [
     "one",

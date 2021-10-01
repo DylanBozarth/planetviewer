@@ -4,7 +4,7 @@
   overflow: visible;
 }
 
-.yellow-dwarf1 {
+.Yellow-Dwarf1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -21,7 +21,7 @@
   background-size: cover;
   transition: transform 0.7s linear;
 }
-.blue-giant1 {
+.Blue-Giant1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -39,7 +39,7 @@
 
   transition: transform 0.7s linear;
 }
-.white-dwarf1 {
+.White-Dwarf1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -57,7 +57,7 @@
   transition: transform 0.7s linear;
 }
 
-.brown-dwarf1 {
+.Brown-Dwarf1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -75,7 +75,7 @@
 z-index: -1;
   transition: transform 0.7s linear;
 }
-.red-giant1 {
+.Red-Giant1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -92,7 +92,7 @@ z-index: -1;
 
   transition: transform 0.7s linear;
 }
-.red-supergiant1 {
+.Red-Supergiant1 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -110,7 +110,7 @@ z-index: -1;
 
   transition: transform 0.7s linear;
 }
-.red-dwarf1 {
+.Red-Dwarf1 {
   width: 25px;
   height: 25px;
   position: absolute;
