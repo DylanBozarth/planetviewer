@@ -6,7 +6,6 @@ import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence } from "framer-motion";
-import { NavLink } from "react-router-dom";
 import { Mercury } from "./systems/sol/sol-planets/Mercury";
 import { Venus } from "./systems/sol/sol-planets/Venus";
 import { Earth } from "./systems/sol/sol-planets/Earth";
@@ -21,10 +20,13 @@ function App() {
   useEffect(() => {
    
   }, []);
+  var whoosh = new Audio('./sounds/whoosh.wav')
+  var shock = new Audio('./sounds/shock.wav')
+  var beeping = new Audio('./sounds/beeping.wav')
   const location = useLocation();
   return (
     <div>
-      <Navigation area={area} setArea={setArea} />
+      <Navigation area={area} setArea={setArea}  whoosh={whoosh} shock={shock} beeping={beeping} />
       <AnimatePresence className="App" exitBeforeEnter={true}>
         <Switch location={location} key={location.pathname}>
           <Route
