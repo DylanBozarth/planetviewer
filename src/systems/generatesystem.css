@@ -186,7 +186,7 @@
  
 }
 .Molten-world {
-  background-color: red;
+  
  
   z-index: 1;
   border-radius: 50%;
@@ -197,9 +197,7 @@
  
 }
 .Toxic-world {
-  background-color: red;
-  width: 2.3em;
-   height: 2.3em; 
+ 
    z-index: 1;
    border-radius: 50%;
    margin-bottom: 200px;
@@ -306,7 +304,7 @@
 }
 .a5 {
    position: absolute;
-  --size: 2.2rem;
+  --size: 1.8rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
