@@ -32,13 +32,13 @@ function App() {
           <Route
             exact
             path="/interstellar"
-            render={(props) => <Interstellar {...props}  area={area} setArea={setArea}  />}
+            render={(props) => <Interstellar {...props}  area={area} setArea={setArea}  whoosh={whoosh} shock={shock} beeping={beeping}   />}
           />
           <Route
             exact
             path="/"
             
-            render={(props) => <SolSystem {...props} area={area} setArea={setArea} />}
+            render={(props) => <SolSystem {...props} area={area} setArea={setArea}  whoosh={whoosh} shock={shock} beeping={beeping} />}
           />
           <Route
             exact

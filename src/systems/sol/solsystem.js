@@ -50,7 +50,7 @@ const zoomOut = {
     animate="in"
     exit="out"
     transition={pagetransition}
-    variants={FadeIn} ><MiniPlanet name="Mercury"  className="mercuryMini"></MiniPlanet></motion.div>
+    variants={FadeIn} ><MiniPlanet name="Mercury"  className="mercuryMini" ></MiniPlanet></motion.div>
        <motion.div initial="out"
     animate="in"
     exit="out"

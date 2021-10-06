@@ -62,7 +62,8 @@ export const Interstellar = (props) => {
             starName={`${makeStarName()}`}
             starType={`${starList[Math.floor(Math.random() * 6 + 1)]} ${
               positionList[Math.floor(Math.random() * 9 + 1)]
-            }`}
+              
+            }`} 
           ></Star>
           {makeStars(Count - 1)}
         </div>
@@ -90,7 +91,7 @@ export const Interstellar = (props) => {
   return (
     <motion.div initial="in" animate="in" exit="out" variants={FadeIn} className="interstellar-space">
       {/*} <div className="top-warp warp"></div> */}
-     <NavLink to="/" className="sol-system"><div className="sol-system"><p className='sunLabel text-center'>Our Sun</p></div></NavLink>
+     <NavLink to="/" className="sol-system" onClick={() => props.whoosh.play()}><div className="sol-system"><p className='sunLabel text-center'>Our Sun</p></div></NavLink>
       <div className="random-placement">{exoStars}</div>
 
       {/*<div className="bottom-warp warp"></div> */}
