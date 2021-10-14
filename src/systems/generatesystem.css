@@ -304,7 +304,7 @@
 }
 .a5 {
    position: absolute;
-  --size: 1.8rem;
+  --size: 1.6rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
@@ -315,15 +315,15 @@
 }
 @keyframes a5Orbit {
   from {
-    transform: rotate(0deg) translateX(19rem) rotate(0deg);
+    transform: rotate(0deg) translateX(18rem) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(19rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(18rem) rotate(-360deg);
   }
 }
 .a6 {
   position: absolute;
-  --size: 2rem;
+  --size: 1.7rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));
@@ -361,7 +361,7 @@
 }
 .a8 {
   position: absolute;
-  --size: 2.4rem;
+  --size: 2rem;
    --radius: 1rem;
    top: calc(50% - var(--radius));
    left: calc(50% - var(--radius));

@@ -1,7 +1,5 @@
 work in progress- Planet viewing app 
 
-phase 2.5: 
-1.Sounds
 phase 3: 
 1. better ui
 2. labels 
@@ -10,8 +8,6 @@ phase 3:
 
 
 
-little things 
-1. gas giant skin looks bad 
 
 side ideas: 
 1. asteroid belt 
