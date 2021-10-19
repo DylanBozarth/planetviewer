@@ -7,12 +7,9 @@ import { useEffect, useState } from "react";
 export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
-   
     setExoStars(makeStars(RandomNum()));
-    
-   props.setArea('Interstellar Space')
-   
-   
+
+    props.setArea("Interstellar Space");
   }, []);
 
   // animations
@@ -22,7 +19,7 @@ export const Interstellar = (props) => {
   the new transform-origin w the mouse offset relative to the element
   check if user has already been here? 
    */
- 
+
   // auto generation stuff
   function makeStarName() {
     let r = Math.random().toString(36).substring(7);
@@ -62,36 +59,49 @@ export const Interstellar = (props) => {
             starName={`${makeStarName()}`}
             starType={`${starList[Math.floor(Math.random() * 6 + 1)]} ${
               positionList[Math.floor(Math.random() * 9 + 1)]
-              
-            }`} 
+            }`}
           ></Star>
           {makeStars(Count - 1)}
         </div>
       );
     }
   };
-  
+
   const FadeIn = {
     in: {
       opacity: 1,
-      duration: 1.2
+      duration: 1.2,
     },
     out: {
       opacity: 0,
     },
-  };  
+  };
   const zoomOut = {
     in: {
-      x: 0
+      x: 0,
     },
     out: {
-     opacity: 0
-    }
-  }
+      opacity: 0,
+    },
+  };
   return (
-    <motion.div initial="in" animate="in" exit="out" variants={FadeIn} className="interstellar-space">
+    <motion.div
+      initial="in"
+      animate="in"
+      exit="out"
+      variants={FadeIn}
+      className="interstellar-space"
+    >
       {/*} <div className="top-warp warp"></div> */}
-     <NavLink to="/" className="sol-system" onClick={() => props.whoosh.play()}><div className="sol-system"><p className='sunLabel text-center'>Our Sun</p></div></NavLink>
+      <NavLink
+        to="/"
+        className="sol-system"
+        onClick={() => props.whoosh.play()}
+      >
+        <div className="sol-system">
+          <p className="sunLabel text-center">Our Sun</p>
+        </div>
+      </NavLink>
       <div className="random-placement">{exoStars}</div>
 
       {/*<div className="bottom-warp warp"></div> */}
