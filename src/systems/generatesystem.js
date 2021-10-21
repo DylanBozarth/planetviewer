@@ -115,7 +115,7 @@ export const GenerateSystem = (props) => {
     "Molten-world",
     "Molten-world",
   ];
-  let positionList = ["a1", "a3", "a4", "a5", "a6", "a7", "a8"];
+  let positionList = [ "a3", "a4", "a5", "a6", "a7", "a8"];
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
@@ -123,7 +123,7 @@ export const GenerateSystem = (props) => {
    return Math.floor(Math.random() * 55 )
   }
   let randomPositionIndex = () => {
-    return Math.floor(Math.random() * 7)
+    return Math.floor(Math.random() * 6)
   }
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
