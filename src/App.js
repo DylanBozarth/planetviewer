@@ -45,11 +45,11 @@ function App() {
             path="/:id"
             render={(props) => <GenerateSystem {...props} area={area} setArea={setArea} />}
           />
-          {/*<Route
+          <Route
           exact
           path="/planets/:id"
           render={(props) => <GeneratePlanet {...props} />}
-        /> */}
+        /> 
           <Route
       path="/planets/mercury"
       render={props => <Mercury {...props} setArea={setArea} area={area} />}

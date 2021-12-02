@@ -1,8 +1,7 @@
 work in progress- Planet viewing app 
 
 phase 3: 
-1. better ui
-2. labels 
+1. better ui -- possibly sidebar 
 3. scanning and probe features 
 4. good sounds too
 
