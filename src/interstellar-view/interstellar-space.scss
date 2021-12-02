@@ -2,18 +2,7 @@
   min-height: 100vh;
   min-width: 100vw;
 }
-.top-warp {
-  height: 50vh;
-  width: 100vw;
-  background-color: purple;
-  z-index: 99 !important;
-}
-.bottom-warp {
-  height: 50vh;
-  width: 100vw;
-  background-color: purple;
-  z-index: 99 !important;
-}
+
 .sunLabel {
   color: white;
  margin-top: 80px;
@@ -27,7 +16,7 @@
   box-shadow: 1px 1px 105px firebrick;
   box-shadow: 1px 1px 85px goldenrod;
   background-color: red;
-  --radius: 7rem;
+ 
   border-radius: 50%;
   animation: translateBackground 120s infinite linear;
   background: url("../planetTextures/sun.jpg") repeat-x;
