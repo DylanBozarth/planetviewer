@@ -47,7 +47,7 @@ function App() {
           />
           <Route
           exact
-          path="/planets/:id"
+          path="/exoplanets/:id"
           render={(props) => <GeneratePlanet {...props} />}
         /> 
           <Route
