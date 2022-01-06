@@ -57,7 +57,7 @@ export const Interstellar = (props) => {
         <div className="starWrapper">
           <Star
             starName={`${makeStarName()}`}
-            starType={`${starList[Math.floor(Math.random() * 6 + 1)]} ${
+            starType={`${starList[Math.floor(Math.random() * 6 + 2)]} ${
               positionList[Math.floor(Math.random() * 9 + 1)]
             }`}
           ></Star>

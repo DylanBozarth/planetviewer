@@ -82,6 +82,8 @@ function App() {
       path="/planets/neptune"
       render={props => <Neptune {...props} setArea={setArea} area={area} />}
     />
+    <Route path="/test"
+      render={props => <GeneratePlanet {...props} setArea={setArea} area={area} />} />
         </Switch>
       </AnimatePresence>
     </div>

@@ -8,14 +8,10 @@ export const GeneratePlanet = () => {
   return new URLSearchParams(useLocation().search);
   
 }
-useEffect(() => {
-  console.log(planetType, planetName)
-})
-const query = useQuery();
-const planetType = query.get("planetType");
-  const planetName = query.get("name");
 
-  return <div className={planetType}>
+
+
+  return <div className="generatedPlanetView">
   <Sidebar />
   </div>;
 };
