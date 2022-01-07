@@ -5,7 +5,7 @@ Planet view looks bad, should all be the same
 exo planets orbit is wonky for some reason
 
 
-
+Load screenwould be good
 
 phase 3: 
 1. better ui -- possibly sidebar 

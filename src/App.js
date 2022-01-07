@@ -18,12 +18,20 @@ import { Navigation } from "./components/navigation";
 function App() {
   const [area, setArea] = useState("test");
   const [planetParam, setPlanetParam] = useState('')
+const [planetData, setPlanetData] = useState()
   useEffect(() => {
-   
-  }, []);
-  var whoosh = new Audio('./sounds/whoosh.wav')
-  var shock = new Audio('./sounds/shock.wav')
-  var beeping = new Audio('./sounds/beeping.wav')
+    const fetchData = async () => {
+      fetch('/planet-info.json')
+        .then((response) => response.json())
+        .then((result) => {
+          setPlanetData(result.planets)
+        })
+      }
+      fetchData()
+      console.log(`planet data is ${planetData}`)
+    }, []);
+
+ 
   const location = useLocation();
   return (
     <div>
@@ -84,7 +92,7 @@ function App() {
       render={props => <Neptune {...props} setArea={setArea} area={area} />}
     />
     <Route path="/planets/test"
-      render={props => <GeneratePlanet {...props} setArea={setArea} area={area} />} />
+      render={props => <GeneratePlanet {...props} setArea={setArea} area={area} setPlanetParam={setPlanetParam} planetParam={planetParam} />} />
         </Switch>
       </AnimatePresence>
     </div>
