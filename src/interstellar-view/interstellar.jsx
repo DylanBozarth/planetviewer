@@ -96,7 +96,7 @@ export const Interstellar = (props) => {
       <NavLink
         to="/"
         className="sol-system"
-        onClick={() => props.whoosh.play()}
+        
       >
         <div className="sol-system">
           <p className="sunLabel text-center">Our Sun</p>

@@ -17,6 +17,7 @@ import { Neptune } from "./systems/sol/sol-planets/Neptune";
 import { Navigation } from "./components/navigation";
 function App() {
   const [area, setArea] = useState("test");
+  const [planetParam, setPlanetParam] = useState('')
   useEffect(() => {
    
   }, []);
@@ -26,19 +27,19 @@ function App() {
   const location = useLocation();
   return (
     <div>
-      <Navigation area={area} setArea={setArea}  whoosh={whoosh} shock={shock} beeping={beeping} />
+      <Navigation area={area} setArea={setArea}   />
       <AnimatePresence className="App" exitBeforeEnter={true}>
         <Switch location={location} key={location.pathname}>
           <Route
             exact
             path="/interstellar"
-            render={(props) => <Interstellar {...props}  area={area} setArea={setArea}  whoosh={whoosh} shock={shock} beeping={beeping}   />}
+            render={(props) => <Interstellar {...props}  area={area} setArea={setArea}    />}
           />
           <Route
             exact
             path="/"
             
-            render={(props) => <SolSystem {...props} area={area} setArea={setArea}  whoosh={whoosh} shock={shock} beeping={beeping} />}
+            render={(props) => <SolSystem {...props} area={area} setArea={setArea}   planetParam={planetParam} setPlanetParam={setPlanetParam} />}
           />
           <Route
             exact

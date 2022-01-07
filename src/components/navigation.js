@@ -32,7 +32,7 @@ export const Navigation = (props) => {
               <NavLink
                 to="/interstellar"
                 className="navButton"
-                onClick={() => props.whoosh.play()}
+                
               >
                 {" "}
                 Interstellar Space
