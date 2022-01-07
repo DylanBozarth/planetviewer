@@ -20,7 +20,7 @@ function App() {
   const [planetParam, setPlanetParam] = useState('')
 const [planetData, setPlanetData] = useState()
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       fetch('/planet-info.json')
         .then((response) => response.json())
         .then((result) => {

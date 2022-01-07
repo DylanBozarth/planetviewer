@@ -1,4 +1,7 @@
 work in progress- Planet viewing app 
+// currently stuck on: 
+json data
+generated planets 
 
 issues: 
 Planet view looks bad, should all be the same
