@@ -1,17 +1,16 @@
 import "./generatePlanet.css";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
-import { Sidebar } from "../components/sidebar";
-
+import { PlanetView } from "../components/planetview";
 export const GeneratePlanet = () => {
-  function useQuery() {
-  return new URLSearchParams(useLocation().search);
-  
-}
+ 
 
 
 
-  return <div className="generatedPlanetView">
-  <Sidebar />
+  return <div className="generatedPlanetView ">
+   <PlanetView
+            name="Jupiter"
+            description="Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth."
+            moons="79"
+          ></PlanetView>
   </div>;
 };

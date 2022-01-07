@@ -1,6 +1,11 @@
 import './sidebar.css'
-export const Sidebar = () => {
+export const Sidebar = (props) => {
     return (
-        <div>sidebar</div>
+        <div>
+{props.information}
+
+
+
+        </div>
     )
 }
