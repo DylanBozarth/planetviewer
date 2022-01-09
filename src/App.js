@@ -17,82 +17,117 @@ import { Neptune } from "./systems/sol/sol-planets/Neptune";
 import { Navigation } from "./components/navigation";
 function App() {
   const [area, setArea] = useState("test");
-  const [planetParam, setPlanetParam] = useState('')
-const [planetData, setPlanetData] = useState()
+  const [planetParam, setPlanetParam] = useState("");
+  const [planetData, setPlanetData] = useState({});
   useEffect(() => {
-    const fetchData = () => {
-      fetch('/planet-info.json')
-        .then((response) => response.json())
-        .then((result) => {
-          setPlanetData(result.planets)
-        })
-      }
-      fetchData()
-      console.log(`planet data is ${planetData}`)
-    }, []);
+    fetch("/planet-info.json").then(result => {
+      const json = result.json();
+     
+      setPlanetData(json.planets);
+      console.log(planetData)
+    });
+  },[]);
 
- 
   const location = useLocation();
   return (
     <div>
-      <Navigation area={area} setArea={setArea}   />
+      <Navigation area={area} setArea={setArea} />
+      
       <AnimatePresence className="App" exitBeforeEnter={true}>
         <Switch location={location} key={location.pathname}>
           <Route
             exact
             path="/interstellar"
-            render={(props) => <Interstellar {...props}  area={area} setArea={setArea}    />}
+            render={(props) => (
+              <Interstellar {...props} area={area} setArea={setArea} />
+            )}
           />
           <Route
             exact
             path="/"
-            
-            render={(props) => <SolSystem {...props} area={area} setArea={setArea}   planetParam={planetParam} setPlanetParam={setPlanetParam} />}
+            render={(props) => (
+              <SolSystem
+                {...props}
+                area={area}
+                setArea={setArea}
+                planetParam={planetParam}
+                setPlanetParam={setPlanetParam}
+              />
+            )}
           />
           <Route
             exact
             path="/:id"
-            render={(props) => <GenerateSystem {...props} area={area} setArea={setArea} />}
+            render={(props) => (
+              <GenerateSystem {...props} area={area} setArea={setArea} />
+            )}
           />
           <Route
-          exact
-          path="/exoplanets/:id"
-          render={(props) => <GeneratePlanet {...props} />}
-        /> 
+            exact
+            path="/exoplanets/:id"
+            render={(props) => <GeneratePlanet {...props} />}
+          />
           <Route
-      path="/planets/mercury"
-      render={props => <Mercury {...props} setArea={setArea} area={area} />}
-    />
-           <Route
-      path="/planets/venus"
-      render={props => <Venus {...props} setArea={setArea} area={area} />}
-    />
-           <Route
-      path="/planets/earth"
-      render={props => <Earth {...props} setArea={setArea} area={area} />}
-    />
-           <Route
-      path="/planets/mars"
-      render={props => <Mars {...props} setArea={setArea} area={area} />}
-    />
+            path="/planets/mercury"
+            render={(props) => (
+              <Mercury {...props} setArea={setArea} area={area} />
+            )}
+          />
           <Route
-      path="/planets/juipter"
-      render={props => <Jupiter {...props} setArea={setArea} area={area} />}
-    />
+            path="/planets/venus"
+            render={(props) => (
+              <Venus {...props} setArea={setArea} area={area} />
+            )}
+          />
           <Route
-      path="/planets/saturn"
-      render={props => <Saturn {...props} setArea={setArea} area={area} />}
-    />
-           <Route
-      path="/planets/uranus"
-      render={props => <Uranus {...props} setArea={setArea} area={area} />}
-    />
+            path="/planets/earth"
+            render={(props) => (
+              <Earth {...props} setArea={setArea} area={area} />
+            )}
+          />
           <Route
-      path="/planets/neptune"
-      render={props => <Neptune {...props} setArea={setArea} area={area} />}
-    />
-    <Route path="/planets/test"
-      render={props => <GeneratePlanet {...props} setArea={setArea} area={area} setPlanetParam={setPlanetParam} planetParam={planetParam} />} />
+            path="/planets/mars"
+            render={(props) => (
+              <Mars {...props} setArea={setArea} area={area} />
+            )}
+          />
+          <Route
+            path="/planets/juipter"
+            render={(props) => (
+              <Jupiter {...props} setArea={setArea} area={area} />
+            )}
+          />
+          <Route
+            path="/planets/saturn"
+            render={(props) => (
+              <Saturn {...props} setArea={setArea} area={area} />
+            )}
+          />
+          <Route
+            path="/planets/uranus"
+            render={(props) => (
+              <Uranus {...props} setArea={setArea} area={area} />
+            )}
+          />
+          <Route
+            path="/planets/neptune"
+            render={(props) => (
+              <Neptune {...props} setArea={setArea} area={area} />
+            )}
+          />
+          <Route
+            path="/planets/test"
+            render={(props) => (
+              <GeneratePlanet
+                {...props}
+                planetData={planetData}
+                setArea={setArea}
+                area={area}
+                setPlanetParam={setPlanetParam}
+                planetParam={planetParam}
+              />
+            )}
+          />
         </Switch>
       </AnimatePresence>
     </div>
