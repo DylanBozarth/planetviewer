@@ -39,19 +39,17 @@ export const Navigation = (props) => {
               </NavLink>
             </div>
           </div>
-          <div className="navRow col-sm-4">
+          <div className="navRow col-sm-8">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
               {props.area}
             </div>
           </div>
-          <div className="navRow col-sm-4">
-            <div className={hiddenUI ? "currentLocation" : "hidden"}></div>
-          </div>
+          
         </div>
       </motion.div>
       <div className="navRow  ">
         <div
-          className="navIcon text-center toggleNav"
+          className=" text-center toggleNav"
           onClick={() => setHiddenUI(!hiddenUI)}
         >
           Toggle UI

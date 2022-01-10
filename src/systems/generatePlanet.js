@@ -6,7 +6,7 @@ export const GeneratePlanet = (props) => {
   useEffect(() => {
     props.setArea('Testing zone')
     console.log(`planetdata ${props.planetdata}`)
-  })
+  }, [])
   return (
     <div className="generatedPlanetView ">
       <div className="row">

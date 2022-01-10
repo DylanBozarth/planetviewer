@@ -19,33 +19,37 @@
 .currentLocation {
     color: white;
     font-weight: bolder;
-    margin-top: .5rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 1.4rem;
 }
 .navIcon {
    width: 100px;
     height: 50px;
-    background-size: contain;
     border-radius: 25%;
     text-align: center;
     color: white;
     text-decoration: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.navIcon:hover {
+    scale: 1.1;
+    cursor: pointer;
+    
 }
 .navButton {
     color: white;
     text-decoration: none;
 }
 .navButton:hover {
-    color: white;
+    color: darkslateblue;
 }
 .toggleNav {
     bottom: 0;
     position: absolute
 }
-.navIcon:hover {
-    scale: 1.1;
-    cursor: pointer;
-}
+
 .navTitle {
     color: red;
     font-size: 1.5rem;

@@ -18,13 +18,13 @@ import { Navigation } from "./components/navigation";
 function App() {
   const [area, setArea] = useState("test");
   const [planetParam, setPlanetParam] = useState("");
-  const [planetData, setPlanetData] = useState({});
+  const [planetData, setPlanetData] = useState([]);
   useEffect(() => {
     fetch("/planet-info.json").then(result => {
       const json = result.json();
      
       setPlanetData(json.planets);
-      console.log(planetData)
+      
     });
   },[]);
 
