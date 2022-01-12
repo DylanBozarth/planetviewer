@@ -5,7 +5,7 @@ json data
 issues: 
 Planet view looks bad, should all be the same
 exo planets orbit is wonky for some reason
-
+Lets try redux soon
 
 Load screenwould be good
 
