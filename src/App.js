@@ -18,15 +18,7 @@ import { Navigation } from "./components/navigation";
 function App() {
   const [area, setArea] = useState("test");
   const [planetParam, setPlanetParam] = useState("");
-  const [planetData, setPlanetData] = useState([]);
-  useEffect(() => {
-    fetch("/planet-info.json").then(result => {
-      const json = result.json();
-     
-      setPlanetData(json.planets);
-      
-    });
-  },[]);
+ 
 
   const location = useLocation();
   return (
@@ -116,11 +108,11 @@ function App() {
             )}
           />
           <Route
-            path="/planets/test"
+            path="/planets/:id"
             render={(props) => (
               <GeneratePlanet
                 {...props}
-                planetData={planetData}
+               
                 setArea={setArea}
                 area={area}
                 setPlanetParam={setPlanetParam}

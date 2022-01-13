@@ -85,7 +85,7 @@ const zoomOut = {
     variants={FadeIn} > <MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet></motion.div>
         
        
-         <MiniPlanet name="test" onClick={props.setPlanetParam('Mercury')} className="neptuneMini2"></MiniPlanet></motion.div>
+         <MiniPlanet name="Nibiru" onClick={props.setPlanetParam('Nibiru')} className="neptuneMini2"></MiniPlanet></motion.div>
     
   );
 };

@@ -1,5 +1,5 @@
 .generatedPlanetView {
-    border: 5px solid yellow;
+  
     height: 100vh; 
     width: 100vw;
 }
@@ -9,9 +9,7 @@
     width: 100%;
 }
 .generated-planet {
-    width: 100px;
-    height: 100px; 
-    background-color: blue;
+    
     border-radius: 50%;
 }
 /* begin planets */
@@ -28,11 +26,11 @@
     }
     .planetWrapper {
       text-align:center;
-      height: 100vh;
-       padding-left: 10rem;
-       
+     
+       padding-left: 10%;
+       padding-top: 10%
     }
-    /* small 30em, medium 45em, large */ 
+
     .earthView {
     min-height: 100vh;
     min-width: 100vw;
@@ -42,5 +40,13 @@
     .sidePlanetView {
      text-align: center;
     }
-    /* Mercury */
+    /* Niburu */ 
+    .Nibiru {
+width: 400px;
+height: 400px;
+background: url("../planetTextures/Niburu.jpg") repeat-x;
+animation: translateBackground 45s infinite linear;
+  background-size: 150% 150%;
+  border: 2px solid black;
+    }
     
