@@ -23,7 +23,6 @@ export const SolSystem = (props) => {
   useEffect(() => {
     
     props.setArea('Sol System')
-    props.setPlanetParam('test')
   });
 const FadeIn = {
   in: {

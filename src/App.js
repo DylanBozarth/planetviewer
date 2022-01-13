@@ -70,7 +70,7 @@ function App() {
           <Route
             path="/planets/mercury"
             render={(props) => (
-              <Mercury {...props} setArea={setArea} area={area} />
+              <Mercury {...props} setArea={setArea} area={area} planetParam={planetParam} setPlanetParam={setPlanetParam} />
             )}
           />
           <Route
