@@ -45,12 +45,8 @@ const zoomOut = {
   return (
     <motion.div initial="in" animate="in" exit="out" variants={zoomOut}   className="sol-system-master">
       <div className="sun"  ></div>
-
-     <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} onClick={() => props.setPlanetParam('Mercury')} ><MiniPlanet name="Mercury"  className="mercuryMini" ></MiniPlanet></motion.div>
+<div>
+     <MiniPlanet name="Mercury"  className="mercuryMini" onClick={() => props.setPlanetParam('Mercury')}></MiniPlanet></div>
        <motion.div initial="out"
     animate="in"
     exit="out"
@@ -85,7 +81,7 @@ const zoomOut = {
     variants={FadeIn} > <MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet></motion.div>
         
        
-         <MiniPlanet name="Nibiru" onClick={props.setPlanetParam('Nibiru')} className="neptuneMini2"></MiniPlanet></motion.div>
+         <MiniPlanet name="Nibiru" className="neptuneMini2"></MiniPlanet></motion.div>
     
   );
 };

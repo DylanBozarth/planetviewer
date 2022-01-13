@@ -2,10 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export const MiniPlanet = (props) => {
-  var whoosh = new Audio("./sounds/whoosh.wav");
-  var shock = new Audio("./sounds/shock.wav");
+  
   return (
-    <div className={`miniPlanet ${props.planetType}`}>
+    <div className={`miniPlanet ${props.planetType}`} onClick={() => props.setPlanetParam(props.planetName)}>
       <NavLink
         to={`planets/${props.planetName}`}
         onClick={() => props.setPlanetParam(`${props.planetName}`)}

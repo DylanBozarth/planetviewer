@@ -17,7 +17,7 @@ import { Neptune } from "./systems/sol/sol-planets/Neptune";
 import { Navigation } from "./components/navigation";
 function App() {
   const [area, setArea] = useState("test");
-  const [planetParam, setPlanetParam] = useState("");
+  const [planetParam, setPlanetParam] = useState();
  
 
   const location = useLocation();
@@ -59,12 +59,7 @@ function App() {
             path="/exoplanets/:id"
             render={(props) => <GeneratePlanet {...props} />}
           />
-          <Route
-            path="/planets/mercury"
-            render={(props) => (
-              <Mercury {...props} setArea={setArea} area={area} planetParam={planetParam} setPlanetParam={setPlanetParam} />
-            )}
-          />
+          
           <Route
             path="/planets/venus"
             render={(props) => (

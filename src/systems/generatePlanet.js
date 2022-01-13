@@ -7,8 +7,12 @@ export const GeneratePlanet = (props) => {
     props.setArea(`${props.planetParam}`)
     console.log(`planetparam is ${props.planetParam}`)
   }, [])
+  var planetData = {
+    Mercury : { Name: "Mercury", Description: "The smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days.", Moons: "0" },
+    Niburu : { Name : "NIBURU", Description : "evil planet" }
+};
 
-  return (
+   return (
     <div className="generated-planet-view container-fluid text-center">
       <div className="row">
         <div className="col-lg-4 sidePlanetView">
@@ -26,3 +30,6 @@ export const GeneratePlanet = (props) => {
     </div>
   );
 };
+
+
+ 
