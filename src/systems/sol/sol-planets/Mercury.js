@@ -16,8 +16,7 @@ export const Mercury = (props) => {
       };
       useEffect(() => {
         props.setArea('Mercury')
-        props.setPlanetParam('Mercury')
-        console.log(props.planetParam)
+       
       }, [])
   return (
     <motion.div  initial="out"

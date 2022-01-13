@@ -50,17 +50,13 @@ const zoomOut = {
     animate="in"
     exit="out"
     transition={pagetransition}
-    variants={FadeIn} ><MiniPlanet name="Mercury"  className="mercuryMini" ></MiniPlanet></motion.div>
+    variants={FadeIn} onClick={() => props.setPlanetParam('Mercury')} ><MiniPlanet name="Mercury"  className="mercuryMini" ></MiniPlanet></motion.div>
        <motion.div initial="out"
     animate="in"
     exit="out"
     transition={pagetransition}
     variants={FadeIn} ><MiniPlanet name="Venus" className="venusMini"></MiniPlanet></motion.div>
-         <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} ><MiniPlanet name="Earth" className="earthMini"></MiniPlanet></motion.div>
+        <MiniPlanet name="Earth" className="earthMini"></MiniPlanet>
         <motion.div initial="out"
     animate="in"
     exit="out"
@@ -89,7 +85,7 @@ const zoomOut = {
     variants={FadeIn} > <MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet></motion.div>
         
        
-      
-    </motion.div>
+         <MiniPlanet name="test" onClick={props.setPlanetParam('Mercury')} className="neptuneMini2"></MiniPlanet></motion.div>
+    
   );
 };
