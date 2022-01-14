@@ -9,7 +9,6 @@ export const Interstellar = (props) => {
   useEffect(() => {
     setExoStars(makeStars(RandomNum()));
 
-    props.setArea("Interstellar Space");
   }, []);
 
   // animations

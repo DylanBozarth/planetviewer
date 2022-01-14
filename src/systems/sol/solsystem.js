@@ -22,7 +22,7 @@ function RandomNum() {
 export const SolSystem = (props) => {
   useEffect(() => {
     
-    props.setArea('Sol System')
+    props.setSystem('Sol System')
   });
 const FadeIn = {
   in: {
@@ -45,8 +45,14 @@ const zoomOut = {
   return (
     <motion.div initial="in" animate="in" exit="out" variants={zoomOut}   className="sol-system-master">
       <div className="sun"  ></div>
-<div>
-     <MiniPlanet name="Mercury"  className="mercuryMini" onClick={() => props.setPlanetParam('Mercury')}></MiniPlanet></div>
+
+<motion.div initial="out"
+    animate="in"
+    exit="out"
+    transition={pagetransition}
+    variants={FadeIn} >
+      <MiniPlanet name="Mercury"  className="mercuryMini" onClick={() => props.setPlanetParam('Mercury')} />
+      </motion.div>
        <motion.div initial="out"
     animate="in"
     exit="out"

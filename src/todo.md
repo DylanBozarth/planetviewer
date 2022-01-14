@@ -5,7 +5,7 @@ json data
 issues: 
 Planet view looks bad, should all be the same
 exo planets orbit is wonky for some reason
-Lets try redux soon
+3 tier locations for the nav bar
 
 Load screenwould be good
 

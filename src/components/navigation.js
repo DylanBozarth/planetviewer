@@ -35,16 +35,20 @@ export const Navigation = (props) => {
                 
               >
                 {" "}
-                Interstellar Space
+               Milky Way
               </NavLink>
             </div>
           </div>
-          <div className="navRow col-sm-8">
+          <div className="navRow col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
-              {props.area}
+              {props.system}
             </div>
           </div>
-          
+          <div className="navRow col-sm-4">
+            <div className={hiddenUI ? "currentLocation" : "hidden"}>
+              {props.planet}
+            </div>
+          </div>
         </div>
       </motion.div>
       <div className="navRow  ">

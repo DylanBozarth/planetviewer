@@ -16,14 +16,15 @@ import { Uranus } from "./systems/sol/sol-planets/Uranus";
 import { Neptune } from "./systems/sol/sol-planets/Neptune";
 import { Navigation } from "./components/navigation";
 function App() {
-  const [area, setArea] = useState("test");
+  const [system, setSystem] = useState("");
+  const [planet, setPlanet] = useState('')
   const [planetParam, setPlanetParam] = useState();
  
 
   const location = useLocation();
   return (
     <div>
-      <Navigation area={area} setArea={setArea} />
+      <Navigation system={system} setSystem={setSystem} planet={planet} setPlanet={setPlanet} />
       
       <AnimatePresence className="App" exitBeforeEnter={true}>
         <Switch location={location} key={location.pathname}>
@@ -31,7 +32,7 @@ function App() {
             exact
             path="/interstellar"
             render={(props) => (
-              <Interstellar {...props} area={area} setArea={setArea} />
+              <Interstellar {...props} system={system} setSystem={setSystem} />
             )}
           />
           <Route
@@ -40,8 +41,8 @@ function App() {
             render={(props) => (
               <SolSystem
                 {...props}
-                area={area}
-                setArea={setArea}
+                system={system}
+                setSystem={setSystem}
                 planetParam={planetParam}
                 setPlanetParam={setPlanetParam}
               />
@@ -51,7 +52,7 @@ function App() {
             exact
             path="/:id"
             render={(props) => (
-              <GenerateSystem {...props} area={area} setArea={setArea} />
+              <GenerateSystem {...props} system={system} setSystem={setSystem} />
             )}
           />
           <Route
@@ -63,43 +64,43 @@ function App() {
           <Route
             path="/planets/venus"
             render={(props) => (
-              <Venus {...props} setArea={setArea} area={area} />
+              <Venus {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
             path="/planets/earth"
             render={(props) => (
-              <Earth {...props} setArea={setArea} area={area} />
+              <Earth {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
             path="/planets/mars"
             render={(props) => (
-              <Mars {...props} setArea={setArea} area={area} />
+              <Mars {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
             path="/planets/juipter"
             render={(props) => (
-              <Jupiter {...props} setArea={setArea} area={area} />
+              <Jupiter {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
             path="/planets/saturn"
             render={(props) => (
-              <Saturn {...props} setArea={setArea} area={area} />
+              <Saturn {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
             path="/planets/uranus"
             render={(props) => (
-              <Uranus {...props} setArea={setArea} area={area} />
+              <Uranus {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
             path="/planets/neptune"
             render={(props) => (
-              <Neptune {...props} setArea={setArea} area={area} />
+              <Neptune {...props} setSystem={setSystem} system={system} />
             )}
           />
           <Route
@@ -108,8 +109,8 @@ function App() {
               <GeneratePlanet
                 {...props}
                
-                setArea={setArea}
-                area={area}
+                setSystem={setSystem}
+                system={system}
                 setPlanetParam={setPlanetParam}
                 planetParam={planetParam}
               />

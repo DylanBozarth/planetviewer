@@ -1,10 +1,10 @@
 import "./generatePlanet.scss";
 import React, { useEffect, useState } from "react";
-import { PlanetView } from "../components/planetview";
 
+import { NavLink } from "react-router-dom";
 export const GeneratePlanet = (props) => {
   useEffect(() => {
-    props.setArea(`${props.planetParam}`)
+    props.setPlanet(`${props.planetParam}`)
     console.log(`planetparam is ${props.planetParam}`)
   }, [])
   var planetData = {
@@ -16,11 +16,12 @@ export const GeneratePlanet = (props) => {
     <div className="generated-planet-view container-fluid text-center">
       <div className="row">
         <div className="col-lg-4 sidePlanetView">
-          <PlanetView
-            name=""
-            description=""
-            moons=""
-          ></PlanetView>
+        <div className="planetView">
+        Name: {props.name} <br />  {props.description}<br />
+ <br /> 
+ Moons: {props.moons} <br />
+<NavLink to="/" className="planetViewBack" onClick={() => props.setPlanetParam('')}>Back to solar view</NavLink>
+    </div>
         </div>
 
         <div className="col-lg-8 planetWrapper">
