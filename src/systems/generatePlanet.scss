@@ -49,4 +49,11 @@ animation: translateBackground 45s infinite linear;
   background-size: 150% 150%;
   border: 2px solid black;
     }
-    
+    .Mercury {
+      width: 400px;
+height: 400px;
+background: url("../planetTextures/mercuryHighRes.jpg") repeat-x;
+animation: translateBackground 45s infinite linear;
+  background-size: 150% 150%;
+  border: 2px solid black;
+    }

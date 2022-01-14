@@ -6,7 +6,6 @@ import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence } from "framer-motion";
-import { Mercury } from "./systems/sol/sol-planets/Mercury";
 import { Venus } from "./systems/sol/sol-planets/Venus";
 import { Earth } from "./systems/sol/sol-planets/Earth";
 import { Mars } from "./systems/sol/sol-planets/Mars";
@@ -52,15 +51,16 @@ function App() {
             exact
             path="/:id"
             render={(props) => (
-              <GenerateSystem {...props} system={system} setSystem={setSystem} />
+              <GenerateSystem {...props} system={system} setSystem={setSystem}   planet={planet}
+              setPlanet={setPlanet} />
             )}
           />
-          <Route
+          {/*<Route
             exact
             path="/exoplanets/:id"
             render={(props) => <GeneratePlanet {...props} />}
           />
-          
+          */}
           <Route
             path="/planets/venus"
             render={(props) => (
@@ -111,8 +111,8 @@ function App() {
                
                 setSystem={setSystem}
                 system={system}
-                setPlanetParam={setPlanetParam}
-                planetParam={planetParam}
+               planet={planet}
+               setPlanet={setPlanet}
               />
             )}
           />

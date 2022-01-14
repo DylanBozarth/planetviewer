@@ -28,7 +28,7 @@ export const Navigation = (props) => {
       >
         <div className="row">
           <div className="navRow col-sm-4">
-            <div className={hiddenUI ? "navIcon" : "hidden"}>
+            <div className={hiddenUI ? "currentLocation" : "hidden"}>
               <NavLink
                 to="/interstellar"
                 className="navButton"
@@ -51,14 +51,14 @@ export const Navigation = (props) => {
           </div>
         </div>
       </motion.div>
-      <div className="navRow  ">
+     {/*} <div className="navRow  ">
         <div
           className=" text-center toggleNav"
           onClick={() => setHiddenUI(!hiddenUI)}
         >
           Toggle UI
         </div>
-      </div>
+  </div> */}
     </div>
   );
 };

@@ -15,7 +15,7 @@ export const GenerateSystem = (props) => {
   }, []);
   
   useEffect(() => {
-    props.setArea(starName)
+    props.setSystem(starName)
    
   console.log(starName)
   }, []);
@@ -131,6 +131,7 @@ export const GenerateSystem = (props) => {
         <div>
           <MiniExoPlanet
             planetName={`${makePlanetName()}`}
+            onClick={() => props.setPlanet('aaa')}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
             
