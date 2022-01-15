@@ -17,7 +17,6 @@ import { Navigation } from "./components/navigation";
 function App() {
   const [system, setSystem] = useState("");
   const [planet, setPlanet] = useState('')
-  const [planetParam, setPlanetParam] = useState();
  
 
   const location = useLocation();

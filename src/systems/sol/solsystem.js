@@ -49,41 +49,17 @@ const zoomOut = {
       <button onClick={() => props.setPlanet('test')} className="debug">DEBUG</button>
       <div onClick={() => props.setPlanet('Mercury')}><MiniPlanet name="Mercury"   className="mercuryMini" /></div>
      
-       <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} ><MiniPlanet name="Venus" className="venusMini"></MiniPlanet></motion.div>
-        <MiniPlanet name="Earth" className="earthMini"></MiniPlanet>
-        <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} > <MiniPlanet name="Mars" className="marsMini"></MiniPlanet></motion.div>
+      <div onClick={() => props.setPlanet('Venus')}><MiniPlanet name="Venus" className="venusMini"></MiniPlanet></div>
+      <div onClick={() => props.setPlanet('Earth')}><MiniPlanet name="Earth" className="earthMini"></MiniPlanet></div>
+      <div onClick={() => props.setPlanet('Mars')}><MiniPlanet name="Mars" className="marsMini"></MiniPlanet></div>
         {/*<MiniPlanet name="Asteroid-Belt" className="asteroidBelt"></MiniPlanet> */}
-        <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} ><MiniPlanet name="Juipter" className="juipterMini"></MiniPlanet></motion.div>
-         <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} ><MiniPlanet name="Saturn" className="saturnMini"></MiniPlanet></motion.div>
-        <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} > <MiniPlanet name="Uranus" className="uranusMini"></MiniPlanet></motion.div>
-        <motion.div initial="out"
-    animate="in"
-    exit="out"
-    transition={pagetransition}
-    variants={FadeIn} > <MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet></motion.div>
+        <div onClick={() => props.setPlanet('Juipter')}><MiniPlanet name="Juipter" className="juipterMini"></MiniPlanet></div>
+        <div onClick={() => props.setPlanet('Saturn')}><MiniPlanet name="Saturn" className="saturnMini"></MiniPlanet></div>
+        <div onClick={() => props.setPlanet('Uranus')}><MiniPlanet name="Uranus" className="uranusMini"></MiniPlanet></div>
+        <div onClick={() => props.setPlanet('Neptune')}><MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet></div>
         
        
-         <MiniPlanet name="Nibiru" className="neptuneMini2" onClick={() => props.setPlanet("Nibiru")}></MiniPlanet></motion.div>
+        <div onClick={() => props.setPlanet('Niburu')}><MiniPlanet name="Nibiru" className="neptuneMini2" /></div></motion.div>
     
   );
 };

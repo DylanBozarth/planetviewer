@@ -231,9 +231,9 @@
     transform: rotate(360deg) translateX(44rem) rotate(-360deg);
   }
 }
-/* test planet */
+/* easter egg planet */
 .neptuneMini2 {
-  --radius: 6rem;
+  --radius: 4rem;
   position: absolute;
   top: calc(50% - var(--radius));
   left: calc(50% - var(--radius));
@@ -241,9 +241,9 @@
   height: calc(2 * var(--radius));
   border-radius: 50%;
   animation: translateBackground 75s infinite linear;
-  background: url("../../planetTextures/neptune.jpg") repeat-x;
+  background: url("../../planetTextures/Niburu.jpg") repeat-x;
   background-size: 100% 100%;
-  animation: neptuneOrbit2 12s linear infinite;
+  animation: neptuneOrbit2 65s linear infinite;
 }
 @keyframes neptuneOrbit2 {
   from {
