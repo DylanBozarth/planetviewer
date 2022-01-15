@@ -4,6 +4,7 @@ json data
 
 issues: 
 Planet view looks bad, should all be the same
+refreshing the page clears the planet variable
 exo planets orbit is wonky for some reason
 3 tier locations for the nav bar
 

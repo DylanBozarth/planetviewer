@@ -21,10 +21,10 @@ export const GeneratePlanet = (props) => {
       <div className="row">
         <div className="col-lg-4 sidePlanetView">
           <div className="planetView">
-            Name: {props.name} <br /> {props.description}
+            Name: {props.planet} <br /> {props.description}
             <br />
             <br />
-            Moons: {props.moons} <br />
+            Moons: 7 <br />
             <NavLink
               to="/"
               className="planetViewBack"

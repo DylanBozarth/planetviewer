@@ -42,8 +42,8 @@ function App() {
                 {...props}
                 system={system}
                 setSystem={setSystem}
-                planetParam={planetParam}
-                setPlanetParam={setPlanetParam}
+                planet={planet}
+                setPlanet={setPlanet}
               />
             )}
           />
