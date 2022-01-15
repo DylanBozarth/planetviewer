@@ -46,7 +46,6 @@ const zoomOut = {
     <motion.div initial="in" animate="in" exit="out" variants={zoomOut}   className="sol-system-master">
       <div className="sun"  ></div>
 
-      <button onClick={() => props.setPlanet('test')} className="debug">DEBUG</button>
       <div onClick={() => props.setPlanet('Mercury')}><MiniPlanet name="Mercury"   className="mercuryMini" /></div>
      
       <div onClick={() => props.setPlanet('Venus')}><MiniPlanet name="Venus" className="venusMini"></MiniPlanet></div>

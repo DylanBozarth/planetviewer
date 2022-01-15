@@ -6,13 +6,7 @@ import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence } from "framer-motion";
-import { Venus } from "./systems/sol/sol-planets/Venus";
-import { Earth } from "./systems/sol/sol-planets/Earth";
-import { Mars } from "./systems/sol/sol-planets/Mars";
-import { Jupiter } from "./systems/sol/sol-planets/Jupiter";
-import { Saturn } from "./systems/sol/sol-planets/Saturn";
-import { Uranus } from "./systems/sol/sol-planets/Uranus";
-import { Neptune } from "./systems/sol/sol-planets/Neptune";
+
 import { Navigation } from "./components/navigation";
 function App() {
   const [system, setSystem] = useState("");
@@ -60,48 +54,7 @@ function App() {
             render={(props) => <GeneratePlanet {...props} />}
           />
           */}
-          <Route
-            path="/planets/venus"
-            render={(props) => (
-              <Venus {...props} setSystem={setSystem} system={system} />
-            )}
-          />
-          <Route
-            path="/planets/earth"
-            render={(props) => (
-              <Earth {...props} setSystem={setSystem} system={system} />
-            )}
-          />
-          <Route
-            path="/planets/mars"
-            render={(props) => (
-              <Mars {...props} setSystem={setSystem} system={system} />
-            )}
-          />
-          <Route
-            path="/planets/juipter"
-            render={(props) => (
-              <Jupiter {...props} setSystem={setSystem} system={system} />
-            )}
-          />
-          <Route
-            path="/planets/saturn"
-            render={(props) => (
-              <Saturn {...props} setSystem={setSystem} system={system} />
-            )}
-          />
-          <Route
-            path="/planets/uranus"
-            render={(props) => (
-              <Uranus {...props} setSystem={setSystem} system={system} />
-            )}
-          />
-          <Route
-            path="/planets/neptune"
-            render={(props) => (
-              <Neptune {...props} setSystem={setSystem} system={system} />
-            )}
-          />
+         
           <Route
             path="/planets/:id"
             render={(props) => (
