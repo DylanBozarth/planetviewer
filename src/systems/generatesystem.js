@@ -1,7 +1,7 @@
 import "./generatesystem.css";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { MiniExoPlanet } from "../components/miniExoPlanet";
+import {MiniPlanet} from '../components/miniplanet'
 
 import { motion } from "framer-motion";
 function useQuery() {
@@ -129,9 +129,9 @@ export const GenerateSystem = (props) => {
     if (Count > 0) {
       return (
         <div>
-          <MiniExoPlanet
+          <MiniPlanet
             planetName={`${makePlanetName()}`}
-            onClick={() => props.setPlanet('aaa')}
+            onClick={() => props.setPlanet(`${makePlanetName()}`)}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
             
@@ -139,7 +139,7 @@ export const GenerateSystem = (props) => {
           >
             
             {" "}
-          </MiniExoPlanet>
+          </MiniPlanet>
           {makePlanets(Count - 1)}
         </div>
       );

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const MiniPlanet = (props) => {
   
   return (
-    <div className={`miniPlanet ${props.planetType}`} onClick={() => props.setPlanet(props.planetName)}>
+    <div className={`miniPlanet ${props.planetType}`}>
       <NavLink
         to={`planets/${props.planetName}`}
         onClick={() => props.setPlanetParam(`${props.planetName}`)}

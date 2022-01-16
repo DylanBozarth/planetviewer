@@ -4,6 +4,7 @@ json data
 
 issues: 
 refreshing the page clears the planet variable
+navigation is displaying when it shouldnt 
 exo planets orbit is wonky for some reason
 need information on planets
 sidebar that shows info and such
