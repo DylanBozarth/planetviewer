@@ -22,7 +22,7 @@ function RandomNum() {
 export const SolSystem = (props) => {
   useEffect(() => {
     
-    props.setSystem('Sol System')
+    props.setSystem('Sol')
   });
 const FadeIn = {
   in: {

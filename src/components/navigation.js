@@ -41,12 +41,15 @@ export const Navigation = (props) => {
           </div>
           <div className="navRow col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
-              {props.system}
+              <NavLink to={`${props.system}`} className={hiddenUI ? "currentLocation" : "hidden"} onClick={() => props.setPlanet('')}>
+              {props.system} System</NavLink>
             </div>
           </div>
           <div className="navRow col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
+            <NavLink to={`${props.planet}`} className={hiddenUI ? "currentLocation" : "hidden"}>
               {props.planet}
+              </NavLink>
             </div>
           </div>
         </div>
