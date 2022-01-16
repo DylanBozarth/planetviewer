@@ -17,6 +17,10 @@ export const Navigation = (props) => {
       // fix this
     },
   };
+  const clearBar = () => {
+    props.setSystem('')
+    props.setPlanet('')
+  }
   return (
     <div className="">
       <motion.div
@@ -32,6 +36,7 @@ export const Navigation = (props) => {
               <NavLink
                 to="/interstellar"
                 className="navButton"
+                onClick={() => props.setSystem('')}
                 
               >
                 {" "}
@@ -41,14 +46,14 @@ export const Navigation = (props) => {
           </div>
           <div className="navRow col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
-              <NavLink to={`${props.system}`} className={hiddenUI ? "currentLocation" : "hidden"} onClick={() => props.setPlanet('')}>
-              {props.system} System</NavLink>
+              <NavLink to={`/${props.system}`} className={hiddenUI ? "currentLocation" : "hidden"} onClick={() => props.setPlanet('')}>
+              {props.system.length !== 0 ? `${props.system} system` : ''}</NavLink>
             </div>
           </div>
           <div className="navRow col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
             <NavLink to={`${props.planet}`} className={hiddenUI ? "currentLocation" : "hidden"}>
-              {props.planet}
+              {props.system.length !== 0 ? `${props.planet}` : ''}
               </NavLink>
             </div>
           </div>

@@ -3,11 +3,10 @@ work in progress- Planet viewing app
 json data
 
 issues: 
-Planet view looks bad, should all be the same
 refreshing the page clears the planet variable
 exo planets orbit is wonky for some reason
-3 tier locations for the nav bar
-
+need information on planets
+sidebar that shows info and such
 Load screenwould be good
 
 phase 3: 
