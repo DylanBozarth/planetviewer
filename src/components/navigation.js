@@ -36,7 +36,7 @@ export const Navigation = (props) => {
               <NavLink
                 to="/interstellar"
                 className="navButton"
-                onClick={() => props.setSystem('')}
+                onClick={() => clearBar()}
                 
               >
                 {" "}
