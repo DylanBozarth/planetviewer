@@ -4,7 +4,10 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 export const GeneratePlanet = (props) => {
   useEffect(() => {
-    //props.setPlanet(`${props.planetParam}`);
+    
+    var planetParam = props.planet.toString()
+    console.log(`planetparam is ${planetParam}`)
+
   }, []);
   var planetData = {
     Mercury: {
@@ -21,7 +24,7 @@ export const GeneratePlanet = (props) => {
       <div className="row">
         <div className="col-lg-4 sidePlanetView">
           <div className="planetView">
-          
+          <button onClick={() => console.log(planetData.planetParam.Name)}>log</button>
             <NavLink
               to="/"
               className="planetViewBack"
