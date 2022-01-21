@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 export const MiniPlanet = (props) => {
+ 
   return (
     <NavLink to={`planets/${props.name}`}>
       <div className="miniPlanet">
@@ -24,15 +25,7 @@ export const SolSystem = (props) => {
     
     props.setSystem('Sol')
   });
-const FadeIn = {
-  in: {
-    opacity: 1,
-    duration: RandomNum()
-  },
-  out: {
-    opacity: 0,
-  },
-};  
+
 /* sun effects */
 const zoomOut = {
   in: {
@@ -42,11 +35,12 @@ const zoomOut = {
    opacity: 0
   }
 }
+
   return (
     <motion.div initial="in" animate="in" exit="out" variants={zoomOut}   className="sol-system-master">
       <div className="sun"  ></div>
 
-      <div onClick={() => props.setPlanet('Mercury')}><MiniPlanet name="Mercury"   className="mercuryMini" /></div>
+      <div onClick={() => props.setPlanet('Mercury') }><MiniPlanet name="Mercury"   className="mercuryMini" /></div>
      
       <div onClick={() => props.setPlanet('Venus')}><MiniPlanet name="Venus" className="venusMini"></MiniPlanet></div>
       <div onClick={() => props.setPlanet('Earth')}><MiniPlanet name="Earth" className="earthMini"></MiniPlanet></div>

@@ -1,8 +1,7 @@
 work in progress- Planet viewing app 
-// currently stuck on: 
-json data
 
 issues: 
+venus clouds and saturn rings
 refreshing the page clears the planet variable
 navigation is displaying when it shouldnt 
 exo planets orbit is wonky for some reason

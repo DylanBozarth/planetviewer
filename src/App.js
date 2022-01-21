@@ -10,14 +10,19 @@ import { AnimatePresence } from "framer-motion";
 import { Navigation } from "./components/navigation";
 function App() {
   const [system, setSystem] = useState("");
-  const [planet, setPlanet] = useState('')
- 
+  const [planet, setPlanet] = useState("");
+  const [planetData, setPlanetData] = useState("test");
 
   const location = useLocation();
   return (
     <div>
-      <Navigation system={system} setSystem={setSystem} planet={planet} setPlanet={setPlanet} />
-      
+      <Navigation
+        system={system}
+        setSystem={setSystem}
+        planet={planet}
+        setPlanet={setPlanet}
+      />
+
       <AnimatePresence className="App" exitBeforeEnter={true}>
         <Switch location={location} key={location.pathname}>
           <Route
@@ -37,6 +42,8 @@ function App() {
                 setSystem={setSystem}
                 planet={planet}
                 setPlanet={setPlanet}
+                planetData={planetData}
+                setPlanetData={setPlanetData}
               />
             )}
           />
@@ -50,6 +57,8 @@ function App() {
                 setSystem={setSystem}
                 planet={planet}
                 setPlanet={setPlanet}
+                planetData={planetData}
+                setPlanetData={setPlanetData}
               />
             )}
           />
@@ -57,8 +66,15 @@ function App() {
             exact
             path="/:id"
             render={(props) => (
-              <GenerateSystem {...props} system={system} setSystem={setSystem}   planet={planet}
-              setPlanet={setPlanet} />
+              <GenerateSystem
+                {...props}
+                system={system}
+                setSystem={setSystem}
+                planet={planet}
+                planetData={planetData}
+                setPlanetData={setPlanetData}
+                setPlanet={setPlanet}
+              />
             )}
           />
           {/*<Route
@@ -67,17 +83,18 @@ function App() {
             render={(props) => <GeneratePlanet {...props} />}
           />
           */}
-         
+
           <Route
             path="/planets/:id"
             render={(props) => (
               <GeneratePlanet
                 {...props}
-               
                 setSystem={setSystem}
                 system={system}
-               planet={planet}
-               setPlanet={setPlanet}
+                planet={planet}
+                setPlanet={setPlanet}
+                planetData={planetData}
+                setPlanetData={setPlanetData}
               />
             )}
           />
