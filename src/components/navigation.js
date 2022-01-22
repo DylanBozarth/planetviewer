@@ -31,7 +31,7 @@ export const Navigation = (props) => {
         className="navMaster container-fluid"
       >
         <div className="row">
-          <div className="navRow col-sm-4">
+          <div className=" col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
               <NavLink
                 to="/interstellar"
@@ -44,13 +44,13 @@ export const Navigation = (props) => {
               </NavLink>
             </div>
           </div>
-          <div className="navRow col-sm-4">
+          <div className=" col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
               <NavLink to={`/${props.system}`} className={hiddenUI ? "currentLocation" : "hidden"} onClick={() => props.setPlanet('')}>
               {props.system.length !== 0 ? `${props.system} system` : ''}</NavLink>
             </div>
           </div>
-          <div className="navRow col-sm-4">
+          <div className=" col-sm-4">
             <div className={hiddenUI ? "currentLocation" : "hidden"}>
             <NavLink to={`${props.planet}`} className={hiddenUI ? "currentLocation" : "hidden"}>
               {props.system.length !== 0 ? `${props.planet}` : ''}
@@ -59,7 +59,7 @@ export const Navigation = (props) => {
           </div>
         </div>
       </motion.div>
-     {/*} <div className="navRow  ">
+     {/*} <div className="  ">
         <div
           className=" text-center toggleNav"
           onClick={() => setHiddenUI(!hiddenUI)}
