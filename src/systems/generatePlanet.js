@@ -6,26 +6,85 @@ import { Redirect } from "react-router-dom";
 export const GeneratePlanet = (props) => {
   useEffect(() => {
     
-    var planetParam = props.planet.toString()
-    console.log(`planetparam is ${planetParam}`)
+    
+    
     console.log(`planetparam and planetdata  ${planetData.planetParam}`)
-    if (props.planet.length === 0) {
-      Redirect('/')
+    if (props.planet === 0) {
+      window.location('/')
     }
 
   }, []);
   /* planet data */
   let planetData = {
+    
     Mercury: {
-      description: "It's not a nice place"
-    }
+      description: "The smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days.",
+      moons: 0,
+      rings: false,
+      clouds: false,
+      habitable: false
+    },
+    Venus: {
+      description: "Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system.",
+      moons: 0,
+      rings: false,
+      clouds: true,
+      habitable: false
+    },
+    Earth: {
+      description: "Our home planet, is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.",
+      moons: 1,
+      rings: false,
+      clouds: true,
+      habitable: true
+    },
+    Mars: {
+      description: "Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was billions of years ago wetter and warmer, with a thicker atmosphere.",
+      moons: 2,
+      rings: false,
+      clouds: false,
+      habitable: false
+    },
+    Juipter: {
+      description: "Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.",
+      moons: 79,
+      rings: false,
+      clouds: false,
+      habitable: false
+    },
+    Saturn: {
+      description: "Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's.",
+      moons: 62,
+      rings: false,
+      clouds: false,
+      habitable: false
+    },
+    Uranus: {
+      description: "Seventh planet from the Sun rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.",
+      moons: 27,
+      rings: false,
+      clouds: false,
+      habitable: false
+    },
+   Neptune: {
+      description: "The eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.",
+      moons: 14,
+      rings: false,
+      clouds: false,
+      habitable: false
+    },
   }
+  var planetParam = props.planet
   return (
     <div className="generated-planet-view container-fluid text-center">
       <div className="row">
-        <div className="col-lg-4 sidePlanetView">
+        {planetParam ?  (<div className="col-lg-4 sidePlanetView">
           <div className="planetView">
-          {planetData.planetParam}
+           <h4>{planetData[`${planetParam}`].description}</h4>
+             <br />
+             <h5>Moons: {planetData[`${planetParam}`].moons}</h5>
+           {/* true or not soon */}
+             
             <NavLink
               to="/"
               className="planetViewBack"
@@ -34,9 +93,10 @@ export const GeneratePlanet = (props) => {
               Back to solar view
             </NavLink>
           </div>
-        </div>
+        </div>) : <div>problem with data</div>} 
 
         <div className="col-lg-8 planetWrapper">
+        
           <div className={`generated-planet ${props.planet}`}></div>
         </div>
       </div>
