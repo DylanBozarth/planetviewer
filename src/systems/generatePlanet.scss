@@ -107,10 +107,10 @@ background-color: yellow;
 }
  .planetClouds{
     background:url('../planetTextures/clouds.png') repeat-x;
-    background-size: 100% 100%;
+    background-size: 150% 100%;
     border-radius:50%;
-    width: 45em; 
-    height: 45em;
+    width: 100%;
+    height: 100%;
 position: absolute;
   top: 0;
     animation: translateBackground 55s infinite linear;
