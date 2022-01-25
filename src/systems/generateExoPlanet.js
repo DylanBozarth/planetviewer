@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-export const GeneratePlanet = (props) => {
+export const GenerateExoPlanet = (props) => {
   useEffect(() => {
     console.log(`planetparam and planetdata  ${planetData.planetParam}`);
     if (props.planet === '') {

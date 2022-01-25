@@ -98,6 +98,20 @@ function App() {
               />
             )}
           />
+           <Route
+            path="/ExoPlanets/:id"
+            render={(props) => (
+              <GeneratePlanet
+                {...props}
+                setSystem={setSystem}
+                system={system}
+                planet={planet}
+                setPlanet={setPlanet}
+                planetData={planetData}
+                setPlanetData={setPlanetData}
+              />
+            )}
+          />
         </Switch>
       </AnimatePresence>
     </div>
