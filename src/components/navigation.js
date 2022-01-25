@@ -28,7 +28,7 @@ export const Navigation = (props) => {
         enter="in"
         exit="out"
         variants={NavToggle}
-        className="navMaster container-fluid"
+        className="navMaster container-fluid text-center"
       >
         <div className="row">
           <div className=" col-sm-4">
@@ -59,14 +59,7 @@ export const Navigation = (props) => {
           </div>
         </div>
       </motion.div>
-     {/*} <div className="  ">
-        <div
-          className=" text-center toggleNav"
-          onClick={() => setHiddenUI(!hiddenUI)}
-        >
-          Toggle UI
-        </div>
-  </div> */}
+     
     </div>
   );
 };

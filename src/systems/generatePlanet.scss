@@ -1,43 +1,33 @@
 .generatedPlanetView {
-  
-    height: 100vh; 
-    width: 100vw;
+  height: 100vh;
+    margin-top: 13.5rem;
+
 }
 
 .generated-planet {
     
     border-radius: 50%;
+    overflow: visible;
+    margin: auto;
+    margin-top: -5rem;
 }
 /* begin planets */
 /* view box */
 
 .planetView {
-    padding: 10px;
+    padding: 5px;
       text-align: center;
       background: #191919;
       box-shadow: 0px 0px 15px 2px #7Cbdbd inset;
       border: 2px solid #3acaec;
       border-radius: 5px;
-     /* CENTER ME*/ 
-     margin-top: 10rem;
       font-size: calc(10px + 1.5vw);
+  
+      
     }
-    .planetWrapper {
-      text-align:center;
-     
-       padding-left: 10%;
-       padding-top: 10%
-    }
+   
 
-    .earthView {
-    min-height: 100vh;
-    min-width: 100vw;
-    height: 100vh;
-    width: 100vw;
-    }
-    .sidePlanetView {
-     text-align: center;
-    }
+    
     /* Niburu */ 
     .Nibiru {
 width: 40em;
@@ -67,10 +57,7 @@ animation: translateBackground 45s infinite linear;
  background-size: cover;
 
   z-index: 1;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute
+ 
 }
 
 /* end venus */
@@ -85,7 +72,7 @@ animation: translateBackground 45s infinite linear;
     animation: translateBackground 125s infinite linear;  
     background:url(../planetTextures/earthHighRes.jpg) repeat-x;
    background-size: 100% 100%;
-  position: absolute;
+  
     border-radius:50%;
     z-index: 1;
     
@@ -96,7 +83,6 @@ animation: translateBackground 45s infinite linear;
     border-radius:50%;
     width: 100%;
     height: 100%;
-position: absolute;
   top: 0;
     animation: translateBackground 55s infinite linear;
     opacity: 0.6;
@@ -107,16 +93,15 @@ position: absolute;
 /* mars */
 
 .Mars {
-  width:35em;
-  height:35em;
+  width:25em;
+  height:25em;
   border-radius: 50%;
   animation: translateBackground 125s infinite linear;  
   background:url("../planetTextures/marsHighRes.jpg") repeat-x;
  background-size: 100% 100%;
-position: absolute;
+
   border-radius:50%;
   z-index: 1;
-  margin-top: 1rem;
 }
 
 /* end mars */
@@ -128,10 +113,9 @@ position: absolute;
   animation: translateBackground 125s infinite linear;  
   background:url("../planetTextures/juipterHighRes.jpg") repeat-x;
  background-size: 100% 100%;
-position: absolute;
+
   border-radius:50%;
   z-index: 1;
-  margin-top: -5rem;
 }
 
 /* end juipter */
@@ -143,35 +127,32 @@ position: absolute;
   animation: translateBackground 125s infinite linear;  
   background:url("../planetTextures/saturnHighRes.jpg") repeat-x;
  background-size: 100% 100%;
-position: absolute;
+
   border-radius:50%;
   z-index: 1;
-  margin-top: -5rem;
 }
 .rings {
-  position: absolute;
+  
 background-image: url('../planetTextures/saturn.jpg');
 z-index: 2;
 background-size: 100% 100%;
 border-radius: 50%;
-width: 72em; 
+
 height: .8em;
 opacity: .8;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
+width: 100%;
+margin: auto;
 }
 /* end saturn */
 /* Uranus */
 .Uranus {
-  width:45em;
-  height:45em;
+  width:20em;
+  height: 20em;
   border-radius: 50%;
   animation: translateBackground 125s infinite linear;  
   background:url("../planetTextures/uranusHighRes.png") repeat-x;
  background-size: 100% 100%;
-position: absolute;
+overflow: visible;
   border-radius:50%;
   z-index: 1;
 }
@@ -185,9 +166,8 @@ position: absolute;
   animation: translateBackground 125s infinite linear;  
   background:url("../planetTextures/neptuneHighRes.jpg") repeat-x;
  background-size: 100% 100%;
-position: absolute;
+
   border-radius:50%;
-  margin-top: 3rem;
   z-index: 1;
 }
 /* end neptune */

@@ -87,14 +87,15 @@ export const GeneratePlanet = (props) => {
   };
   var planetParam = props.planet;
   return (
-    <div className="generated-planet-view  text-center">
-      <div className="row">
+    <div className="generatedPlanetView row container-fluid">
+     <div className="col-sm-4">
         {planetParam ? (
-          <div className="col-lg-4 sidePlanetView">
-            <div className="planetView">
+          <div className=" planetView">
+           
               <h4>{planetData[`${planetParam}`].description}</h4>
               <br />
               <h5>Moons: {planetData[planetParam].moons}</h5>
+              {planetData[planetParam].habitable === true ? <div className="habitable">Habitable</div> : <div className="uninhabitable">Uninhabitable</div>}
               {/* true or not soon */}
 
               <NavLink
@@ -105,13 +106,15 @@ export const GeneratePlanet = (props) => {
                 Back to solar view
               </NavLink>
             </div>
-          </div>
+          
         ) : (
           <div>problem with data</div>
         )}
+       </div>
+       <div className="col-sm-8">
 {planetParam ?
-        <div className="col-lg-8 planetWrapper">
-          <div className={`generated-planet ${props.planet}`}>
+        
+          <div className={` generated-planet ${props.planet}`}>
             {" "}
             {planetData[planetParam].rings === true ? (
               <div className="rings"></div>
@@ -125,8 +128,8 @@ export const GeneratePlanet = (props) => {
             )}
           </div>
 
-        </div> : 'no'}
+         : 'Data issue'}
       </div>
-    </div>
+   </div>
   );
 };
