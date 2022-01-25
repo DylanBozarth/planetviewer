@@ -7,7 +7,7 @@ export const GeneratePlanet = (props) => {
   useEffect(() => {
     console.log(`planetparam and planetdata  ${planetData.planetParam}`);
     if (props.planet === '') {
-      window.location("/");
+      window.location.replace('/')
     }
   }, []);
   /* planet data */
@@ -72,6 +72,14 @@ export const GeneratePlanet = (props) => {
       description:
         "The eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.",
       moons: 14,
+      rings: false,
+      clouds: false,
+      habitable: false,
+    },
+    Nibiru: {
+      description:
+        "THE MYSTERY PLANET X",
+      moons: "??",
       rings: false,
       clouds: false,
       habitable: false,

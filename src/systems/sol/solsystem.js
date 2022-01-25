@@ -52,7 +52,7 @@ const zoomOut = {
         <div onClick={() => props.setPlanet('Neptune')}><MiniPlanet name="Neptune" className="neptuneMini"></MiniPlanet></div>
         
        
-        <div onClick={() => props.setPlanet('Niburu')}><MiniPlanet name="Nibiru" className="neptuneMini2" /></div></motion.div>
+        <div onClick={() => props.setPlanet('Nibiru')}><MiniPlanet name="Nibiru" className="neptuneMini2" /></div></motion.div>
     
   );
 };

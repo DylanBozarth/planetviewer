@@ -42,16 +42,16 @@
     }
     /* Niburu */ 
     .Nibiru {
-width: 400px;
-height: 400px;
+width: 40em;
+height: 40em;
 background: url("../planetTextures/Niburu.jpg") repeat-x;
 animation: translateBackground 45s infinite linear;
   background-size: 150% 150%;
   border: 2px solid black;
     }
     .Mercury {
-      width: 400px;
-height: 400px;
+      width: 20em;
+height: 20em;
 background: url("../planetTextures/mercuryHighRes.jpg") repeat-x;
 animation: translateBackground 45s infinite linear;
   background-size: 150% 150%;
@@ -67,7 +67,7 @@ animation: translateBackground 45s infinite linear;
   animation: translateBackground 88s infinite linear;  
   background:url("../planetTextures/venusHighRes.jpg") repeat-x;
  background-size: cover;
-margin-top: 4rem;
+
   z-index: 1;
   display: block;
   margin-left: auto;
@@ -89,7 +89,7 @@ background-color: yellow;
   z-index: 2
 }
 /* end venus */
-/* End Mercury */
+
 /* Earth */
 
 
