@@ -87,7 +87,7 @@ export const GeneratePlanet = (props) => {
   };
   var planetParam = props.planet;
   return (
-    <div className="generated-planet-view container-fluid text-center">
+    <div className="generated-planet-view  text-center">
       <div className="row">
         {planetParam ? (
           <div className="col-lg-4 sidePlanetView">
@@ -119,7 +119,7 @@ export const GeneratePlanet = (props) => {
               <div></div>
             )}{" "}
             {planetData[planetParam].clouds === true ? (
-              <div className="planetClouds"></div>
+              <div className={`planetClouds`}></div>
             ) : (
               <div></div>
             )}

@@ -3,11 +3,7 @@
     height: 100vh; 
     width: 100vw;
 }
-.generated-planet-container {
-    border: 1px solid green;
-    height: 100%;
-    width: 100%;
-}
+
 .generated-planet {
     
     border-radius: 50%;
@@ -22,7 +18,9 @@
       box-shadow: 0px 0px 15px 2px #7Cbdbd inset;
       border: 2px solid #3acaec;
       border-radius: 5px;
-      margin-top: 10rem;
+     /* CENTER ME*/ 
+     margin-top: 10rem;
+      font-size: calc(10px + 1.5vw);
     }
     .planetWrapper {
       text-align:center;
@@ -74,20 +72,7 @@ animation: translateBackground 45s infinite linear;
   margin-right: auto;
   position: absolute
 }
-.venusClouds {
-  background:url(../planetTextures/venusClouds.png) repeat-x;
-  background-size: 100% 100%;
-  border-radius:50%;
-  width: 30em; 
-  height: 30em;
-position: absolute;
 
-margin-top: 4rem;
-background-color: yellow;
-  animation: translateBackground 35s infinite linear;
-  opacity: 0.25;
-  z-index: 2
-}
 /* end venus */
 
 /* Earth */
@@ -103,7 +88,7 @@ background-color: yellow;
   position: absolute;
     border-radius:50%;
     z-index: 1;
-    margin-top: 1rem;
+    
 }
  .planetClouds{
     background:url('../planetTextures/clouds.png') repeat-x;
@@ -117,6 +102,7 @@ position: absolute;
     opacity: 0.6;
     z-index: 2
   }
+
 /* End earth */
 /* mars */
 
@@ -146,7 +132,6 @@ position: absolute;
   border-radius:50%;
   z-index: 1;
   margin-top: -5rem;
-  margin-left: -5rem;
 }
 
 /* end juipter */
@@ -161,7 +146,7 @@ position: absolute;
 position: absolute;
   border-radius:50%;
   z-index: 1;
-  margin-top: -3rem;
+  margin-top: -5rem;
 }
 .rings {
   position: absolute;
