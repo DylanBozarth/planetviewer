@@ -1,5 +1,5 @@
 import "./interstellar-space.scss";
-import { Star } from "./stars/star";
+import {Star} from '../components/star.jsx'
 import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,7 +8,9 @@ export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
     setExoStars(makeStars(RandomNum()));
-
+props.setSystem(
+  ''
+)
   }, []);
 
   // animations

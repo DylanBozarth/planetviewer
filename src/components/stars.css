@@ -32,7 +32,7 @@
     height: 35px;
     border-radius: 50%;
     animation: translateBackground 120s infinite linear;
-    background: url("../../planetTextures/sun.jpg") repeat-x;
+    background: url("../planetTextures/sun.jpg") repeat-x;
     background-size: 200% 100%;
     transition: transform 0.7s linear;
 }
@@ -48,7 +48,7 @@
  height: 70px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../starTextures/blue-giant.jpg") repeat-x;
+    background:url("../starTextures/blue-giant.jpg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
@@ -65,7 +65,7 @@
  margin-right: 450px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../starTextures/white-dwarf.jpg") repeat-x;
+    background:url("../starTextures/white-dwarf.jpg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
@@ -83,7 +83,7 @@
  margin: 100px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../starTextures/brown-dwarf.jpg") repeat-x;
+    background:url("../starTextures/brown-dwarf.jpg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
@@ -100,7 +100,7 @@
     margin-bottom: 50px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../starTextures/red-supergiant.jpeg") repeat-x;
+    background:url("../starTextures/red-supergiant.jpeg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
@@ -117,7 +117,7 @@
     margin-top: 300px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../starTextures/red-supergiant.jpeg") repeat-x;
+    background:url("../starTextures/red-supergiant.jpeg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
@@ -132,7 +132,7 @@
    margin: 160px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../starTextures/red-supergiant.jpeg") repeat-x;
+    background:url("../starTextures/red-supergiant.jpeg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
@@ -154,7 +154,7 @@
  height: 75px;
       border-radius: 50%;
       animation: translateBackground 120s infinite linear;  
-    background:url("../../planetTextures/sun.jpg") repeat-x;
+    background:url("../planetTextures/sun.jpg") repeat-x;
     background-size: 200% 100%;
    z-index: 95;
       transition: transform 0.7s linear;
