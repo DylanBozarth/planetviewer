@@ -55,9 +55,10 @@ props.setSystem(
   const makeStars = (Count = 5) => {
     if (Count > 0) {
       return (
-        <div className="starWrapper">
+        <div className="starWrapper" onClick={() => props.setSystem(`${starList[Math.floor(Math.random() * 6 + 2 )]}`)}>
           <Star
             starName={`${makeStarName()}`}
+           
             starType={`${starList[Math.floor(Math.random() * 6 + 2)]} ${
               positionList[Math.floor(Math.random() * 9 + 1)]
             }`}

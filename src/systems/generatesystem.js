@@ -4,9 +4,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { MiniExoPlanet } from "../components/miniExoPlanet";
 
 import { motion } from "framer-motion";
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
+
 
 export const GenerateSystem = (props) => {
   const [planets, setPlanets] = useState();
@@ -15,29 +13,11 @@ export const GenerateSystem = (props) => {
   }, []);
   
   useEffect(() => {
-    props.setSystem(starName)
+    
    
-  console.log(starName)
   }, []);
   
-  const backToInterstellar = {
-    leaveSystem: {
-      scale: 0.01,
-      transition: {
-        duration: 3,
-      },
-    },
-  };
 
-  const FadeIn = {
-    in: {
-      opacity: 1,
-      duration: '1.5s'
-    },
-    out: {
-      opacity: 0,
-    },
-  };  
   const zoomOut = {
     in: {
       x: 0
@@ -47,11 +27,7 @@ export const GenerateSystem = (props) => {
     }
   }
 
-  const query = useQuery();
-  const starType = query.get("starType");
-  const getTheName = starType.split(' ')
-  const starName = getTheName[0].replace('-', " ") +  " Star" 
-  const splitCss = starType.split(" ");
+ 
   // making planets
 
   function makePlanetName() {
@@ -156,7 +132,7 @@ export const GenerateSystem = (props) => {
       className="generatedSystem"
     >
       
-      <div className={splitCss[0] + "1" }></div>{" "}
+      <div className={`${props.system}1`}></div>{" "}
      <div className="">{planets}</div>
      
     </motion.div>
