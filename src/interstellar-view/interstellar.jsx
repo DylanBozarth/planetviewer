@@ -1,5 +1,5 @@
 import "./interstellar-space.scss";
-import {Star} from '../components/star.jsx'
+import { Star } from "../components/star.jsx";
 import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,9 +8,7 @@ export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
     setExoStars(makeStars(RandomNum()));
-props.setSystem(
-  ''
-)
+    props.setSystem("");
   }, []);
 
   // animations
@@ -55,16 +53,22 @@ props.setSystem(
   const makeStars = (Count = 5) => {
     if (Count > 0) {
       return (
-        <div className="starWrapper" onClick={() => props.setSystem(`${starList[Math.floor(Math.random() * 6 + 2 )]}`)}>
+        <NavLink 
+        to="/test"
+          className="starWrapper"
+          
+        >
+          {" "}
+          {/* this is different than the other */}
           <Star
             starName={`${makeStarName()}`}
-           
-            starType={`${starList[Math.floor(Math.random() * 6 + 2)]} ${
-              positionList[Math.floor(Math.random() * 9 + 1)]
-            }`}
+            starPosition={positionList[Math.floor(Math.random() * 9 + 1)]}
+            starType={`${starList[Math.floor(Math.random() * 6 + 2)]}`}
+              
+            
           ></Star>
           {makeStars(Count - 1)}
-        </div>
+        </NavLink>
       );
     }
   };
@@ -78,14 +82,7 @@ props.setSystem(
       opacity: 0,
     },
   };
-  const zoomOut = {
-    in: {
-      x: 0,
-    },
-    out: {
-      opacity: 0,
-    },
-  };
+
   return (
     <motion.div
       initial="in"
@@ -94,18 +91,12 @@ props.setSystem(
       variants={FadeIn}
       className="interstellar-space"
     >
-     
-      <NavLink
-        to="/"
-        className="sol-system"
-        
-      >
+      <NavLink to="/" className="sol-system">
         <div className="sol-system">
           <p className="sunLabel text-center">Our Sun</p>
         </div>
       </NavLink>
       <div className="random-placement">{exoStars}</div>
-
     </motion.div>
   );
 };

@@ -47,21 +47,7 @@ function App() {
               />
             )}
           />
-          <Route
-            exact
-            path="/Sol"
-            render={(props) => (
-              <SolSystem
-                {...props}
-                system={system}
-                setSystem={setSystem}
-                planet={planet}
-                setPlanet={setPlanet}
-                planetData={planetData}
-                setPlanetData={setPlanetData}
-              />
-            )}
-          />
+       
           <Route
             exact
             path="/:id"
@@ -99,7 +85,7 @@ function App() {
             )}
           />
            <Route
-            path="/ExoPlanets/:id"
+            path={`/${system}/:id`}
             render={(props) => (
               <GeneratePlanet
                 {...props}

@@ -108,6 +108,7 @@ export const GenerateSystem = (props) => {
           <MiniExoPlanet
             planetName={`${makePlanetName()}`}
             onClick={() => props.setPlanet(`${makePlanetName()}`)}
+            path={`${props.system}/${props.planet}`}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
             
