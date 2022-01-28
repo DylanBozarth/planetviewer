@@ -60,6 +60,7 @@ export const GenerateSystem = (props) => {
     "Earth-like-world",
 
     "Earth-like-world",
+    
     "Toxic-world",
     "Frozen-world",
     "Ocean-world",

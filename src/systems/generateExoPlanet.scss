@@ -35,11 +35,11 @@ border: 2px solid black;
   }
 
   .Frozen-world1 {
-    width: 35em;
-height: 35em;
+    width: 30em;
+height: 30em;
 background: url("../systems/exoplanettextures/frozen.png") repeat-x;
 animation: translateBackground 75s infinite linear;
-background-size: 90% 100%;
+background-size: 100% 100%;
 border: 2px solid black;
   }
   
@@ -67,11 +67,11 @@ animation: translateBackground 110s infinite linear;
 background-size: 100% 100%;
 border: 2px solid black;
   }
-  .Earth-Like1 {
-    width: 65em;
-height: 65em;
-background: url("../systems/exoplanettextures/gas.png") repeat-x;
-animation: translateBackground 45s infinite linear;
-background-size: 100% 100%;
+  .Earth-like-world1 {
+    width: 30em;
+height: 30em;
+background: url("../planetTextures/earthlikeplanet.jpg") repeat-x;
+animation: translateBackground 85s infinite linear;
+background-size: 120% 100%;
 border: 2px solid black;
   }

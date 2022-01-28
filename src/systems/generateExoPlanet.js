@@ -27,7 +27,7 @@ export const GenerateExoPlanet = (props) => {
       clouds: false,
       habitable: false,
     },
-    'Earth-like': {
+    'Earth-like-world': {
       description: "This planet's atmosphere's contains the proper ratios of Carbon Dioxide, Nitrogen, and Oxygen to allow humans to breathe without assistance. Further exploration is needed ",
       moons: 3,
       rings: false,
