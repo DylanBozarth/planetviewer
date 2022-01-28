@@ -3,7 +3,7 @@ import { Star } from "../components/star.jsx";
 import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
@@ -50,7 +50,7 @@ export const Interstellar = (props) => {
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
-  let randomTypeVariable = starList[Math.floor(Math.random() * 6 + 1)];
+  let randomTypeVariable = useMemo(() => starList[Math.floor(Math.random() * 6 + 1)], []);
   const makeStars = (Count = 5) => {
     if (Count > 0) {
       return (
@@ -62,7 +62,7 @@ export const Interstellar = (props) => {
           <Star
             starName={`${makeStarName()}`}
             starPosition={positionList[Math.floor(Math.random() * 9 + 1)]}
-            starType={`${starList[Math.floor(Math.random() * 6 + 2)]}`}
+            starType={`${randomTypeVariable}`}
           ></Star>
           {makeStars(Count - 1)}
         </NavLink>

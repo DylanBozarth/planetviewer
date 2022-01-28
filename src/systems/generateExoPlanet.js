@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export const GenerateExoPlanet = (props) => {
   useEffect(() => {
     console.log(`planet should be  ${props.planet}`);
-    
+    // shouldnt be undefined 
   }, []);
   /* planet data */
   let planetData = {
