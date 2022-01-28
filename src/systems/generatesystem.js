@@ -10,12 +10,13 @@ export const GenerateSystem = (props) => {
   const [planets, setPlanets] = useState();
   useEffect(() => {
     setPlanets(makePlanets(RandomNum()));
+    let url = window.location.href
+    let modifiedUrl = url.split('/')
+    console.log(modifiedUrl)
+    props.setSystem(modifiedUrl[3])
   }, []);
   
-  useEffect(() => {
-    
-   
-  }, []);
+
   
 
   const zoomOut = {
@@ -101,7 +102,7 @@ export const GenerateSystem = (props) => {
   let randomPositionIndex = () => {
     return Math.floor(Math.random() * 6)
   }
-  {/*props.setPlanet(`${planetTypes[randomPlanetIndex()]}`) */}
+
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
