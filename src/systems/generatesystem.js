@@ -106,7 +106,7 @@ export const GenerateSystem = (props) => {
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
-        <div onClick={() => props.setPlanet(`${planetTypes[randomPlanetIndex()]}`)}>
+        <div>
           <MiniExoPlanet
            
             
