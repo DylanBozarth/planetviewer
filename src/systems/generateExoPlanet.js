@@ -6,6 +6,10 @@ export const GenerateExoPlanet = (props) => {
   useEffect(() => {
     console.log(`planet should be  ${props.planet}`);
     // shouldnt be undefined 
+    let url = window.location.href
+    let modifiedUrl = url.split('/')
+    
+    props.setPlanet(modifiedUrl[4])
   }, []);
   /* planet data */
   let planetData = {
@@ -69,50 +73,7 @@ export const GenerateExoPlanet = (props) => {
  
   return (
     <div className="generatedPlanetView row container-fluid">
-      <div className="col-sm-4">
-        {props.planet !== undefined ? (
-          <div className=" planetView">
-            <h4>{planetData[`${props.planet}`].description}</h4>
-            <br />
-            <h5>Moons: {planetData[props.planet].moons}</h5>
-            {planetData[props.planet].habitable === true ? (
-              <div className="habitable">Habitable</div>
-            ) : (
-              <div className="uninhabitable">Uninhabitable</div>
-            )}
-            {/* true or not soon */}
-
-            <NavLink
-              to={`${props.system}`}
-              className="planetViewBack"
-              onClick={() => props.setPlanet("")}
-            >
-              Back to solar view
-            </NavLink>
-          </div>
-        ) : (
-          <div>problem with data</div>
-        )}
-      </div>
-      <div className="col-sm-8">
-        {props.planet ? (
-          <div className={` generated-planet ${props.planet}`}>
-            {" "}
-            {/* RINGS ARE BEING NAUGHTY {planetData[props.planet].rings === true ? (
-              <div className="rings"></div>
-            ) : (
-              <div></div>
-            )}{" "} */}
-            {planetData[props.planet].clouds === true ? (
-              <div className={`planetClouds`}></div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-        ) : (
-          "Data issue"
-        )}
-      </div>
+      I didn't plan it
     </div>
   );
 };

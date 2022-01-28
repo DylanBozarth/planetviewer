@@ -12,7 +12,7 @@ export const GenerateSystem = (props) => {
     setPlanets(makePlanets(RandomNum()));
     let url = window.location.href
     let modifiedUrl = url.split('/')
-    console.log(modifiedUrl)
+    
     props.setSystem(modifiedUrl[3])
   }, []);
   
@@ -110,7 +110,7 @@ export const GenerateSystem = (props) => {
           <MiniExoPlanet
            
             
-            path={`exoPlanets/${props.planet}`}
+            path={`exoPlanets/${planetTypes[randomPlanetIndex()] }`}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
             
