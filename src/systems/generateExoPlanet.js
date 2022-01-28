@@ -1,4 +1,4 @@
-import "./generatePlanet.scss";
+import "./generateExoPlanet.scss";
 import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
@@ -13,7 +13,7 @@ export const GenerateExoPlanet = (props) => {
   }, []);
   /* planet data */
   let planetData = {
-    'Gas-Giant': {
+    'Gas-giant': {
       description: "gas giant",
       moons: 56,
       rings: false,
@@ -27,9 +27,9 @@ export const GenerateExoPlanet = (props) => {
       clouds: false,
       habitable: false,
     },
-    EarthLike: {
+    'Earth-like': {
       description: "Earth Like",
-      moons: 0,
+      moons: 1,
       rings: false,
       clouds: false,
       habitable: true,
@@ -101,7 +101,7 @@ export const GenerateExoPlanet = (props) => {
       </div>
       <div className="col-sm-8">
         {planetParam ? (
-          <div className={` generated-planet ${props.planet}`}>
+          <div className={` generated-planet ${props.planet}1`}>
             {" "}
             {/* RINGS ARE BEING NAUGHTY {planetData[planetParam].rings === true ? (
               <div className="rings"></div>
