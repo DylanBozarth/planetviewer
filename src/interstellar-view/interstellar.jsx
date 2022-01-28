@@ -50,22 +50,19 @@ export const Interstellar = (props) => {
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
+  let randomTypeVariable = starList[Math.floor(Math.random() * 6 + 1)];
   const makeStars = (Count = 5) => {
     if (Count > 0) {
       return (
-        <NavLink 
-        to={`/${makeStarName()}`}
+        <NavLink
+          to={`/${randomTypeVariable}`}
+          onClick={() => props.setSystem(`${randomTypeVariable}`)}
           className="starWrapper"
-          onClick={() => props.setSystem(`${starList[Math.floor(Math.random() * 6 + 1)]}`)}
         >
-          {" "}
-          {/* this is different than the other */}
           <Star
             starName={`${makeStarName()}`}
             starPosition={positionList[Math.floor(Math.random() * 9 + 1)]}
-           starType={`${starList[Math.floor(Math.random() * 6 + 2)]}`}
-             
-            
+            starType={`${starList[Math.floor(Math.random() * 6 + 2)]}`}
           ></Star>
           {makeStars(Count - 1)}
         </NavLink>
