@@ -2,10 +2,10 @@ import "./generatePlanet.scss";
 import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 export const GenerateExoPlanet = (props) => {
   useEffect(() => {
-    console.log(`planetparam and planetdata  ${planetData.planetParam}`);
+    console.log(`planet should be  ${props.planet}`);
+    
   }, []);
   /* planet data */
   let planetData = {
@@ -66,16 +66,16 @@ export const GenerateExoPlanet = (props) => {
       habitable: false,
     },
   };
-  var planetParam = props.planet;
+ 
   return (
     <div className="generatedPlanetView row container-fluid">
       <div className="col-sm-4">
-        {planetParam ? (
+        {props.planet !== undefined ? (
           <div className=" planetView">
-            <h4>{planetData[`${planetParam}`].description}</h4>
+            <h4>{planetData[`${props.planet}`].description}</h4>
             <br />
-            <h5>Moons: {planetData[planetParam].moons}</h5>
-            {planetData[planetParam].habitable === true ? (
+            <h5>Moons: {planetData[props.planet].moons}</h5>
+            {planetData[props.planet].habitable === true ? (
               <div className="habitable">Habitable</div>
             ) : (
               <div className="uninhabitable">Uninhabitable</div>
@@ -83,7 +83,7 @@ export const GenerateExoPlanet = (props) => {
             {/* true or not soon */}
 
             <NavLink
-              to="/"
+              to={`${props.system}`}
               className="planetViewBack"
               onClick={() => props.setPlanet("")}
             >
@@ -95,15 +95,15 @@ export const GenerateExoPlanet = (props) => {
         )}
       </div>
       <div className="col-sm-8">
-        {planetParam ? (
+        {props.planet ? (
           <div className={` generated-planet ${props.planet}`}>
             {" "}
-            {/* RINGS ARE BEING NAUGHTY {planetData[planetParam].rings === true ? (
+            {/* RINGS ARE BEING NAUGHTY {planetData[props.planet].rings === true ? (
               <div className="rings"></div>
             ) : (
               <div></div>
             )}{" "} */}
-            {planetData[planetParam].clouds === true ? (
+            {planetData[props.planet].clouds === true ? (
               <div className={`planetClouds`}></div>
             ) : (
               <div></div>

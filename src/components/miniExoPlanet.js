@@ -3,13 +3,13 @@ import "./components.css"
 import { NavLink } from "react-router-dom";
 export const MiniExoPlanet = (props) => {
   return (
-    <div className={`miniPlanet ${props.planetType} ${props.position}`}>
-     <NavLink
-        to={props.path}
-        
-      >
-      <p>aaaa</p></NavLink>
-    </div>
+    <NavLink
+      to={`exoPlanets/${props.planetType}`}
      
+    ><div className={`miniPlanet ${props.planetType} ${props.position}`}>
+    
+      
+   
+  </div> </NavLink>
   );
 };

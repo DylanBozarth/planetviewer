@@ -6,6 +6,7 @@ import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence } from "framer-motion";
+import { GenerateExoPlanet } from "./systems/generateExoPlanet";
 
 import { Navigation } from "./components/navigation";
 function App() {
@@ -85,9 +86,9 @@ function App() {
             )}
           />
            <Route
-            path={`/${system}/:id`}
+            path={`/exoPlanets/:id`}
             render={(props) => (
-              <GeneratePlanet
+              <GenerateExoPlanet
                 {...props}
                 setSystem={setSystem}
                 system={system}

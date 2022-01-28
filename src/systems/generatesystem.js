@@ -101,14 +101,15 @@ export const GenerateSystem = (props) => {
   let randomPositionIndex = () => {
     return Math.floor(Math.random() * 6)
   }
+  {/*props.setPlanet(`${planetTypes[randomPlanetIndex()]}`) */}
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
-        <div>
+        <div onClick={() => props.setPlanet(`${planetTypes[randomPlanetIndex()]}`)}>
           <MiniExoPlanet
-            planetName={`${makePlanetName()}`}
-            onClick={() => props.setPlanet(`${makePlanetName()}`)}
-            path={`${props.system}/${props.planet}`}
+           
+            
+            path={`exoPlanets/${props.planet}`}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
             

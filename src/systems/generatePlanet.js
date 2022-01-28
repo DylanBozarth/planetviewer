@@ -5,10 +5,8 @@ import { NavLink } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 export const GeneratePlanet = (props) => {
   useEffect(() => {
-    console.log(`planetparam and planetdata  ${planetData.planetParam}`);
-    if (props.planet === "") {
-      window.location.replace("/");
-    }
+    console.log(`Planet component  ${planetData.planetParam}`);
+    
   }, []);
   /* planet data */
   let planetData = {
