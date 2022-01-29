@@ -6,6 +6,7 @@ import { SolSystem } from "./systems/sol/solsystem";
 import { GenerateSystem } from "./systems/generatesystem";
 import { GeneratePlanet } from "./systems/generatePlanet";
 import { AnimatePresence } from "framer-motion";
+import { GenerateExoPlanet } from "./systems/generateExoPlanet";
 
 import { Navigation } from "./components/navigation";
 function App() {
@@ -47,21 +48,7 @@ function App() {
               />
             )}
           />
-          <Route
-            exact
-            path="/Sol"
-            render={(props) => (
-              <SolSystem
-                {...props}
-                system={system}
-                setSystem={setSystem}
-                planet={planet}
-                setPlanet={setPlanet}
-                planetData={planetData}
-                setPlanetData={setPlanetData}
-              />
-            )}
-          />
+       
           <Route
             exact
             path="/:id"
@@ -99,9 +86,9 @@ function App() {
             )}
           />
            <Route
-            path="/ExoPlanets/:id"
+            path={`/exoPlanets/:id`}
             render={(props) => (
-              <GeneratePlanet
+              <GenerateExoPlanet
                 {...props}
                 setSystem={setSystem}
                 system={system}

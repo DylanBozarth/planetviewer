@@ -1,120 +1,107 @@
-import "./generatePlanet.scss";
+import "./generateExoPlanet.scss";
 import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 export const GenerateExoPlanet = (props) => {
   useEffect(() => {
-    console.log(`planetparam and planetdata  ${planetData.planetParam}`);
-    if (props.planet === '') {
-      window.location.replace('/')
-    }
+    console.log(`planet should be  ${props.planet}`);
+    // shouldnt be undefined 
+    let url = window.location.href
+    let modifiedUrl = url.split('/')
+    console.log(modifiedUrl)
+    props.setPlanet(modifiedUrl[4])
   }, []);
   /* planet data */
   let planetData = {
-    Mercury: {
-      description:
-        "The smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days.",
-      moons: 0,
+    'Gas-giant': {
+      description: "This vast planet is entirely made of gas. The core however is solid due to the immense pressure, but is likely only the size of a small planet. ",
+      moons: 56,
       rings: false,
       clouds: false,
       habitable: false,
     },
-    Venus: {
-      description:
-        "Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system.",
-      moons: 0,
-      rings: false,
-      clouds: true,
-      habitable: false,
-    },
-    Earth: {
-      description:
-        "Our home planet, is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.",
-      moons: 1,
-      rings: false,
-      clouds: true,
-      habitable: true,
-    },
-    Mars: {
-      description:
-        "Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was billions of years ago wetter and warmer, with a thicker atmosphere.",
+    'Desert-world': {
+      description: "This planet is consists primarily of a vast desert. Liquid water is all but impossible to find on the surface. Scorching temptures during the day and frigid tempertures at night make this planet uninhabitable.",
       moons: 2,
       rings: false,
       clouds: false,
       habitable: false,
     },
-    Juipter: {
-      description:
-        "Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.",
-      moons: 79,
+    'Earth-like-world': {
+      description: "This planet's atmosphere's contains the proper ratios of Carbon Dioxide, Nitrogen, and Oxygen to allow humans to breathe without assistance. Further exploration is needed ",
+      moons: 3,
+      rings: false,
+      clouds: false,
+      habitable: true,
+    },
+    'Toxic-world': {
+      description: "With an atmosphere comprised of toxic chemicals and extremely high pressure; any attempt to settle or even explore this planet would be met with failure. ",
+      moons: 2,
       rings: false,
       clouds: false,
       habitable: false,
     },
-    Saturn: {
-      description:
-        "Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's.",
-      moons: 62,
-      rings: true,
-      clouds: false,
-      habitable: false,
-    },
-    Uranus: {
-      description:
-        "Seventh planet from the Sun rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.",
-      moons: 27,
+    'Frozen-world': {
+      description: "This planet is far from the heat source of its home star, thus the surface is almost entirely made of ice. This planet is simply too cold to support animal or plant life.",
+      moons: 2,
       rings: false,
       clouds: false,
       habitable: false,
     },
-    Neptune: {
-      description:
-        "The eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations, rather than by telescope.",
-      moons: 14,
+    'Ocean-world': {
+      description: "This planet has a surface, that is underneath a massive planet-spanning ocean that is hundreds kilometers deep. Due to micro organisms in the vast ocean the planet's air is breatable. Possible canidate for colonization. ",
+      moons: 1,
+      rings: false,
+      clouds: true,
+      habitable: false,
+    },
+    'Rocky-world': {
+      description: "Barren and desolate, the defining features of this planet are its abundance of mineral and metal deposits.",
+      moons: 1,
       rings: false,
       clouds: false,
       habitable: false,
     },
-    Nibiru: {
-      description:
-        "THE MYSTERY PLANET X",
-      moons: "??",
+    'Molten-world': {
+      description: "With a surface that is constantly at the mercy of the planet's chaotic tectonics, a surface temperture that can melt metal, and frequent asteroid impacts. The surface of planet is incapable of supporting life. ",
+      moons: 4,
       rings: false,
       clouds: false,
       habitable: false,
     },
   };
+ 
   var planetParam = props.planet;
   return (
     <div className="generatedPlanetView row container-fluid">
-     <div className="col-sm-4">
-        {planetParam ? (
+      <div className="col-sm-4">
+        {props.planet ? (
           <div className=" planetView">
-           
-              <h4>{planetData[`${planetParam}`].description}</h4>
-              <br />
-              <h5>Moons: {planetData[planetParam].moons}</h5>
-              {planetData[planetParam].habitable === true ? <div className="habitable">Habitable</div> : <div className="uninhabitable">Uninhabitable</div>}
-              {/* true or not soon */}
+            <h4>{planetData[`${planetParam}`].description}</h4>
+            <br />
+            <h5>Moons: {planetData[planetParam].moons}</h5>
+            {planetData[planetParam].habitable === true ? (
+              <div className="habitable">Habitable</div>
+            ) : (
+              <div className="uninhabitable">Uninhabitable</div>
+            )}
+            {/* true or not soon */}
 
-              <NavLink
-                to="/"
-                className="planetViewBack"
-                onClick={() => props.setPlanet("")}
-              >
-                Back to solar view
-              </NavLink>
-            </div>
-          
+            <NavLink
+              to={`/${props.system}`}
+              className="planetViewBack"
+              onClick={() => props.setPlanet("")}
+            >
+              Back to solar view
+            </NavLink>
+          </div>
         ) : (
           <div>problem with data</div>
         )}
-       </div>
-       <div className="col-sm-8">
-{planetParam ?
-        
-          <div className={` generated-planet ${props.planet}`}>
+      </div>
+      <div className="col-sm-8">
+        {planetParam ? (
+          <div className={` generated-planet ${props.planet}1`}>
             {" "}
             {/* RINGS ARE BEING NAUGHTY {planetData[planetParam].rings === true ? (
               <div className="rings"></div>
@@ -127,9 +114,10 @@ export const GenerateExoPlanet = (props) => {
               <div></div>
             )}
           </div>
-
-         : 'Data issue'}
+        ) : (
+          "Data issue"
+        )}
       </div>
-   </div>
+    </div>
   );
 };

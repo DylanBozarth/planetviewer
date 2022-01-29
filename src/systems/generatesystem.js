@@ -4,40 +4,21 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { MiniExoPlanet } from "../components/miniExoPlanet";
 
 import { motion } from "framer-motion";
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
+
 
 export const GenerateSystem = (props) => {
   const [planets, setPlanets] = useState();
   useEffect(() => {
     setPlanets(makePlanets(RandomNum()));
+    let url = window.location.href
+    let modifiedUrl = url.split('/')
+    
+    props.setSystem(modifiedUrl[3])
   }, []);
   
-  useEffect(() => {
-    props.setSystem(starName)
-   
-  console.log(starName)
-  }, []);
-  
-  const backToInterstellar = {
-    leaveSystem: {
-      scale: 0.01,
-      transition: {
-        duration: 3,
-      },
-    },
-  };
 
-  const FadeIn = {
-    in: {
-      opacity: 1,
-      duration: '1.5s'
-    },
-    out: {
-      opacity: 0,
-    },
-  };  
+  
+
   const zoomOut = {
     in: {
       x: 0
@@ -47,11 +28,7 @@ export const GenerateSystem = (props) => {
     }
   }
 
-  const query = useQuery();
-  const starType = query.get("starType");
-  const getTheName = starType.split(' ')
-  const starName = getTheName[0].replace('-', " ") +  " Star" 
-  const splitCss = starType.split(" ");
+ 
   // making planets
 
   function makePlanetName() {
@@ -83,6 +60,7 @@ export const GenerateSystem = (props) => {
     "Earth-like-world",
 
     "Earth-like-world",
+    
     "Toxic-world",
     "Frozen-world",
     "Ocean-world",
@@ -125,13 +103,15 @@ export const GenerateSystem = (props) => {
   let randomPositionIndex = () => {
     return Math.floor(Math.random() * 6)
   }
+
   const makePlanets = (Count = 5) => {
     if (Count > 0) {
       return (
         <div>
           <MiniExoPlanet
-            planetName={`${makePlanetName()}`}
-            onClick={() => props.setPlanet(`${makePlanetName()}`)}
+           
+            
+            path={`exoPlanets/${planetTypes[randomPlanetIndex()] }`}
             label={``}
             planetType={`${planetTypes[randomPlanetIndex()] } 
             
@@ -156,7 +136,7 @@ export const GenerateSystem = (props) => {
       className="generatedSystem"
     >
       
-      <div className={splitCss[0] + "1" }></div>{" "}
+      <div className={`${props.system}1`}></div>{" "}
      <div className="">{planets}</div>
      
     </motion.div>

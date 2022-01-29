@@ -1,0 +1,77 @@
+.planetView {
+    padding: 5px;
+      text-align: center;
+      background: #191919;
+      box-shadow: 0px 0px 15px 2px #7Cbdbd inset;
+      border: 2px solid #3acaec;
+      border-radius: 5px;
+      font-size: calc(10px + 1.5vw);
+  
+      
+    }
+   .habitable {
+     color: lightGreen;
+   }
+   .uninhabitable {
+     color: red;
+   }
+
+   .Molten-world1 {
+    width: 25em;
+height: 25em;
+background: url("../systems/exoplanettextures/lava.jpg") repeat-x;
+animation: translateBackground 45s infinite linear;
+background-size: 100% 100%;
+border: 2px solid black;
+  }
+
+  .Desert-world1 {
+    width: 25em;
+height: 25em;
+background: url("../systems/exoplanettextures/desert.jpg") repeat-x;
+animation: translateBackground 45s infinite linear;
+background-size: 100% 100%;
+border: 2px solid black;
+  }
+
+  .Frozen-world1 {
+    width: 30em;
+height: 30em;
+background: url("../systems/exoplanettextures/frozen.png") repeat-x;
+animation: translateBackground 75s infinite linear;
+background-size: 100% 100%;
+border: 2px solid black;
+  }
+  
+  .Gas-giant1 {
+    width: 60em;
+height: 60em;
+background: url("../systems/exoplanettextures/gas.png") repeat-x;
+animation: translateBackground 165s infinite linear;
+background-size: 100% 100%;
+border: 2px solid black;
+  }
+  .Ocean-world1 {
+    width: 25em;
+height: 25em;
+background: url("../systems/exoplanettextures/ocean.jpg") repeat-x;
+animation: translateBackground 45s infinite linear;
+background-size: 100% 100%;
+border: 2px solid black;
+  }
+  .Rocky-world1 {
+    width: 20em;
+height: 20em;
+background: url("../systems/exoplanettextures/rocky.jpg") repeat-x;
+animation: translateBackground 110s infinite linear;
+background-size: 100% 100%;
+border: 2px solid black;
+  }
+  .Earth-like-world1 {
+    width: 30em;
+height: 30em;
+background: url("../planetTextures/earthlikeplanet.jpg") repeat-x;
+animation: translateBackground 85s infinite linear;
+background-size: 120% 100%;
+border: 2px solid black;
+  }

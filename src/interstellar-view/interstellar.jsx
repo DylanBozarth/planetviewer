@@ -1,5 +1,5 @@
 import "./interstellar-space.scss";
-import {Star} from '../components/star.jsx'
+import { Star } from "../components/star.jsx";
 import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,9 +8,7 @@ export const Interstellar = (props) => {
   const [exoStars, setExoStars] = useState();
   useEffect(() => {
     setExoStars(makeStars(RandomNum()));
-props.setSystem(
-  ''
-)
+    props.setSystem("");
   }, []);
 
   // animations
@@ -52,18 +50,25 @@ props.setSystem(
   function RandomNum() {
     return Math.floor(Math.random() * 5 + 3);
   }
+  
   const makeStars = (Count = 5) => {
+    let randomTypeVariable = starList[Math.floor(Math.random() * 6 + 1)];
     if (Count > 0) {
       return (
-        <div className="starWrapper">
+     
+        <NavLink
+          to={`/${randomTypeVariable}`}
+          
+          className="starWrapper"
+        >
           <Star
+          
             starName={`${makeStarName()}`}
-            starType={`${starList[Math.floor(Math.random() * 6 + 2)]} ${
-              positionList[Math.floor(Math.random() * 9 + 1)]
-            }`}
+            starPosition={positionList[Math.floor(Math.random() * 9 + 1)]}
+            starType={`${randomTypeVariable}`}
           ></Star>
           {makeStars(Count - 1)}
-        </div>
+        </NavLink>
       );
     }
   };
@@ -77,14 +82,7 @@ props.setSystem(
       opacity: 0,
     },
   };
-  const zoomOut = {
-    in: {
-      x: 0,
-    },
-    out: {
-      opacity: 0,
-    },
-  };
+
   return (
     <motion.div
       initial="in"
@@ -93,18 +91,12 @@ props.setSystem(
       variants={FadeIn}
       className="interstellar-space"
     >
-     
-      <NavLink
-        to="/"
-        className="sol-system"
-        
-      >
+      <NavLink to="/" className="sol-system">
         <div className="sol-system">
           <p className="sunLabel text-center">Our Sun</p>
         </div>
       </NavLink>
       <div className="random-placement">{exoStars}</div>
-
     </motion.div>
   );
 };

@@ -5,10 +5,8 @@ import { NavLink } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 export const GeneratePlanet = (props) => {
   useEffect(() => {
-    console.log(`planetparam and planetdata  ${planetData.planetParam}`);
-    if (props.planet === '') {
-      window.location.replace('/')
-    }
+    console.log(`Planet component  ${planetData.planetParam}`);
+    
   }, []);
   /* planet data */
   let planetData = {
@@ -77,8 +75,7 @@ export const GeneratePlanet = (props) => {
       habitable: false,
     },
     Nibiru: {
-      description:
-        "THE MYSTERY PLANET X",
+      description: "THE MYSTERY PLANET X",
       moons: "??",
       rings: false,
       clouds: false,
@@ -88,32 +85,33 @@ export const GeneratePlanet = (props) => {
   var planetParam = props.planet;
   return (
     <div className="generatedPlanetView row container-fluid">
-     <div className="col-sm-4">
+      <div className="col-sm-4">
         {planetParam ? (
           <div className=" planetView">
-           
-              <h4>{planetData[`${planetParam}`].description}</h4>
-              <br />
-              <h5>Moons: {planetData[planetParam].moons}</h5>
-              {planetData[planetParam].habitable === true ? <div className="habitable">Habitable</div> : <div className="uninhabitable">Uninhabitable</div>}
-              {/* true or not soon */}
+            <h4>{planetData[`${planetParam}`].description}</h4>
+            <br />
+            <h5>Moons: {planetData[planetParam].moons}</h5>
+            {planetData[planetParam].habitable === true ? (
+              <div className="habitable">Habitable</div>
+            ) : (
+              <div className="uninhabitable">Uninhabitable</div>
+            )}
+            {/* true or not soon */}
 
-              <NavLink
-                to="/"
-                className="planetViewBack"
-                onClick={() => props.setPlanet("")}
-              >
-                Back to solar view
-              </NavLink>
-            </div>
-          
+            <NavLink
+              to="/"
+              className="planetViewBack"
+              onClick={() => props.setPlanet("")}
+            >
+              Back to solar view
+            </NavLink>
+          </div>
         ) : (
           <div>problem with data</div>
         )}
-       </div>
-       <div className="col-sm-8">
-{planetParam ?
-        
+      </div>
+      <div className="col-sm-8">
+        {planetParam ? (
           <div className={` generated-planet ${props.planet}`}>
             {" "}
             {/* RINGS ARE BEING NAUGHTY {planetData[planetParam].rings === true ? (
@@ -127,9 +125,10 @@ export const GeneratePlanet = (props) => {
               <div></div>
             )}
           </div>
-
-         : 'Data issue'}
+        ) : (
+          "Data issue"
+        )}
       </div>
-   </div>
+    </div>
   );
 };
