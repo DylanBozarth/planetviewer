@@ -111,14 +111,15 @@ export const GeneratePlanet = (props) => {
         )}
       </div>
       <div className="col-sm-8">
+      
         {planetParam ? (
           <div className={` generated-planet ${props.planet}`}>
-            {" "}
-            {/* RINGS ARE BEING NAUGHTY {planetData[planetParam].rings === true ? (
+           {" "}
+             {planetData[planetParam].rings === true ? (
               <div className="rings"></div>
             ) : (
               <div></div>
-            )}{" "} */}
+            )}{" "} 
             {planetData[planetParam].clouds === true ? (
               <div className={`planetClouds`}></div>
             ) : (

@@ -10,9 +10,8 @@ import { GenerateExoPlanet } from "./systems/generateExoPlanet";
 
 import { Navigation } from "./components/navigation";
 function App() {
-  const [system, setSystem] = useState("");
-  const [planet, setPlanet] = useState("");
-  const [planetData, setPlanetData] = useState("test");
+  const [system, setSystem] = useState(""); // This controls the star 
+  const [planet, setPlanet] = useState(""); // this controls the single planet view 
 
   const location = useLocation();
   return (
@@ -43,8 +42,6 @@ function App() {
                 setSystem={setSystem}
                 planet={planet}
                 setPlanet={setPlanet}
-                planetData={planetData}
-                setPlanetData={setPlanetData}
               />
             )}
           />
@@ -58,8 +55,7 @@ function App() {
                 system={system}
                 setSystem={setSystem}
                 planet={planet}
-                planetData={planetData}
-                setPlanetData={setPlanetData}
+                
                 setPlanet={setPlanet}
               />
             )}
@@ -80,8 +76,7 @@ function App() {
                 system={system}
                 planet={planet}
                 setPlanet={setPlanet}
-                planetData={planetData}
-                setPlanetData={setPlanetData}
+                
               />
             )}
           />
@@ -94,8 +89,7 @@ function App() {
                 system={system}
                 planet={planet}
                 setPlanet={setPlanet}
-                planetData={planetData}
-                setPlanetData={setPlanetData}
+                
               />
             )}
           />

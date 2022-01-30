@@ -2,7 +2,7 @@
  
   overflow: visible;
 }
-
+// Add the 1 to the class otherwise it will be small like the mini stars on the previous page
 .Yellow-Dwarf1 {
   position: absolute;
   left: 50%;

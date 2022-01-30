@@ -1,4 +1,4 @@
-work in progress- Planet viewing app 
+Ideas and things that aren't working 
 
 issues: 
 saturn rings
