@@ -202,7 +202,7 @@
    border-radius: 50%;
    margin-bottom: 200px;
    animation: translateBackground 120s infinite linear;
-   background: url("../systems/exoplanettextures/lava.jpg") repeat-x;
+   background: url("../systems/exoplanettextures/toxic.png") repeat-x;
    background-size: 200% 100%;
 }
 .Earth-like-world {
