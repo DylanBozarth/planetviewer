@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import { GenerateExoPlanet } from "./systems/generateExoPlanet";
 
 import { Navigation } from "./components/navigation";
+import { Testzone } from "./components/testzone";
 function App() {
   const [system, setSystem] = useState("");
   const [planet, setPlanet] = useState("");
@@ -48,7 +49,9 @@ function App() {
               />
             )}
           />
-       
+       <Route
+            exact path="/testzone" component={Testzone} 
+          />
           <Route
             exact
             path="/:id"
@@ -99,6 +102,7 @@ function App() {
               />
             )}
           />
+          
         </Switch>
       </AnimatePresence>
     </div>
