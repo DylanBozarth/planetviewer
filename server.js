@@ -1,14 +1,23 @@
-const http = require('http');
-const express = require('express')
-const hostname = '127.0.0.1';
-const port = 4000;
-//nodemon server
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Server changed');
-}); 
+   
+const quotes = require("./quotes.json");
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET",
+    "Access-Control-Allow-Headers": "Content-Type",
+};
+
+
+const express = require('express')
+const app = express()
+const port = 4000
+
+app.get('/', (req, res) => {
+  
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  res.send(quote)
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})

@@ -10,6 +10,7 @@ import { GenerateExoPlanet } from "./systems/generateExoPlanet";
 
 import { Navigation } from "./components/navigation";
 import { Testzone } from "./components/testzone";
+import { JadenSmith } from "./jadenSmith";
 function App() {
   const [system, setSystem] = useState("");
   const [planet, setPlanet] = useState("");
@@ -97,7 +98,7 @@ function App() {
               />
             )}
           />
-          
+          <Route path="/api/quote" component={JadenSmith} />
         </Switch>
       </AnimatePresence>
     </div>
